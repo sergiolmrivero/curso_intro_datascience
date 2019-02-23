@@ -1,0 +1,41 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AdMRAVD17}
+
+\bibitem[AdMRAVD17]{Almeida2017}
+Oriana Almeida, Sérgio~Luiz de~Medeiros~Rivero, Carlos~Mariano Alvez-Valles,
+  and Yue Dou.
+\newblock Percepção do impacto de eventos extremos sobre a produção pela
+  população do estuário amazônico.
+\newblock {\em Revista Iberoamericana de Economia Ecológica}, 27:59--70, 2017.
+
+\bibitem[Alm16]{Coutinho2016}
+Marta Coutinho;~Oriana Almeida.
+\newblock EstratÉgias para gestÃo de recursos naturais: Pesca de
+  camarÃo-da-amazonia macrobrachium amazonicum (heller,1862) nas comunidades
+  do baixo tocantins, abaetetuba parÁ.
+\newblock 2016.
+
+\bibitem[AVR11]{Almeida2009a}
+Oriana Almeida, Nathan Vogt, and SergioThe Rivero.
+\newblock The invisible population and catch in the amazon floodplain:
+  estimating fisher population and catch for fisheries management in the
+  amazon.
+\newblock In Ratana Chuenpagdee, editor, {\em IASC 2011 - Sustaining Commons:
+  Sustaining our Future}, Bangkok, 2011. WSFC.
+
+\bibitem[DL18]{DeLima2018}
+O.; Pinedo-Vasquez M.; Lee T.M.; Rirvero S.; Mansur~A. De~Lima, A.C.B;~Almeida.
+\newblock Resiliencia urbana y amenazas climáticas: Vulnerabilidad y
+  planificaciónde adaptación para ciudades pequeñas en el delta y estuario
+  del rio amazonas.
+\newblock {\em Medio Ambiente Y Urbanización}, 88(1), 2018.
+
+\bibitem[VPVB{\etalchar{+}}16]{Vogt2016}
+Nathan Vogt, Miguel Pinedo-Vasquez, Eduardo~S. Brond{\'i}zio, Fernando~G.
+  Rabelo, Katia Fernandes, Oriana Almeida, Sergio Rivero, Peter~J. Deadman, and
+  Yue Dou.
+\newblock Local ecological knowledge and incremental adaptation to changing
+  flood patterns in the amazon delta.
+\newblock {\em Sustainability Science}, 11:611–623, 2016.
+
+\end{thebibliography}

@@ -1,0 +1,239 @@
+\documentclass[12pt,a4paper,oneside]{erdc}
+%\documentclass{erdc}
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+%\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+%\usepackage{microtype} 			% para melhorias de justificação
+\usepackage[brazil]{babel}
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\usepackage{lipsum}
+
+
+\begin{document}
+
+\frontmatter
+
+\laboratory{PPGE-UFPA}
+
+\reportnum{BP/EcoS - Curso-DataScience-00-2019}
+
+\program{Construção de Modelos e Indicadores Econômicos}
+
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+%\subtitle{Assessments and Report from Socioeconomic and Demographic Data in \\
+%	      Small Cities in Amazon Delta}
+
+\subtitle{ou Data Science para todos!}
+
+\date{\today}
+
+\author{S.~Rivero \and H.~Farias}
+
+\affiliation{Programa de Pós-Graduação em Economia\\
+  Instituto de Ciências Sociais Aplicadas\\
+  Universidade Federal do Pará\\
+  Rua Augusto Correia, 1\\
+  Belém, Pará - 66.075-200}
+
+\author{Equipe UFPA }
+
+
+\affiliation{Faculdade de Economia \\
+	Instituto de Ciências Sociais Aplicadas\\
+	Universidade Federal do Pará\\
+	Rua Augusto Correia, 1\\
+	Belém, Pará - 66.075-200}
+
+
+\coverart[width=\linewidth]{../figs/Capa}
+
+\reporttype{Produto: Cursos}
+
+\distribution{Propriedade BANPARÁ e PPGE-UFPA \\ (Distribuição Restrita)}
+
+% \distribution{Distribution authorized to U.S. Government Agencies
+% only; Test and Evaluation; November 2005.  Other requests should be
+% referred to U.S. Army Engineer Research and Development Center}
+
+%\additionalinfo{Supersedes ERDC/CREL AF-01-23}
+
+\begin{abstract}
+  \lipsum[12-13]
+\end{abstract}
+
+\disclaimer{
+	
+	This document is an output from the  Banpará Project 
+	
+	PPGE-UFPA report
+	
+	Distribution Restrictions
+	
+	\copyright 2019, All rights reserved
+	
+	\pagebreak
+	
+	}
+
+\preparedfor{Banpará} 
+
+\contractnum{FADESP-NO-CONTRATO}
+
+\monitoredby{Banpará}
+
+%\preparedfor{}
+
+
+
+
+\maketitle
+
+\tableofcontents
+
+
+%\chapter*{Resumo Executivo}
+
+
+\mainmatter
+
+
+\chapter{Introdução }
+
+Para que serve o R?
+
+Como se pode utilizar o conjunto de pacotes R para Análise de Dados e BI?
+
+Uma configuração adequada para usar ferramentas de BI 
+
+		
+
+\chapter{Aula 1 - Instalando e Configurando o R e RStudio}
+
+Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a utilizar bibliotecas em R
+
+\section{Chegando a Instalação Existente e os Requisitos}
+
+\section{Instalando o R e RStudio}
+
+\section{Bibliotecas no R}
+
+\subsection{O conceito de Biblioteca e para que serve}
+
+\subsection{Como sei que bibliotecas eu preciso?}
+
+\subsection{Baixando as Bibliotecas}
+
+\subsection{Resolvendo problemas de compilação}
+
+\subsection{Utilizando as bibliotecas no seu programa R}
+
+
+\chapter{Aula 2 - Acessando e Utilizando Bases de Dados}
+
+Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os principais comandos  
+
+\section{O ciclo de tratamento e análise de dados}
+
+\section{Tipos de Dados em R}
+
+\section{Dataframes}
+
+\section{Acessando Arquivos no computador}
+
+
+\section{Acessando Bases de dados via \textit{APIs}}
+
+\section{Trabalhando com bases de dados muito grandes}
+
+
+\chapter{Aula 3 - Limpando e organizando seus dados}
+
+\section{O que é uma boa base de dados e que tipos de bases existem?}
+
+\section{dplyr}
+
+\section{tidyr}
+
+\section{tidyverse}
+
+\chapter{Aula 4 - Apresentando Resultados}
+
+\section{Rmarkdown - Preparando o relatório enquanto você analisa os dados}
+
+\section{Gerando dados sintetizados - Utilizando dataframes}
+
+\section{Gerando Tabelas}
+
+\subsection{xtable}
+
+\subsection{stargazer}
+
+\chapter{Aula 5 - Gerando estatísticas dos Dados}
+
+\section{Estatísticas Descritivas}
+
+\section{Correlação}
+
+\section{Apresentando os Resultados em Gráficos}
+
+\subsection{Gráficos Simples}
+
+\subsection{Bibliotecas de Gráficos}
+
+\chapter{Aula 6 - Apresentando Resultados}
+
+\section{ggplot}
+
+\section{shiny}
+
+\chapter{Aula 7 - Utilizando modelos}
+
+\section{Regressão}
+
+\subsection{Executando a Regressão}
+
+\subsection{Apresentando os resultados da Regressão}
+
+\section{Gerando Dashboards}
+
+\chapter{Aula 8 - Encerramento do Curso}
+
+
+\chapter{Onde aprender mais?}
+
+
+  
+  
+  
+
+%\bibliographystyle{unsrt}
+\bibliographystyle{alpha}
+\bibliography{../bib/bibliografia}
+
+%\appendix
+
+%\chapter{Tabelas demográficas}
+
+%\lipsum[12-16]
+
+%\begin{equation}
+%  \label{eq:C}
+%  \frac{\partial H}{\partial x} = -X
+%\end{equation}
+
+%\chapter{PeCiDAm}
+
+%\lipsum[16-22]
+
+
+
+
+\end{document}

@@ -1,0 +1,46 @@
+\babel@toc {brazil}{}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o }{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Aula 1 - Instalando e Configurando o R e RStudio}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Chegando a Instala\IeC {\c c}\IeC {\~a}o Existente e os Requisitos}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Instalando o R e RStudio}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bibliotecas no R}{2}{section.2.3}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {2.3.1}O conceito de Biblioteca e para que serve}{2}{subsection.2.3.1}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {2.3.2}Como sei que bibliotecas eu preciso?}{2}{subsection.2.3.2}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {2.3.3}Baixando as Bibliotecas}{2}{subsection.2.3.3}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {2.3.4}Resolvendo problemas de compila\IeC {\c c}\IeC {\~a}o}{2}{subsection.2.3.4}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {2.3.5}Utilizando as bibliotecas no seu programa R}{2}{subsection.2.3.5}
+\contentsline {chapter}{\numberline {3}Aula 2 - Acessando e Utilizando Bases de Dados}{3}{chapter.3}
+\contentsline {section}{\numberline {3.1}O ciclo de tratamento e an\IeC {\'a}lise de dados}{3}{section.3.1}
+\contentsline {section}{\numberline {3.2}Tipos de Dados em R}{3}{section.3.2}
+\contentsline {section}{\numberline {3.3}Dataframes}{3}{section.3.3}
+\contentsline {section}{\numberline {3.4}Acessando Arquivos no computador}{3}{section.3.4}
+\contentsline {section}{\numberline {3.5}Acessando Bases de dados via \textit {APIs}}{3}{section.3.5}
+\contentsline {section}{\numberline {3.6}Trabalhando com bases de dados muito grandes}{3}{section.3.6}
+\contentsline {chapter}{\numberline {4}Aula 3 - Limpando e organizando seus dados}{4}{chapter.4}
+\contentsline {section}{\numberline {4.1}O que \IeC {\'e} uma boa base de dados e que tipos de bases existem?}{4}{section.4.1}
+\contentsline {section}{\numberline {4.2}dplyr}{4}{section.4.2}
+\contentsline {section}{\numberline {4.3}tidyr}{4}{section.4.3}
+\contentsline {section}{\numberline {4.4}tidyverse}{4}{section.4.4}
+\contentsline {chapter}{\numberline {5}Aula 4 - Apresentando Resultados}{5}{chapter.5}
+\contentsline {section}{\numberline {5.1}Rmarkdown - Preparando o relat\IeC {\'o}rio enquanto voc\IeC {\^e} analisa os dados}{5}{section.5.1}
+\contentsline {section}{\numberline {5.2}Gerando dados sintetizados - Utilizando dataframes}{5}{section.5.2}
+\contentsline {section}{\numberline {5.3}Gerando Tabelas}{5}{section.5.3}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.3.1}xtable}{5}{subsection.5.3.1}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.3.2}stargazer}{5}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Aula 5 - Gerando estat\IeC {\'\i }sticas dos Dados}{6}{chapter.6}
+\contentsline {section}{\numberline {6.1}Estat\IeC {\'\i }sticas Descritivas}{6}{section.6.1}
+\contentsline {section}{\numberline {6.2}Correla\IeC {\c c}\IeC {\~a}o}{6}{section.6.2}
+\contentsline {section}{\numberline {6.3}Apresentando os Resultados em Gr\IeC {\'a}ficos}{6}{section.6.3}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {6.3.1}Gr\IeC {\'a}ficos Simples}{6}{subsection.6.3.1}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {6.3.2}Bibliotecas de Gr\IeC {\'a}ficos}{6}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Aula 6 - Apresentando Resultados}{7}{chapter.7}
+\contentsline {section}{\numberline {7.1}ggplot}{7}{section.7.1}
+\contentsline {section}{\numberline {7.2}shiny}{7}{section.7.2}
+\contentsline {chapter}{\numberline {8}Aula 7 - Utilizando modelos}{8}{chapter.8}
+\contentsline {section}{\numberline {8.1}Regress\IeC {\~a}o}{8}{section.8.1}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {8.1.1}Executando a Regress\IeC {\~a}o}{8}{subsection.8.1.1}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {8.1.2}Apresentando os resultados da Regress\IeC {\~a}o}{8}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Gerando Dashboards}{8}{section.8.2}
+\contentsline {chapter}{\numberline {9}Aula 8 - Encerramento do Curso}{9}{chapter.9}
+\contentsline {chapter}{\numberline {10}Onde aprender mais?}{10}{chapter.10}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas\markboth {\MakeUppercase {Refer\^encias Bibliogr\'aficas}}{\MakeUppercase {Refer\^encias Bibliogr\'aficas}}}{11}{chapter*.1}
