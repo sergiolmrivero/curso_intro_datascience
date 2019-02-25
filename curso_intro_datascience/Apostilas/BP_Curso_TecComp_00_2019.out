@@ -1,45 +1,47 @@
 \BOOKMARK [0][-]{chapter.1}{Introdu\347\343o }{}% 1
 \BOOKMARK [0][-]{chapter.2}{Aula 1 - Instalando e Configurando o R e RStudio}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Chegando a Instala\347\343o Existente e os Requisitos}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.1}{Checando a Instala\347\343o Existente e os Requisitos}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Instalando o R e RStudio}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Bibliotecas no R}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.3.1}{O conceito de Biblioteca e para que serve}{section.2.3}% 6
-\BOOKMARK [2][-]{subsection.2.3.2}{Como sei que bibliotecas eu preciso?}{section.2.3}% 7
-\BOOKMARK [2][-]{subsection.2.3.3}{Baixando as Bibliotecas}{section.2.3}% 8
-\BOOKMARK [2][-]{subsection.2.3.4}{Resolvendo problemas de compila\347\343o}{section.2.3}% 9
-\BOOKMARK [2][-]{subsection.2.3.5}{Utilizando as bibliotecas no seu programa R}{section.2.3}% 10
-\BOOKMARK [0][-]{chapter.3}{Aula 2 - Acessando e Utilizando Bases de Dados}{}% 11
-\BOOKMARK [1][-]{section.3.1}{O ciclo de tratamento e an\341lise de dados}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Tipos de Dados em R}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Dataframes}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Acessando Arquivos no computador}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.5}{Acessando Bases de dados via APIs}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.6}{Trabalhando com bases de dados muito grandes}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Aula 3 - Limpando e organizando seus dados}{}% 18
-\BOOKMARK [1][-]{section.4.1}{O que \351 uma boa base de dados e que tipos de bases existem?}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{dplyr}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{tidyr}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.4}{tidyverse}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Aula 4 - Apresentando Resultados}{}% 23
-\BOOKMARK [1][-]{section.5.1}{Rmarkdown - Preparando o relat\363rio enquanto voc\352 analisa os dados}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{Gerando dados sintetizados - Utilizando dataframes}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Gerando Tabelas}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.3.1}{xtable}{section.5.3}% 27
-\BOOKMARK [2][-]{subsection.5.3.2}{stargazer}{section.5.3}% 28
-\BOOKMARK [0][-]{chapter.6}{Aula 5 - Gerando estat\355sticas dos Dados}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Estat\355sticas Descritivas}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.2}{Correla\347\343o}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.3}{Apresentando os Resultados em Gr\341ficos}{chapter.6}% 32
-\BOOKMARK [2][-]{subsection.6.3.1}{Gr\341ficos Simples}{section.6.3}% 33
-\BOOKMARK [2][-]{subsection.6.3.2}{Bibliotecas de Gr\341ficos}{section.6.3}% 34
-\BOOKMARK [0][-]{chapter.7}{Aula 6 - Apresentando Resultados}{}% 35
-\BOOKMARK [1][-]{section.7.1}{ggplot}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.2}{shiny}{chapter.7}% 37
-\BOOKMARK [0][-]{chapter.8}{Aula 7 - Utilizando modelos}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Regress\343o}{chapter.8}% 39
-\BOOKMARK [2][-]{subsection.8.1.1}{Executando a Regress\343o}{section.8.1}% 40
-\BOOKMARK [2][-]{subsection.8.1.2}{Apresentando os resultados da Regress\343o}{section.8.1}% 41
-\BOOKMARK [1][-]{section.8.2}{Gerando Dashboards}{chapter.8}% 42
-\BOOKMARK [0][-]{chapter.9}{Aula 8 - Encerramento do Curso}{}% 43
-\BOOKMARK [0][-]{chapter.10}{Onde aprender mais?}{}% 44
-\BOOKMARK [0][-]{chapter*.1}{Refer\352ncias Bibliogr\341ficas}{}% 45
+\BOOKMARK [2][-]{subsection.2.2.1}{Instalando o R}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Instalando o R Studio}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Pacotes no R}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{O conceito de pacote e para que serve}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{Como sei que pacotes eu preciso?}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.3}{Baixando os pacotes}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.4}{Resolvendo problemas de compila\347\343o}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.5}{Utilizando os pacotes no seu programa R}{section.2.3}% 12
+\BOOKMARK [0][-]{chapter.3}{Aula 2 - Acessando e Utilizando Bases de Dados}{}% 13
+\BOOKMARK [1][-]{section.3.1}{O ciclo de tratamento e an\341lise de dados}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Tipos de Dados em R}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Dataframes}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Acessando Arquivos no computador}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{Acessando Bases de dados via APIs}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{Trabalhando com bases de dados muito grandes}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Aula 3 - Limpando e organizando seus dados}{}% 20
+\BOOKMARK [1][-]{section.4.1}{O que \351 uma boa base de dados e que tipos de bases existem?}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{dplyr}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{tidyr}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.4}{tidyverse}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Aula 4 - Apresentando Resultados}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Rmarkdown - Preparando o relat\363rio enquanto voc\352 analisa os dados}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Gerando dados sintetizados - Utilizando dataframes}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Gerando Tabelas}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.3.1}{xtable}{section.5.3}% 29
+\BOOKMARK [2][-]{subsection.5.3.2}{stargazer}{section.5.3}% 30
+\BOOKMARK [0][-]{chapter.6}{Aula 5 - Gerando estat\355sticas dos Dados}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Estat\355sticas Descritivas}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.2}{Correla\347\343o}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.3}{Apresentando os Resultados em Gr\341ficos}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.3.1}{Gr\341ficos Simples}{section.6.3}% 35
+\BOOKMARK [2][-]{subsection.6.3.2}{Bibliotecas de Gr\341ficos}{section.6.3}% 36
+\BOOKMARK [0][-]{chapter.7}{Aula 6 - Apresentando Resultados}{}% 37
+\BOOKMARK [1][-]{section.7.1}{ggplot}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.2}{shiny}{chapter.7}% 39
+\BOOKMARK [0][-]{chapter.8}{Aula 7 - Utilizando modelos}{}% 40
+\BOOKMARK [1][-]{section.8.1}{Regress\343o}{chapter.8}% 41
+\BOOKMARK [2][-]{subsection.8.1.1}{Executando a Regress\343o}{section.8.1}% 42
+\BOOKMARK [2][-]{subsection.8.1.2}{Apresentando os resultados da Regress\343o}{section.8.1}% 43
+\BOOKMARK [1][-]{section.8.2}{Gerando Dashboards}{chapter.8}% 44
+\BOOKMARK [0][-]{chapter.9}{Aula 8 - Encerramento do Curso}{}% 45
+\BOOKMARK [0][-]{chapter.10}{Onde aprender mais?}{}% 46
+\BOOKMARK [0][-]{chapter*.1}{Refer\352ncias Bibliogr\341ficas}{}% 47
