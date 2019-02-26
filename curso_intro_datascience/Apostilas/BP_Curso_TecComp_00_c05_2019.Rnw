@@ -1,0 +1,13 @@
+
+\chapter{Aula 5 - Gerando estatísticas dos Dados}
+
+\section{Estatísticas Descritivas}
+
+\section{Correlação}
+
+\section{Apresentando os Resultados em Gráficos}
+
+\subsection{Gráficos Simples}
+
+\subsection{Bibliotecas de Gráficos}
+

@@ -1,0 +1,75 @@
+\chapter{Aula 1 - Instalando e Configurando o R e RStudio}
+
+Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a utilizar bibliotecas em R
+
+\section{Checando a Instalação Existente e os Requisitos}l
+
+\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
+
+\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
+
+\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
+
+\section{Instalando o R e RStudio}
+
+\subsection{Instalando o R}
+
+\url{https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html}
+
+\url{https://cran.r-project.org/doc/manuals/R-admin.html}
+
+
+\subsection{Instalando o R Studio}
+
+\url{https://www.rstudio.com/products/rstudio/}
+
+\url{http://web.cs.ucla.edu/~gulzar/rstudio/}
+
+\url{https://www.rstudio.com/products/rstudio/download/}
+
+\url{http://rprogramming.net/download-and-install-rstudio/}
+
+\section{Pacotes no R}
+
+\subsection{O conceito de pacote e para que serve}
+
+\url{https://www.datacamp.com/community/tutorials/r-packages-guide}
+
+\url{https://www.rstudio.com/products/rpackages/}
+
+\url{http://r-pkgs.had.co.nz/}
+
+\subsection{Como sei que pacotes eu preciso?}
+
+\url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+
+\url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+
+\url{https://cran.r-project.org/web/packages/}
+
+\subsection{Baixando os pacotes}
+
+\url{https://www.r-bloggers.com/installing-r-packages/}
+
+\url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+
+\url{http://kbroman.org/pkg_primer/pages/build.html}
+
+
+\subsection{Resolvendo problemas de compilação}
+
+\url{https://stackoverflow.com/questions/23135703/package-install-error-compilation-failed}
+
+\url{https://support.rstudio.com/hc/en-us/community/posts/200522573-Can-t-install-packages}
+
+\url{http://mazamascience.com/WorkingWithData/?p=1185}
+
+
+\subsection{Utilizando os pacotes no seu programa R}
+
+\url{https://www.statmethods.net/interface/packages.html}
+
+\url{https://www.dummies.com/programming/r/how-to-install-load-and-unload-packages-in-r/}
+
+
+

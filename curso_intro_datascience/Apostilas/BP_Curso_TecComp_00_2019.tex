@@ -1,4 +1,54 @@
-\documentclass[12pt,a4paper,oneside]{erdc}
+\documentclass[12pt,a4paper,oneside]{erdc}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 %\documentclass{erdc}
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
@@ -14,8 +64,7 @@
 \usepackage{natbib}
 
 \usepackage{lipsum}
-
-
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
 \frontmatter
@@ -113,23 +162,223 @@ Como se pode utilizar o conjunto de pacotes R para Análise de Dados e BI?
 
 Uma configuração adequada para usar ferramentas de BI 
 
+\chapter{Aula 1 - Instalando e Configurando o R e RStudio}
+
+Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a utilizar bibliotecas em R
+
+\section{Checando a Instalação Existente e os Requisitos}l
+
+\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
+
+\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
+
+\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
+
+\section{Instalando o R e RStudio}
+
+\subsection{Instalando o R}
+
+\url{https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html}
+
+\url{https://cran.r-project.org/doc/manuals/R-admin.html}
+
+
+\subsection{Instalando o R Studio}
+
+\url{https://www.rstudio.com/products/rstudio/}
+
+\url{http://web.cs.ucla.edu/~gulzar/rstudio/}
+
+\url{https://www.rstudio.com/products/rstudio/download/}
+
+\url{http://rprogramming.net/download-and-install-rstudio/}
+
+\section{Pacotes no R}
+
+\subsection{O conceito de pacote e para que serve}
+
+\url{https://www.datacamp.com/community/tutorials/r-packages-guide}
+
+\url{https://www.rstudio.com/products/rpackages/}
+
+\url{http://r-pkgs.had.co.nz/}
+
+\subsection{Como sei que pacotes eu preciso?}
+
+\url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+
+\url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+
+\url{https://cran.r-project.org/web/packages/}
+
+\subsection{Baixando os pacotes}
+
+\url{https://www.r-bloggers.com/installing-r-packages/}
+
+\url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+
+\url{http://kbroman.org/pkg_primer/pages/build.html}
+
+
+\subsection{Resolvendo problemas de compilação}
+
+\url{https://stackoverflow.com/questions/23135703/package-install-error-compilation-failed}
+
+\url{https://support.rstudio.com/hc/en-us/community/posts/200522573-Can-t-install-packages}
+
+\url{http://mazamascience.com/WorkingWithData/?p=1185}
+
+
+\subsection{Utilizando os pacotes no seu programa R}
+
+\url{https://www.statmethods.net/interface/packages.html}
+
+\url{https://www.dummies.com/programming/r/how-to-install-load-and-unload-packages-in-r/}
+
+
 		
+\chapter{Aula 2 - Acessando e Utilizando Bases de Dados}
 
-\include{BP_Curso_TecComp_00_c01_2019}
+Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os principais comandos  
 
-\include{BP_Curso_TecComp_00_c02_2019}
+\section{O ciclo de tratamento e análise de dados}
 
-\include{BP_Curso_TecComp_00_c03_2019}
+\section{Tipos de Dados em R}
 
-\include{BP_Curso_TecComp_00_c04_2019}
+\url{https://www.statmethods.net/input/datatypes.html}
 
-\include{BP_Curso_TecComp_00_c05_2019}
+\url{https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/}
 
-\include{BP_Curso_TecComp_00_c06_2019}
+\url{https://www.tutorialspoint.com/r/r_data_types.htm}
 
-\include{BP_Curso_TecComp_00_c07_2019}
+\url{http://www.r-tutor.com/r-introduction/basic-data-types}
 
-\include{BP_Curso_TecComp_00_c08_2019}
+\url{https://www.cyclismo.org/tutorial/R/types.html}
+
+\url{https://stat.ethz.ch/R-manual/R-devel/library/base/html/typeof.html}
+
+\section{Dataframes}
+
+\url{https://www.tutorialspoint.com/r/r_data_frames.htm}
+
+\url{https://www.datamentor.io/r-programming/data-frame/}
+
+\url{http://www.r-tutor.com/r-introduction/data-frame}
+
+\url{https://stat.ethz.ch/R-manual/R-devel/library/base/html/data.frame.html}
+
+\url{https://www.tutorialgateway.org/data-frame-in-r/}
+
+\url{https://datacarpentry.org/R-ecology-lesson/02-starting-with-data.html}
+
+\url{https://www.statmethods.net/input/importingdata.html}
+
+\section{Acessando Arquivos no computador}
+
+\url{https://www.datacamp.com/community/tutorials/r-data-import-tutorial?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=332602034364&utm_targetid=dsa-473406573035&utm_loc_interest_ms=&utm_loc_physical_ms=1001610&gclid=Cj0KCQiA5NPjBRDDARIsAM9X1GLkgYWekNMkjHQnsTnRAzV7_gVEiwAqyW9CPisvAqFv2mNXzwarSlIaAgdZEALw_wcB}
+
+\url{http://rprogramming.net/read-csv-in-r/}
+
+\url{https://www.rdocumentation.org/packages/gdata/versions/2.18.0/topics/read.xls}
+
+\url{https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.fwf.html}
+
+\url{https://riptutorial.com/r/example/31447/importing-fixed-width-files}
+
+
+\section{Acessando Bases de dados via \textit{APIs}}
+
+\url{https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/}
+
+\url{https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html}
+
+\url{https://zapier.com/learn/apis/}
+
+\url{https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/API-data-access-r/}
+
+
+
+\section{Trabalhando com bases de dados muito grandes}
+
+\url{http://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/sql.html}
+
+\url{https://datacarpentry.org/R-ecology-lesson/05-r-and-databases.html}
+
+\url{https://db.rstudio.com/}
+
+\url{http://www.columbia.edu/~sjm2186/EPIC_R/EPIC_R_BigData.pdf}
+
+\url{https://www.rstudio.com/resources/webinars/working-with-big-data-in-r/}
+
+\url{https://rpubs.com/msundar/large_data_analysis}
+
+
+
+\chapter{Aula 3 - Limpando e organizando seus dados}
+
+	\section{O que é uma boa base de dados e que tipos de bases existem?}
+	
+	\section{dplyr}
+	
+	\section{tidyr}
+	
+	\section{tidyverse}
+
+
+
+
+\chapter{Aula 4 - Apresentando Resultados}
+
+	\section{Rmarkdown - Preparando o relatório enquanto você analisa os dados}
+	
+	\section{Gerando dados sintetizados - Utilizando dataframes}
+	
+	\section{Gerando Tabelas}
+	
+		\subsection{xtable}
+		
+		\subsection{stargazer}
+
+
+
+
+\chapter{Aula 5 - Gerando estatísticas dos Dados}
+
+	\section{Estatísticas Descritivas}
+	
+	\section{Correlação}
+	
+	\section{Apresentando os Resultados em Gráficos}
+	
+		\subsection{Gráficos Simples}
+		
+		\subsection{Bibliotecas de Gráficos}
+
+
+\chapter{Aula 6 - Apresentando Resultados}
+
+	\section{ggplot}
+
+	\section{shiny}
+
+
+
+\chapter{Aula 7 - Utilizando modelos}
+
+	\section{Regressão}
+	
+		\subsection{Executando a Regressão}
+		
+		\subsection{Apresentando os resultados da Regressão}
+	
+	\section{Gerando Dashboards}
+
+
+
+
+\chapter{Aula 8 - Encerramento do Curso}
+
+
 
 
 \chapter{Onde aprender mais?}

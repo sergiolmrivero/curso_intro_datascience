@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.17)  25 FEB 2019 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.17)  26 FEB 2019 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,6 +358,17 @@ s
 )
 \@emptytoks=\toks23
 \abstractbox=\box32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip77
+\fb@frw=\dimen132
+\fb@frh=\dimen133
+\FrameRule=\dimen134
+\FrameSep=\dimen135
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
@@ -774,7 +785,7 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count110
-\U@D=\dimen132
+\U@D=\dimen136
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count111
@@ -834,7 +845,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen133
+\@linkdim=\dimen137
 \Hy@linkcounter=\count112
 \Hy@pagecounter=\count113
 
@@ -862,10 +873,10 @@ Package hyperref Info: Bookmarks ON on input line 4762.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen134
+\XeTeXLinkMargin=\dimen138
 \Fld@menulength=\count116
-\Field@Width=\dimen135
-\Fld@charsize=\dimen136
+\Field@Width=\dimen139
+\Fld@charsize=\dimen140
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -891,57 +902,57 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip77
+\Hy@SectionHShift=\skip78
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count122
 )
-(./BP_Curso_TecComp_00_2019.aux (./BP_Curso_TecComp_00_c01_2019.aux)
-(./BP_Curso_TecComp_00_c02_2019.aux) (./BP_Curso_TecComp_00_c03_2019.aux)
-(./BP_Curso_TecComp_00_c04_2019.aux) (./BP_Curso_TecComp_00_c05_2019.aux)
-(./BP_Curso_TecComp_00_c06_2019.aux) (./BP_Curso_TecComp_00_c07_2019.aux)
-(./BP_Curso_TecComp_00_c08_2019.aux))
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(./BP_Curso_TecComp_00_2019.aux)
 \openout1 = `BP_Curso_TecComp_00_2019.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for T1+xjgi on input line 19.
-LaTeX Font Info:    No file T1xjgi.fd. on input line 19.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for T1+xjgi on input line 68.
+LaTeX Font Info:    No file T1xjgi.fd. on input line 68.
 
 
 LaTeX Font Warning: Font shape `T1/xjgi/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 19.
+(Font)              using `T1/cmr/m/n' instead on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
-\scratchdimen=\dimen137
+\scratchdimen=\dimen141
 \scratchbox=\box33
 \nofMPsegments=\count124
 \nofMParguments=\count125
 \everyMPshowfont=\toks26
 \MPscratchCnt=\count126
-\MPscratchDim=\dimen138
+\MPscratchDim=\dimen142
 \MPnumerator=\count127
 \makeMPintoPDFobject=\count128
 \everyMPtoPDFconversion=\toks27
@@ -972,7 +983,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 19.
+LaTeX Info: Redefining \selectfont on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1009,7 +1020,7 @@ LaTeX Info: Redefining \selectfont on input line 19.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 68.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1018,9 +1029,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
 
 (./BP_Curso_TecComp_00_2019.out) (./BP_Curso_TecComp_00_2019.out)
 \@outlinefile=\write3
@@ -1029,164 +1040,165 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 
 LaTeX Font Warning: Font shape `T1/xjgi/bx/n' undefined
-(Font)              using `T1/xjgi/m/n' instead on input line 68.
+(Font)              using `T1/xjgi/m/n' instead on input line 117.
 
-LaTeX Font Info:    Try loading font information for T1+xifg on input line 98.
-LaTeX Font Info:    No file T1xifg.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for T1+xifg on input line 147.
+
+LaTeX Font Info:    No file T1xifg.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `T1/xifg/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 98.
+(Font)              using `T1/cmr/m/n' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/bx/n' undefined
-(Font)              using `T1/xifg/m/n' instead on input line 98.
+(Font)              using `T1/xifg/m/n' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/bx/n' in size <22> not available
-(Font)              size <20.74> substituted on input line 98.
+(Font)              size <20.74> substituted on input line 147.
 
-LaTeX Font Info:    Try loading font information for OT1+zjgi on input line 98.
-
-LaTeX Font Info:    No file OT1zjgi.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for OT1+zjgi on input line 147
+.
+LaTeX Font Info:    No file OT1zjgi.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `OT1/zjgi/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 98.
+(Font)              using `OT1/cmr/m/n' instead on input line 147.
 
-LaTeX Font Info:    Try loading font information for OML+zjgi on input line 98.
-
-LaTeX Font Info:    No file OMLzjgi.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for OML+zjgi on input line 147
+.
+LaTeX Font Info:    No file OMLzjgi.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `OML/zjgi/m/it' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 98.
+(Font)              using `OML/cmm/m/it' instead on input line 147.
 
-LaTeX Font Info:    Try loading font information for OMS+zjgi on input line 98.
-
-LaTeX Font Info:    No file OMSzjgi.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for OMS+zjgi on input line 147
+.
+LaTeX Font Info:    No file OMSzjgi.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `OMS/zjgi/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 98.
+(Font)              using `OMS/cmsy/m/n' instead on input line 147.
 
-LaTeX Font Info:    Try loading font information for OMX+zjgi on input line 98.
-
-LaTeX Font Info:    No file OMXzjgi.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for OMX+zjgi on input line 147
+.
+LaTeX Font Info:    No file OMXzjgi.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `OMX/zjgi/m/n' undefined
-(Font)              using `OMX/cmex/m/n' instead on input line 98.
+(Font)              using `OMX/cmex/m/n' instead on input line 147.
 
-LaTeX Font Info:    Try loading font information for OML+zifg on input line 98.
-
-LaTeX Font Info:    No file OMLzifg.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for OML+zifg on input line 147
+.
+LaTeX Font Info:    No file OMLzifg.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `OML/zifg/k/n' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 98.
+(Font)              using `OML/cmm/m/it' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `OML/zifg/d/n' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 98.
+(Font)              using `OML/cmm/m/it' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/bx/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 98.
+(Font)              size <17.28> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/k/n' undefined
-(Font)              using `T1/xifg/m/n' instead on input line 98.
+(Font)              using `T1/xifg/m/n' instead on input line 147.
 
 <../logos/logoBP.png, id=192, 422.57875pt x 120.45pt>
 File: ../logos/logoBP.png Graphic file (type png)
 <use ../logos/logoBP.png>
-Package pdftex.def Info: ../logos/logoBP.png  used on input line 98.
+Package pdftex.def Info: ../logos/logoBP.png  used on input line 147.
 (pdftex.def)             Requested size: 65.0pt x 18.52618pt.
-LaTeX Font Info:    Try loading font information for TS1+xifg on input line 98.
-
-LaTeX Font Info:    No file TS1xifg.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for TS1+xifg on input line 147
+.
+LaTeX Font Info:    No file TS1xifg.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `TS1/xifg/bx/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textregistered' on input line 98.
+(Font)              for symbol `textregistered' on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/k/it' undefined
-(Font)              using `T1/xifg/k/n' instead on input line 98.
+(Font)              using `T1/xifg/k/n' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/h/n' undefined
-(Font)              using `T1/xifg/m/n' instead on input line 98.
+(Font)              using `T1/xifg/m/n' instead on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xifg/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 98.
+(Font)              size <20.74> substituted on input line 147.
 
 <../figs/Capa.png, id=193, 803.0pt x 602.25pt>
 File: ../figs/Capa.png Graphic file (type png)
 <use ../figs/Capa.png>
-Package pdftex.def Info: ../figs/Capa.png  used on input line 98.
+Package pdftex.def Info: ../figs/Capa.png  used on input line 147.
 (pdftex.def)             Requested size: 442.485pt x 331.8726pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../logos/logoBP.png> <../f
 igs/Capa.png (PNG copy)>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
  [2]
-Overfull \hbox (132.515pt too wide) in paragraph at lines 98--98
+Overfull \hbox (132.515pt too wide) in paragraph at lines 147--147
 [][][][]  
  []
 
 
 LaTeX Font Warning: Font shape `T1/xifg/h/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 98.
+(Font)              size <20.74> substituted on input line 147.
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
+Overfull \hbox (80.0pt too wide) in paragraph at lines 147--147
 []$[]$[]  
  []
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
+Overfull \hbox (80.0pt too wide) in paragraph at lines 147--147
 []$[]$[]  
  []
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
+Overfull \hbox (80.0pt too wide) in paragraph at lines 147--147
 []$[]$  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 
-      [1]
+l.147 
+       [1]
 
 LaTeX Font Warning: Font shape `T1/xjgi/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 98.
+(Font)              size <8> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `T1/xjgi/bx/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 98.
+(Font)              size <8> substituted on input line 147.
 
-LaTeX Font Info:    Try loading font information for TS1+xjgi on input line 98.
-
-LaTeX Font Info:    No file TS1xjgi.fd. on input line 98.
+LaTeX Font Info:    Try loading font information for TS1+xjgi on input line 147
+.
+LaTeX Font Info:    No file TS1xjgi.fd. on input line 147.
 
 LaTeX Font Warning: Font shape `TS1/xjgi/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textcopyright' on input line 98.
+(Font)              for symbol `textcopyright' on input line 147.
 
 
 LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 98.
+(Font)              size <8> substituted on input line 147.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1195,15 +1207,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 
-      [2
+l.147 
+       [2
 
 ] (./BP_Curso_TecComp_00_2019.toc
 Package babel Info: Redefining portuges shorthand "|
@@ -1218,263 +1230,328 @@ Package babel Info: Redefining portuges shorthand "|
 \openout4 = `BP_Curso_TecComp_00_2019.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 105.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 105.
+(babel)             in language  on input line 154.
  [4]
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 165.
 [1
 
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c01_2019.aux'.
-
- (./BP_Curso_TecComp_00_c01_2019.tex
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-
-Overfull \hbox (8.37817pt too wide) in paragraph at lines 7--8
-[]\T1/xifg/h/n/12 https://stackoverflow.com/questions/11103189/how-to-find-out-
-which-package- 
+(babel)             in language  on input line 169.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 171.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (305.9147pt too wide) in paragraph at lines 171--172
+[][]$\T1/pcr/m/n/12 https : / / stackoverflow . com / questions / 11103189 / ho
+w-[]to-[]find-[]out-[]which-[]package-[]version-[]is-[]loaded-[]in-[]r$[]  
  []
 
 
-Overfull \hbox (12.22856pt too wide) in paragraph at lines 9--10
-[]\T1/xifg/h/n/12 https://www.r-bloggers.com/list-of-user-installed-r-packages-
-and-their-versions/  
+Overfull \hbox (183.01476pt too wide) in paragraph at lines 173--174
+[][]$\T1/pcr/m/n/12 https : / / www . r-[]bloggers . com / list-[]of-[]user-[]i
+nstalled-[]r-[]packages-[]and-[]their-[]versions/$[]  
+ []
+
+
+Overfull \hbox (138.31477pt too wide) in paragraph at lines 175--176
+[][]$\T1/pcr/m/n/12 https : / / community . rstudio . com / t / reinstalling-[]
+packages-[]on-[]new-[]version-[]of-[]r / 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 177.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 179.
 
-Overfull \hbox (41.13947pt too wide) in paragraph at lines 17--18
-[]\T1/xifg/h/n/12 https://a-little-book-of-r-for-bioinformatics.readthedocs.io/
-en/latest/src/installr.html  
+Overfull \hbox (23.11482pt too wide) in paragraph at lines 181--182
+[][]$\T1/pcr/m/n/12 https : / / a-[]little-[]book-[]of-[]r-[]for-[]bioinformati
+cs . readthedocs . 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 200.
 [2
 
-
 ]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
-
-Overfull \hbox (19.53787pt too wide) in paragraph at lines 62--63
-[]\T1/xifg/h/n/12 https://stackoverflow.com/questions/23135703/package-install-
-error-compilation- 
+Overfull \hbox (42.71481pt too wide) in paragraph at lines 200--201
+[][]$\T1/pcr/m/n/12 https : / / www . datacamp . com / community / tutorials / 
+r-[]packages-[]guide$[]  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
-)
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 118.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 118.
- [3]
-\openout2 = `BP_Curso_TecComp_00_c02_2019.aux'.
+(babel)             in language  on input line 206.
 
- (./BP_Curso_TecComp_00_c02_2019.tex
+Overfull \hbox (6.21483pt too wide) in paragraph at lines 208--209
+[][]$\T1/pcr/m/n/12 https : / / blog . revolutionanalytics . com / 2017 / 01 / 
+cran-[]10000 . 
+ []
+
+
+Overfull \hbox (27.81482pt too wide) in paragraph at lines 210--211
+[][]$\T1/pcr/m/n/12 https : / / cran . r-[]project . org / web / packages / ava
+ilable _ packages _ 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 214.
+
+Overfull \hbox (88.9148pt too wide) in paragraph at lines 218--219
+[][]$\T1/pcr/m/n/12 https : / / www . r-[]bloggers . com / how-[]to-[]install-[
+]and-[]include-[]an-[]r-[]package/$[]  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 223.
+
+Overfull \hbox (216.51474pt too wide) in paragraph at lines 225--226
+[][]$\T1/pcr/m/n/12 https : / / stackoverflow . com / questions / 23135703 / pa
+ckage-[]install-[]error-[]compilation-[]failed$[]  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 232.
+
+Overfull \hbox (204.11475pt too wide) in paragraph at lines 236--237
+[][]$\T1/pcr/m/n/12 https : / / www . dummies . com / programming / r / how-[]t
+o-[]install-[]load-[]and-[]unload-[]packages-[]in-[]r/$[]  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
+[3]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 244.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 246.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 260.
+
+Overfull \hbox (73.0148pt too wide) in paragraph at lines 272--273
+[][]$\T1/pcr/m/n/12 https : / / datacarpentry . org / R-[]ecology-[]lesson / 02
+-[]starting-[]with-[]data . 
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 274.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 274.
+[4
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 276.
+
+Overfull \hbox (93.61479pt too wide) in paragraph at lines 278--279
+[][]$\T1/pcr/m/n/12 https : / / www . datacamp . com / community / tutorials / 
+r-[]data-[]import-[]tutorial ? 
+ []
+
+
+Overfull \hbox (12.91483pt too wide) in paragraph at lines 278--279
+\T1/pcr/m/n/12 matchtype = b & utm _ network = g & utm _ adpostion = 1t1 & utm 
+_ creative = 
+ []
+
+
+Overfull \hbox (35.01482pt too wide) in paragraph at lines 278--279
+\T1/pcr/m/n/12 332602034364 & utm _ targetid = dsa-[]473406573035 & utm _ loc _
+ interest _ 
+ []
+
+
+Overfull \hbox (228.91473pt too wide) in paragraph at lines 278--279
+\T1/pcr/m/n/12 ms = &utm _ loc _ physical _ ms = 1001610 & gclid = Cj0KCQiA5NPj
+BRDDARIsAM9X1GLkgYWekNMkjHQnsTnRAzV7 _ 
+ []
+
+
+Overfull \hbox (86.4148pt too wide) in paragraph at lines 286--287
+[][]$\T1/pcr/m/n/12 https : / / riptutorial . com / r / example / 31447 / impor
+ting-[]fixed-[]width-[]files$[]  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 289.
 
 LaTeX Font Warning: Font shape `T1/xifg/bx/it' undefined
-(Font)              using `T1/xifg/bx/n' instead on input line 14.
+(Font)              using `T1/xifg/bx/n' instead on input line 289.
+
+
+Overfull \hbox (154.21477pt too wide) in paragraph at lines 291--292
+[][]$\T1/pcr/m/n/12 https : / / www . r-[]bloggers . com / accessing-[]apis-[]f
+rom-[]r-[]and-[]a-[]little-[]r-[]programming/$[]  
+ []
+
+
+Overfull \hbox (13.41483pt too wide) in paragraph at lines 297--298
+[][]$\T1/pcr/m/n/12 https : / / www . earthdatascience . org / courses / earth-
+[]analytics / 
+ []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 16.
-)
+(babel)             in language  on input line 301.
+
+Overfull \hbox (5.71483pt too wide) in paragraph at lines 303--304
+[][]$\T1/pcr/m/n/12 http : / / dept . stat . lsa . umich . edu / ~jerrick / cou
+rses / stat701 / 
+ []
+
+
+Overfull \hbox (51.41481pt too wide) in paragraph at lines 305--306
+[][]$\T1/pcr/m/n/12 https : / / datacarpentry . org / R-[]ecology-[]lesson / 05
+-[]r-[]and-[]databases . 
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 307.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 120.
- [4
+(babel)             in language  on input line 307.
+[5]
+Overfull \hbox (109.01479pt too wide) in paragraph at lines 311--312
+[][]$\T1/pcr/m/n/12 https : / / www . rstudio . com / resources / webinars / wo
+rking-[]with-[]big-[]data-[]in-[]r/$[]  
+ []
 
-
-
-]
-\openout2 = `BP_Curso_TecComp_00_c03_2019.aux'.
-
- (./BP_Curso_TecComp_00_c03_2019.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 317.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 317.
+[6]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 319.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
-)
+(babel)             in language  on input line 325.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 122.
- [5
-
-
+(babel)             in language  on input line 330.
+[7
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c04_2019.aux'.
-
- (./BP_Curso_TecComp_00_c04_2019.tex
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 332.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 336.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 11.
-)
+(babel)             in language  on input line 340.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 124.
- [6
-
-
+(babel)             in language  on input line 345.
+[8
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c05_2019.aux'.
-
- (./BP_Curso_TecComp_00_c05_2019.tex
 Cap\'{\i }tulo 6.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 347.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 349.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 351.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 353.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 12.
-)
+(babel)             in language  on input line 355.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 126.
- [7
-
-
+(babel)             in language  on input line 358.
+[9
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c06_2019.aux'.
-
- (./BP_Curso_TecComp_00_c06_2019.tex
 Cap\'{\i }tulo 7.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 360.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-)
+(babel)             in language  on input line 362.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 366.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 128.
- [8
-
-
+(babel)             in language  on input line 366.
+[10
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c07_2019.aux'.
-
- (./BP_Curso_TecComp_00_c07_2019.tex
 Cap\'{\i }tulo 8.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 366.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 368.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 370.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 372.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 10.
-)
+(babel)             in language  on input line 374.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 130.
- [9
-
-
+(babel)             in language  on input line 379.
+[11
 
 ]
-\openout2 = `BP_Curso_TecComp_00_c08_2019.aux'.
-
- (./BP_Curso_TecComp_00_c08_2019.tex
 Cap\'{\i }tulo 9.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3.
-)
+(babel)             in language  on input line 379.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 384.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 132.
- [10
-
-
+(babel)             in language  on input line 384.
+[12
 
 ]
 Cap\'{\i }tulo 10.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 384.
 (./BP_Curso_TecComp_00_2019.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [11
-
+ [13
 
 ]
 Package babel Info: Redefining portuges shorthand "|
@@ -1484,22 +1561,18 @@ Package babel Info: Redefining portuges shorthand "|
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 410.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 161.
- [12
+(babel)             in language  on input line 410.
+ [14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
- (./BP_Curso_TecComp_00_2019.aux (./BP_Curso_TecComp_00_c01_2019.aux)
-(./BP_Curso_TecComp_00_c02_2019.aux) (./BP_Curso_TecComp_00_c03_2019.aux)
-(./BP_Curso_TecComp_00_c04_2019.aux) (./BP_Curso_TecComp_00_c05_2019.aux)
-(./BP_Curso_TecComp_00_c06_2019.aux) (./BP_Curso_TecComp_00_c07_2019.aux)
-(./BP_Curso_TecComp_00_c08_2019.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
+ (./BP_Curso_TecComp_00_2019.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
 Package rerunfilecheck Info: File `BP_Curso_TecComp_00_2019.out' has not change
 d.
 (rerunfilecheck)             Checksum: 21A0667C36801523B19DF095C8808095;3480.
@@ -1511,28 +1584,30 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 410.
  ) 
 Here is how much of TeX's memory you used:
- 9919 strings out of 494733
- 143829 string characters out of 6175646
- 341682 words of memory out of 5000000
- 12960 multiletter control sequences out of 15000+600000
- 13974 words of font info for 37 fonts, out of 8000000 for 9000
+ 9982 strings out of 494733
+ 143570 string characters out of 6175646
+ 340560 words of memory out of 5000000
+ 13061 multiletter control sequences out of 15000+600000
+ 14595 words of font info for 39 fonts, out of 8000000 for 9000
  109 hyphenation exceptions out of 8191
- 43i,13n,50p,320b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/
-cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm2074.pfb>
-Output written on BP_Curso_TecComp_00_2019.pdf (18 pages, 525433 bytes).
+ 43i,13n,50p,475b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-s
+uper/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm2074.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr
+8a.pfb>
+Output written on BP_Curso_TecComp_00_2019.pdf (20 pages, 547732 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
+ 66 named destinations out of 1000 (max. 500000)
  387 words of extra memory for PDF output out of 10000 (max. 10000000)
 

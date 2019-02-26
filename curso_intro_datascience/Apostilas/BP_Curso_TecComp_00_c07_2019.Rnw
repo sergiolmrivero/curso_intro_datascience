@@ -1,0 +1,10 @@
+
+\chapter{Aula 7 - Utilizando modelos}
+
+\section{Regressão}
+
+\subsection{Executando a Regressão}
+
+\subsection{Apresentando os resultados da Regressão}
+
+\section{Gerando Dashboards}
