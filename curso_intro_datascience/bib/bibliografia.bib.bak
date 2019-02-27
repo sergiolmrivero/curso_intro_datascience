@@ -65,4 +65,36 @@
   groups    = {ffla},
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@Book{Venables2011,
+  author    = {Venables, W N and Smith, D M},
+  title     = {An Introduction to R},
+  year      = {2011},
+  volume    = {2},
+  publisher = {CRAN - Comprehensive R Archive Network},
+  isbn      = {3900051127},
+  booktitle = {Development},
+  file      = {:/home/rivero/Papers/manuals/R-intro.pdf:pdf},
+}
+
+@WWW{RFoundation2019,
+  editor       = {The R Foundation},
+  title        = {The R Project for Statistical Computing},
+  year         = {2019},
+  date         = {2019-02-27},
+  url          = {https://www.r-project.org/},
+  organization = {The R Project for Statistical Computing},
+  owner        = {rivero},
+  timestamp    = {2019.02.27},
+}
+
+@WWW{Showmeshiny2019,
+  editor    = {Showmeshiny},
+  title     = {Show me Shiny: Gallery of R web apps},
+  year      = {2019},
+  date      = {2019-02-27},
+  url       = {https://www.showmeshiny.com/monetary-policy/},
+  owner     = {rivero},
+  timestamp = {2019.02.27},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}

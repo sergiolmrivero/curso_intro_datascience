@@ -1,54 +1,4 @@
-\documentclass[12pt,a4paper,oneside]{erdc}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
-
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt}
+\documentclass[12pt,a4paper,oneside]{erdc}
 %\documentclass{erdc}
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
@@ -64,8 +14,11 @@
 \usepackage{natbib}
 
 \usepackage{lipsum}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+
+\usepackage{Sweave}
 \begin{document}
+\input{BP_Curso_TecComp_00_2019-concordance}
 
 \frontmatter
 
@@ -153,34 +106,104 @@
 
 \mainmatter
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Chamadas de Bibliotecas e Variaveis Globais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Introdução }
 
-Para que serve o R?
 
-Como se pode utilizar o conjunto de pacotes R para Análise de Dados e BI?
+\chapter*{Introdução}
+\addcontentsline{toc}{section}{Introdução}
 
-Uma configuração adequada para usar ferramentas de BI 
+O R é uma suíte integrada de software que permite a recuperação, o tratamento, e a análise de dados\cite{Venables2011}. Pode se dizer que o R é um ambiente de tratamento de dados que permite ao usuário, além a análise de dados propriamente dita, escrever extensões e ampliar o seu escopo.
+
+R é uma ferramenta de software livre que atende aos critérios da \textit{Free Software Foundation} e tem uma licença \textbf{GNU}\footnote{\url{https://www.gnu.org/}}
+
+Algumas das funcionalidade do R são\cite{Venables2011}:
+\begin{itemize}
+	\item Ferramentas para manuseio e armazenamento de dados
+	\item Um conjunto de operadores que permitem o cálculo numérico e a manipulação de matrizes
+	\item Um enorme conjunto de bibliotecas para análise de dados
+	\item Ferramentas para apresentação gráfica de dados e resultados
+	\item Uma linguagem de programação orientada a objetos e extensível
+	\item A possibilidade de estender a linguagem, suas bibliotecas e funções
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/f-Intro-01-Monetary-Policy}
+	\caption{Exemplo de \textit{Dashboard} de Política monetária usando R \cite{Showmeshiny2019}}
+	\label{fig:f-intro-01}
+\end{figure}
+
+O R tem um conjunto extenso de ferramentas que permitem desde uma análise simples de regressão ou de aglomerados (\textit{cluster}) até apresentações de resultados extraídos de bancos de dados em larga escala com ferramentas de busca \textit{SQL}\footnote{Structured Query Language - \url{https://pt.wikipedia.org/wiki/SQL}} apresentas em páginas web\ref{fig:f-intro-01}.
+
+Neste texto, iremos apresentar um conjunto de ferramentas de uso livre, a sua maioria de código aberto, que permitirão a extração, tratamento, análise e apresentação de dados, tanto para análises estatísticas mais diretas quanto para a tomada de decisões estratégicas de negócios.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Aula 1 - Instalando e Configurando o R e RStudio}
 
 Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a utilizar bibliotecas em R
 
-\section{Checando a Instalação Existente e os Requisitos}l
-
-\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
-
-\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
-
-\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
 
 \section{Instalando o R e RStudio}
 
 \subsection{Instalando o R}
 
-\url{https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html}
+Para instalar o R é preciso acessar o site \url{https://www.r-project.org/}. Os passos estão enumerados a seguir:
 
-\url{https://cran.r-project.org/doc/manuals/R-admin.html}
+Nesta página clicar em \textbf{download R} que acessa a página - \url{https://cran.r-project.org/mirrors.html} - (Figura \ref{fig:f02-01})
+
+
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+	\caption{Nesta página clicar em \textbf{download R}}
+	\label{fig:f02-01}
+\end{figure}
+
+Nesta página você seleciona o espelho que utilizará para baixar o R. Há sites no Brasil ou sítios em nuvem o item 0 - Cloud redirecionará automaticamente para sítios apoiados pelo Rstudio  -  \url{https://cloud.r-project.org/} (Figura \ref{fig:f02-02}) - A diferença entre os prefixos \textit{http} e \textit{https} é que os sites com \textbf{"s"} utilizam encriptação. Muitas vezes é necessário utilizar o \textit{https} em instalações cujos ambientes de TI exigem.
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-02}
+	\caption{Aqui você seleciona o espelho que vai usar para baixar o R}
+	\label{fig:f02-02}
+\end{figure}
+
+Você poderá baixar o R (por exemplo em \url{https://cloud.r-project.org/}) ou em algum dos outros espelhos citados anteriormente, de acordo com seu sistema operacional (Figura \ref{fig:f02-03}) Cada sistema (\textit{Linux}, \textit{MacOSX} ou \textit{Windows} tem uma rotina diferente para instalação. Aqui vamos explicar o sistema operacional mais comum (\textit{Windows}). Para outros sistemas, recomenda-se buscar instruções específicas em fóruns adequados.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-03}
+	\caption{Sítio para baixar o R de acordo com seu sistema operacional}
+	\label{fig:f02-03}
+\end{figure}
+
+
+Finalmente, para instalar o R, você pode executar o arquivo que está no link apresentado na Figura \ref{fig:f02-04}. Você baixará um arquivo \textbf{.exe} e, ao executá-lo, o instalador do \textit{Windows} tornará o programa disponível para uso na sua máquina. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-04}
+	\caption{Página do Download do R}
+	\label{fig:f02-04}
+\end{figure}
+
+
+Você pode conseguir mais informações sobre o R e os detalhes da instalação checando nos \textit{FAQs}\footnote{Frequently Asked Questions} dos sítios que você estiver acessando \url{https://cloud.r-project.org/bin/windows/base/rw-FAQ.html}, ou em \url{https://cran.r-project.org/doc/manuals/R-admin.html}
+
 
 
 \subsection{Instalando o R Studio}
@@ -192,6 +215,17 @@ Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a u
 \url{https://www.rstudio.com/products/rstudio/download/}
 
 \url{http://rprogramming.net/download-and-install-rstudio/}
+
+
+\section{Checando a Instalação Existente e os Requisitos}
+
+
+\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
+
+\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
+
+\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
+
 
 \section{Pacotes no R}
 
@@ -236,6 +270,15 @@ Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a u
 \url{https://www.dummies.com/programming/r/how-to-install-load-and-unload-packages-in-r/}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 \chapter{Aula 2 - Acessando e Utilizando Bases de Dados}
 
@@ -314,6 +357,15 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Aula 3 - Limpando e organizando seus dados}
 
 	\section{O que é uma boa base de dados e que tipos de bases existem?}
@@ -326,6 +378,14 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Aula 4 - Apresentando Resultados}
 
@@ -342,6 +402,14 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \chapter{Aula 5 - Gerando estatísticas dos Dados}
 
 	\section{Estatísticas Descritivas}
@@ -355,6 +423,16 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 		\subsection{Bibliotecas de Gráficos}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Aula 6 - Apresentando Resultados}
 
 	\section{ggplot}
@@ -362,6 +440,13 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 	\section{shiny}
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Aula 7 - Utilizando modelos}
 
@@ -375,13 +460,19 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \chapter{Aula 8 - Encerramento do Curso}
 
 
 
 
 \chapter{Onde aprender mais?}
+\addcontentsline{toc}{section}{Onde aprender mais?}
 
 
 

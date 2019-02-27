@@ -1,3 +1,11 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{Sho19}
+
+\bibitem[Sho19]{Showmeshiny2019}
+Show me shiny: Gallery of r web apps, 2019.
+
+\bibitem[VS11]{Venables2011}
+W~N Venables and D~M Smith.
+\newblock {\em An Introduction to R}, volume~2.
+\newblock CRAN - Comprehensive R Archive Network, 2011.
 
 \end{thebibliography}
