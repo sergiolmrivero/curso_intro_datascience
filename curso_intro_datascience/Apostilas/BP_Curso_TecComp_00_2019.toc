@@ -1,4 +1,4 @@
-\babel@toc {brazil}{}
+\select@language {brazil}
 \contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter*.1}
 \contentsline {section}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{section*.2}
 \contentsline {chapter}{\numberline {1}Aula 1 - Instalando e Configurando o R e RStudio}{3}{chapter.1}
