@@ -111,7 +111,7 @@
 
 <<>>=
 library(knitr)
-library(stargazer)
+#library(stargazer)
 @
 
 
