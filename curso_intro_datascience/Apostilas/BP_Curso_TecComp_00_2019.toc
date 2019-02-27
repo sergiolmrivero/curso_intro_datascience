@@ -1,14 +1,14 @@
-\select@language {brazil}
+\babel@toc {brazil}{}
 \contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter*.1}
 \contentsline {section}{Introdu\IeC {\c c}\IeC {\~a}o}{1}{section*.2}
 \contentsline {chapter}{\numberline {1}Aula 1 - Instalando e Configurando o R e RStudio}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Instalando o R e RStudio}{3}{section.1.1}
 \contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.1.1}Instalando o R}{3}{subsection.1.1.1}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.1.2}Instalando o R Studio}{6}{subsection.1.1.2}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.1.2}Instalando o RStudio}{6}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Checando a Instala\IeC {\c c}\IeC {\~a}o Existente e os Requisitos}{6}{section.1.2}
 \contentsline {section}{\numberline {1.3}Pacotes no R}{6}{section.1.3}
 \contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.1}O conceito de pacote e para que serve}{6}{subsection.1.3.1}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.2}Como sei que pacotes eu preciso?}{6}{subsection.1.3.2}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.2}Como sei que pacotes eu preciso?}{7}{subsection.1.3.2}
 \contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.3}Baixando os pacotes}{7}{subsection.1.3.3}
 \contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.4}Resolvendo problemas de compila\IeC {\c c}\IeC {\~a}o}{7}{subsection.1.3.4}
 \contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {1.3.5}Utilizando os pacotes no seu programa R}{7}{subsection.1.3.5}
