@@ -1,0 +1,19 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+\chapter{Aula 7 - Utilizando modelos}
+
+	\section{Regressão}
+	
+		\subsection{Executando a Regressão}
+		
+		\subsection{Apresentando os resultados da Regressão}
+	
+	\section{Gerando Dashboards}

@@ -1,0 +1,16 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+
+\chapter{Aula 6 - Apresentando Resultados}
+
+	\section{ggplot}
+
+	\section{shiny}

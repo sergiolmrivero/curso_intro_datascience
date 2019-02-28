@@ -1,0 +1,25 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+
+\chapter{Aula 4 - Apresentando Resultados}
+
+	\section{Rmarkdown - Preparando o relatório enquanto você analisa os dados}
+	
+	\section{Gerando dados sintetizados - Utilizando dataframes}
+	
+	\section{Gerando Tabelas}
+	
+		\subsection{xtable}
+		
+		\subsection{stargazer}
+
+
+

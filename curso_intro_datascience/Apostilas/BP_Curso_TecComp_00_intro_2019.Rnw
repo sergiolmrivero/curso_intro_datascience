@@ -1,0 +1,37 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+\chapter*{Introdução}
+
+O R é uma suíte integrada de software que permite a recuperação, o tratamento, e a análise de dados\cite{Venables2011}. Pode se dizer que o R é um ambiente de tratamento de dados que permite ao usuário, além a análise de dados propriamente dita, escrever extensões e ampliar o seu escopo.
+
+R é uma ferramenta de software livre que atende aos critérios da \textit{Free Software Foundation} e tem uma licença \textbf{GNU}\footnote{\url{https://www.gnu.org/}}
+
+Algumas das funcionalidade do R são\cite{Venables2011}:
+\begin{itemize}
+	\item Ferramentas para manuseio e armazenamento de dados
+	\item Um conjunto de operadores que permitem o cálculo numérico e a manipulação de matrizes
+	\item Um enorme conjunto de bibliotecas para análise de dados
+	\item Ferramentas para apresentação gráfica de dados e resultados
+	\item Uma linguagem de programação orientada a objetos e extensível
+	\item A possibilidade de estender a linguagem, suas bibliotecas e funções
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/f-Intro-01-Monetary-Policy}
+	\caption{Exemplo de \textit{Dashboard} de Política monetária usando R \cite{Showmeshiny2019}}
+	\label{fig:f-intro-01}
+\end{figure}
+
+O R tem um conjunto extenso de ferramentas que permitem desde uma análise simples de regressão ou de aglomerados (\textit{cluster}) até apresentações de resultados extraídos de bancos de dados em larga escala com ferramentas de busca \textit{SQL}\footnote{Structured Query Language - \url{https://pt.wikipedia.org/wiki/SQL}} apresentas em páginas web\ref{fig:f-intro-01}.
+
+Neste texto, iremos apresentar um conjunto de ferramentas de uso livre, a sua maioria de código aberto, que permitirão a extração, tratamento, análise e apresentação de dados, tanto para análises estatísticas mais diretas quanto para a tomada de decisões estratégicas de negócios.
+

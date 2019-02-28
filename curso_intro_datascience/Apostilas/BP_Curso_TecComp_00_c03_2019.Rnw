@@ -1,0 +1,19 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+\chapter{Aula 3 - Limpando e organizando seus dados}
+
+	\section{O que é uma boa base de dados e que tipos de bases existem?}
+	
+	\section{dplyr}
+	
+	\section{tidyr}
+	
+	\section{tidyverse}
