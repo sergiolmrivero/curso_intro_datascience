@@ -80,26 +80,47 @@ O RStudio é um ambiente de desenvolvimento integrado para o R. Incorpora um con
 	\label{fig:f01-05}
 \end{figure}
 
-A figura \ref{fig:f01-05} apresenta a página inicial do site do \textbf{Rstudio}. Para ter acesso ao download é preciso clicar na opção \textbf{Rstudio Desktop}.
+Para iniciar o download da plataforma Rstudio é preciso acessar o site (\url{https://www.rstudio.com/}). Na parte superior há a aba \textbf{Products} que dará acesso ao item \textbf{Rstudio} como pode ser visto na figura \ref{fig:f01-05}. 
 
-\begin{figure}[htpb]
+Após clicar no item \textbf{Rstudio} na aba \textbf{Products}, você será redirecionado para a página da figura \ref{fig:f01-06}. Nesta etapa é preciso clicar na opção \textbf{Rstudio Desktop}.
+
+\newpage
+
+\begin{figure}[htpb!]
 	\centering
 	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-06}
-	\caption{Aba de download do Rstudio}
+	\caption{Aba de produtos do Rstudio}
 	\label{fig:f01-06}
 \end{figure}
 
-\textbf{CONTINUAR DAQUI}
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-07}
+	\caption{Diferença entre planos}
+	\label{fig:f01-07}
+\end{figure}
 
+Após clicar em \textbf{Rstudio Desktop} na figura \ref{fig:f01-06}, será possível ter acesso a figura \ref{fig:f01-07} que mostra algumas das principais diferenças entre a plataforma de código aberto e a plataforma de licença comercial. Ainda na figura \ref{fig:f01-07}, para continuar o processo de download, é preciso clicar na aba \textbf{DOWNLOAD RSTUDIO DESKTOP}. 
 
-\url{https://www.rstudio.com/products/rstudio/}
+Após os procedimentos da figura \ref{fig:f01-07}, você terá acesso a interface da figura \ref{fig:f01-08} que mostrará cada plano oferecido pelo \textbf{Rstudio}, bem como os benefícios e preços. O plano utilizado nesse curso será o primeiro da esquerda para direita, intulado \textbf{RStudio Desktop Open Source License}. Então para ter acesso ao download desse plano, basta clicar na respectiva aba de \textbf{download} do plano.
 
-\url{http://web.cs.ucla.edu/~gulzar/rstudio/}
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-08}
+	\caption{Planos, preços e benefícios}
+	\label{fig:f01-08}
+\end{figure}
 
-\url{https://www.rstudio.com/products/rstudio/download/}
+Por fim, após os passos da figura \ref{fig:f01-08}, basta escolher o sistema operacional conforme a figura \ref{fig:f01-09}
 
-\url{http://rprogramming.net/download-and-install-rstudio/}
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-09}
+	\caption{Fim! Escolha o sistema operacional}
+	\label{fig:f01-09}
+\end{figure}
 
+Após o download basta executar o arquivo \textbf{RStudio-1.1.463.exe} e fazer a instalação padrão.
 
 \section{Checando a Instalação Existente e os Requisitos}
 
