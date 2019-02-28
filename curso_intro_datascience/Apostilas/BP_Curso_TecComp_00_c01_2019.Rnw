@@ -20,7 +20,7 @@ Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a u
 
 Para instalar o R é preciso acessar o site \url{https://www.r-project.org/}. Os passos estão enumerados a seguir:
 
-Nesta página clicar em \textbf{download R} que acessa a página - \url{https://cran.r-project.org/mirrors.html} - (Figura \ref{fig:f02-01})
+Nesta página clicar em \textbf{download R} que acessa a página - \url{https://cran.r-project.org/mirrors.html} - (Figura \ref{fig:f01-01})
 
 
 
@@ -28,40 +28,40 @@ Nesta página clicar em \textbf{download R} que acessa a página - \url{https://
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-01}
 	\caption{Nesta página clicar em \textbf{download R}}
-	\label{fig:f02-01}
+	\label{fig:f01-01}
 \end{figure}
 
-Nesta página você seleciona o espelho que utilizará para baixar o R. Há sites no Brasil ou sítios em nuvem o item 0 - Cloud redirecionará automaticamente para sítios apoiados pelo Rstudio  -  \url{https://cloud.r-project.org/} (Figura \ref{fig:f02-02}) - A diferença entre os prefixos \textit{http} e \textit{https} é que os sites com \textbf{"s"} utilizam encriptação. Muitas vezes é necessário utilizar o \textit{https} em instalações cujos ambientes de TI exigem.
+Nesta página você seleciona o espelho que utilizará para baixar o R. Há sites no Brasil ou sítios em nuvem o item 0 - Cloud redirecionará automaticamente para sítios apoiados pelo Rstudio  -  \url{https://cloud.r-project.org/} (Figura \ref{fig:f01-02}) - A diferença entre os prefixos \textit{http} e \textit{https} é que os sites com \textbf{"s"} utilizam encriptação. Muitas vezes é necessário utilizar o \textit{https} em instalações cujos ambientes de TI exigem.
 
 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-02}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-02}
 	\caption{Aqui você seleciona o espelho que vai usar para baixar o R}
-	\label{fig:f02-02}
+	\label{fig:f01-02}
 \end{figure}
 
-Você poderá baixar o R (por exemplo em \url{https://cloud.r-project.org/}) ou em algum dos outros espelhos citados anteriormente, de acordo com seu sistema operacional (Figura \ref{fig:f02-03}) Cada sistema (\textit{Linux}, \textit{MacOSX} ou \textit{Windows} tem uma rotina diferente para instalação. Aqui vamos explicar o sistema operacional mais comum (\textit{Windows}). Para outros sistemas, recomenda-se buscar instruções específicas em fóruns adequados.
+Você poderá baixar o R (por exemplo em \url{https://cloud.r-project.org/}) ou em algum dos outros espelhos citados anteriormente, de acordo com seu sistema operacional (Figura \ref{fig:f01-03}) Cada sistema (\textit{Linux}, \textit{MacOSX} ou \textit{Windows} tem uma rotina diferente para instalação. Aqui vamos explicar o sistema operacional mais comum (\textit{Windows}). Para outros sistemas, recomenda-se buscar instruções específicas em fóruns adequados.
 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-03}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-03}
 	\caption{Sítio para baixar o R de acordo com seu sistema operacional}
-	\label{fig:f02-03}
+	\label{fig:f01-03}
 \end{figure}
 
 
-Finalmente, para instalar o R, você pode executar o arquivo que está no link apresentado na Figura \ref{fig:f02-04}. Você baixará um arquivo \textbf{.exe} e, ao executá-lo, o instalador do \textit{Windows} tornará o programa disponível para uso na sua máquina. 
+Finalmente, para instalar o R, você pode executar o arquivo que está no link apresentado na Figura \ref{fig:f01-04}. Você baixará um arquivo \textbf{.exe} e, ao executá-lo, o instalador do \textit{Windows} tornará o programa disponível para uso na sua máquina. 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-04}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-04}
 	\caption{Página do Download do R}
-	\label{fig:f02-04}
+	\label{fig:f01-04}
 \end{figure}
 
 
