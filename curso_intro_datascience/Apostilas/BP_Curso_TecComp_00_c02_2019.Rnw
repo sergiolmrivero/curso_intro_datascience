@@ -17,6 +17,39 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 \section{Tipos de Dados em R}
 
+Os tipos de dados do R incluem: dados escalares, vetores, matrizes, listas e quadro de dados.
+
+\subsection{Vetores}
+O vetor é um objeto matemático caracterizado em um conjunto de segmentos orientdos de reta que possuem o mesmo módulo, direção e sentido. Ele contêm elementos de classes diferentes, conforme apresentado abaixo:
+
+
+Vetor de classe numérica:
+<<echo=TRUE>>=
+a <- c(1,3500,5.3,543,-2,4000)
+@
+Vetor de classe de caractér:
+<<echo=TRUE>>=
+b <- c("taxa de juros","taxa de câmbio","reservas bancárias") 
+@
+Vetor de classe lógica:
+<<echo=TRUE>>=
+c <- c(FALSE,TRUE,FALSE,TRUE) 
+@
+\subsection{Matrizes}
+São compostas por linhas (valores ordenados na horizontal) representadas pela letra "m" e colunas (valores ordenados na vertical) representadas pela letra "n", onde os dados são convertidos segundo essas disposições.
+<<echo=TRUE>>=
+matriz <- matrix(data=1:16,nrow=4,ncol=4)
+matriz
+@
+Onde:
+       \begin{description}
+       \item [data:] parâmetro que representa os dados usados para criar matriz;
+       \item [nrow:] parâmetro para número de linhas;
+       \item [ncol:] parâmetro para número de colunas.
+       \end{description}
+
+
+
 \url{https://www.statmethods.net/input/datatypes.html}
 
 \url{https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/}
