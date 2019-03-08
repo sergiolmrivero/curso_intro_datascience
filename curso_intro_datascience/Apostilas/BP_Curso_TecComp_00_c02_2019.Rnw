@@ -19,6 +19,17 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 Os tipos de dados do R incluem: dados escalares, vetores, matrizes, listas e quadro de dados.
 
+\subsection{Escalares}
+Determinada variável pode ser um escalar, ou seja, simplesmente um número:
+
+Exemplo de escalares:
+<<echo=TRUE>>=
+a <- 2
+b <- 2*a
+a
+b
+@
+
 \subsection{Vetores}
 O vetor é um objeto matemático caracterizado em um conjunto de segmentos orientdos de reta que possuem o mesmo módulo, direção e sentido. Ele contêm elementos de classes diferentes, conforme apresentado abaixo:
 
@@ -48,7 +59,20 @@ Onde:
        \item [ncol:] parâmetro para número de colunas.
        \end{description}
 
+\subsection{Array}
 
+O dado pode ser um \textbf{Array}. Essa estrutura de dados possui três dimensões, as linhas, as colunas e as camadas. 
+
+Exemplo de Array:
+<<echo=true>>=
+cubo <- array(data = 1:27, dim=c(3,3,3))
+cubo
+@
+
+       \begin{description}
+       \item [data:] parâmetro que representa os dados usados para criar matriz;
+       \item [dim:] parâmetro para determinar as dimensões do array, sendo \textbf{dim} um vetor;
+       \end{description}
 
 \url{https://www.statmethods.net/input/datatypes.html}
 
@@ -63,6 +87,38 @@ Onde:
 \url{https://stat.ethz.ch/R-manual/R-devel/library/base/html/typeof.html}
 
 \section{Dataframes}
+
+Data frame é uma formatação de tabela presente no R que comporta duas dimensões. A primeira dimensão compreende as linhas(Observações) e a segunda dimensão compreende as colunas(variáveis). 
+
+Vetor dos meses:
+<<echo=true>>=
+DATA <- c("ago/2018", "set/2018", "out/2018", 
+          "nov/2018", "dez/2018", "jan/2019")
+DATA
+@
+
+Vetor do IPCA para os respectivos meses do vetor DATA:
+<<echo=true>>=
+IPCA <- c(-0.09, 0.48, 0.45, -0.21, 0.15, 0.32)
+IPCA
+@
+
+Vetor do Pib mensal em milhões(R\$) para os respectivos meses do vetor DATA:
+<<echo=true>>=
+PIBmensalMilhoes <- c(583011.3, 551215.6, 597218.7,
+                      604073.9, 624464.1, 591715.7)
+PIBmensalMilhoes
+@
+
+\newpage
+
+Unimos os três vetores criados anteriormente em uma única estrutura de dados e conseguinte transformamos essa estrutura em um dataframe por meio dos comandos a baixo:
+<<echo=true>>=
+Dados <- data.frame(cbind(DATA, IPCA, PIBmensalMilhoes))
+Dados
+@
+
+
 
 \url{https://www.tutorialspoint.com/r/r_data_frames.htm}
 
