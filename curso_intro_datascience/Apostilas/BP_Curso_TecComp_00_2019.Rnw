@@ -66,9 +66,9 @@
 
 %\additionalinfo{Supersedes ERDC/CREL AF-01-23}
 
-\begin{abstract}
-  \lipsum[12-13]
-\end{abstract}
+%\begin{abstract}
+%  \lipsum[12-13]
+%\end{abstract}
 
 \disclaimer{
 	

@@ -11,4 +11,5 @@
 \chapter{Aula 8 - Encerramento do Curso}
 
 
-Aqui colocamos as coisas que precisa lembrar e algumas ideias sobre o que pode fazer
+Aqui colocamos as coisas que precisa lembrar e algumas idéias sobre o que pode fazer
+

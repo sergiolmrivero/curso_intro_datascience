@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
-\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+\SweaveOpts{concordance=TRUE, echo=TRUE, eval=TRUE}
 
 \chapter{Aula 1 - Instalando e Configurando o R e RStudio}
 
@@ -124,39 +124,132 @@ Após o download basta executar o arquivo \textbf{RStudio-1.1.463.exe} e fazer a
 
 \section{Checando a Instalação Existente e os Requisitos}
 
+Muitas vezes é possível que você já tenha uma versão do R e do RStudio instaladas. Um problema que pode ocorrer é você não ter a última versão do programa. Caso você já tenha o r instalado, é uma boa estratégia atualizar os pacotes para a nova versão (falaremos de pacotes na seção \ref{sec:Pacotes}).
 
-\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
+Para checar a instalação do R você pode executar o seguinte comando:
 
-\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
+<<echo=T >>=
+sessionInfo()
 
-\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
+@
+
+
+O comando dará as informações da versão, plataforma, Bibliotecas, e Locales\footnote{Os \textit{Locales} dão detalhes sobre a codificação de caracteres, data, moeda, etc...}
+
+
 
 
 \section{Pacotes no R}
+\label{sec:Pacotes}
+
+A maior parte da funcionalidade existente no R é fornecida pro programas, funções e bibliotecas agrupadas em pacotes. Estes pacotes são, em boa parte, resultado do esforço colaborativo de milhares de pesquisadores e entusiastas no mundo. Estes pesquisadores desenvolvem e compartilham estes pacotes na CRAN \footnote{The Comprehensive R Archive Network \\ \url{https://cran.r-project.org/web/packages/index.html}}. Lá você pode encontrar, entre os mais de 13 mil pacotes existentes, aquilo que  provavelmente vai resolver seu problema.
 
 \subsection{O conceito de pacote e para que serve}
 
-\url{https://www.datacamp.com/community/tutorials/r-packages-guide}
+Um pacote em R é um conjunto de funções e arquivos de dados (\textit{Datasets}), desenvolvido pela comunidade do R e que amplia o conjunto de funcionalidades do software. Pacotes executam funções específicas (como determinados tipos de funções estatísticas) ou mesmo todo um conjunto de funcionalidades para tarefas mais gerais, como produção de gráficos (ggplot2) ou tratamento de dados (dplyr e tidyr).\footnote{
+\url{https://www.datacamp.com/community/tutorials/r-packages-guide}\\
+\url{https://www.rstudio.com/products/rpackages/}}
 
-\url{https://www.rstudio.com/products/rpackages/}
+uma boa introdução sobre desenvolvimento, estrutura, e implementação de pacotes em R pode ser encontrada em \url{http://r-pkgs.had.co.nz/}.
 
-\url{http://r-pkgs.had.co.nz/}
 
 \subsection{Como sei que pacotes eu preciso?}
 
-\url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+Há uma profusão enorme de pacotes no R. Em geral há um padrão de documentação nos pacotes que permitem ao usuário compreender a finalidade e a forma de uso do pacote. Alguns pacotes mais difundidos, como o \textit{ggplot2} e o \textit{xtable}. Coisas mais específicas, porém, como algoritmos genéticos (\textit{ga}, \textit{genalg}) ou escores de propensão (\textit{MatchIt}) precisam ser encontradas a partir do domínio específico que se precisa.
 
-\url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+Uma boa pedida é usar numa ferramenta de busca específica com termos como \textit{a função que eu quero} em R. (A busca em inglês é bem mais eficiente e dera mais resultados).
 
-\url{https://cran.r-project.org/web/packages/}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-10.png}
+	\caption{Página dos Pacotes Mantidos por pessoas que contribuem com o R (CRAN)}
+	\label{fig:bpcursoteccomp002019f01-10}
+\end{figure}
+
+
+Mais informações podem ser encontradas abaixo:
+\begin{itemize}
+	\item \url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+	
+	\item \url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+	
+	\item \url{https://cran.r-project.org/web/packages/}
+	
+\end{itemize}
+
+
+Além do \textit{CRAN}\footnote{\url{https://cran.r-project.org/}}, uma outra fonte importante para programas no R é o \textit{GitHub}\footnote{\url{https://github.com/}}. Para utilizar o \textit{GitHub}, porém, é necessário baixar o pacote \textit{devtools}. Na seção \ref{section:baixandoPacotes}, falaremos mais sobre baixar e instalar pacotes no R.
+
+
 
 \subsection{Baixando os pacotes}
+\label{section:baixandoPacotes}
 
-\url{https://www.r-bloggers.com/installing-r-packages/}
+O R provê uma maneira de baixar os pacotes diretamente do terminal de linha de comando. É o comando \textit{install.packages}. Abaixo, um exemplo:
 
-\url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+<<echo=T, results=verbatim, eval=FALSE>>=
+install.packages("ggplot2")
 
-\url{http://kbroman.org/pkg_primer/pages/build.html}
+library(ggplot2)
+@
+
+\
+Acima está o exemplo de instalação do pacote \textit{ggplot2} utilizando o R na linha de comando. O mesmo pacote, instalado via RStudio está no exemplo abaixo (figura \ref{fig:bpcursoteccomp002019f01-11}) 
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-11.png}
+	\caption{Instalando o pacote ggplot2 via Rstudio}
+	\label{fig:bpcursoteccomp002019f01-11}
+\end{figure}
+
+Para utilizar o pacote é necessário disponibilizá-lo na seção do R que você está executando. Isto é feito com o comando \textit{library(nomeDoPacote)}.
+
+
+Para o \textit{GitHub}, algum pacote específico para acessar o site deve ser instalado, o mais comum é o \textit{devtools()}. Utilizando o \textit{devtools} é possivel acessar pacotes que não estão no CRAN. 
+
+Você pode encontrar mais informações sobre o assunto em:
+
+\begin{itemize}
+	\item \url{https://www.r-bloggers.com/installing-r-packages/}
+	
+	\item \url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+	
+	\item \url{http://kbroman.org/pkg_primer/pages/build.html}
+	
+\end{itemize}
+
+
+Para a instalação de pacotes a partir do \textit{GitHub} você pode utilizar o pacote devtools. Há outros pacotes disponíveis, mas o \textit{devtools} é o mais utilizado no momento.
+
+<<eval=F, echo=T>>=
+install.packages("devtools")
+
+library(devtools)
+@
+
+Depois de instalar a biblioteca é possível fazer uso do pacotes R disponíveis no \textit{GitHub}. Depois do pacote instalado e a biblioteca ativada no R, você pode baixar os pacotes do github com os seguintes comandos.
+
+<<eval=F, echo=T>>=
+install_github("DeveloperName/PackageName")
+
+githubinstall("PackageName")
+@
+
+O primeiro \textit{install\_github()} instala o pacote a partir do nome do usuário github, mais o nome do pacote, o segundo \textit{githubinstall()} o faz a partir do nome do pacote.
+
+Há alguns pacotes que estão no \textit{GitHub} e no \textbf{CRAN}, a diferença é que, em geral, no \textit{GitHub} a verão acessível é a mais recente ou  de desenvolvimento. A desvantagem é que os pacotes do \textit{GitHub}, como são versões de desenvolvimento, podem, eventualmente ter problemas.
+
+Algumas boas fontes de pacotes do \textit{GitHub} são:
+
+\begin{itemize}
+	\item \url{https://github.com/trending/r}
+	\item \url{https://github.com/hadley}
+\end{itemize}
+
 
 
 \subsection{Resolvendo problemas de compilação}
