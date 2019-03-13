@@ -1,0 +1,181 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% !Rnw root = BP_Curso_TecComp_00_2019.Rnw
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+\chapter{Aula 1 - Instalando e Configurando o R e RStudio}
+
+
+Nesta aula os alunos aprenderÃ£o a baixar o R e RStudio bem como aprenderÃ£o a utilizar bibliotecas em R
+
+
+\section{Instalando o R e RStudio}
+
+\subsection{Instalando o R}
+
+Para instalar o R Ã© preciso acessar o site \url{https://www.r-project.org/}. Os passos estÃ£o enumerados a seguir:
+
+Nesta pÃ¡gina clicar em \textbf{download R} que acessa a pÃ¡gina - \url{https://cran.r-project.org/mirrors.html} - (Figura \ref{fig:f01-01})
+
+
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-01}
+	\caption{Nesta pÃ¡gina clicar em \textbf{download R}}
+	\label{fig:f01-01}
+\end{figure}
+
+Nesta pÃ¡gina vocÃª seleciona o espelho que utilizarÃ¡ para baixar o R. HÃ¡ sites no Brasil ou sÃ­tios em nuvem o item 0 - Cloud redirecionarÃ¡ automaticamente para sÃ­tios apoiados pelo Rstudio  -  \url{https://cloud.r-project.org/} (Figura \ref{fig:f01-02}) - A diferenÃ§a entre os prefixos \textit{http} e \textit{https} Ã© que os sites com \textbf{"s"} utilizam encriptaÃ§Ã£o. Muitas vezes Ã© necessÃ¡rio utilizar o \textit{https} em instalaÃ§Ãµes cujos ambientes de TI exigem.
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-02}
+	\caption{Aqui vocÃª seleciona o espelho que vai usar para baixar o R}
+	\label{fig:f01-02}
+\end{figure}
+
+VocÃª poderÃ¡ baixar o R (por exemplo em \url{https://cloud.r-project.org/}) ou em algum dos outros espelhos citados anteriormente, de acordo com seu sistema operacional (Figura \ref{fig:f01-03}) Cada sistema (\textit{Linux}, \textit{MacOSX} ou \textit{Windows} tem uma rotina diferente para instalaÃ§Ã£o. Aqui vamos explicar o sistema operacional mais comum (\textit{Windows}). Para outros sistemas, recomenda-se buscar instruÃ§Ãµes especÃ­ficas em fÃ³runs adequados.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-03}
+	\caption{SÃ­tio para baixar o R de acordo com seu sistema operacional}
+	\label{fig:f01-03}
+\end{figure}
+
+
+Finalmente, para instalar o R, vocÃª pode executar o arquivo que estÃ¡ no link apresentado na Figura \ref{fig:f01-04}. VocÃª baixarÃ¡ um arquivo \textbf{.exe} e, ao executÃ¡-lo, o instalador do \textit{Windows} tornarÃ¡ o programa disponÃ­vel para uso na sua mÃ¡quina. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-04}
+	\caption{PÃ¡gina do Download do R}
+	\label{fig:f01-04}
+\end{figure}
+
+
+VocÃª pode conseguir mais informaÃ§Ãµes sobre o R e os detalhes da instalaÃ§Ã£o checando nos \textit{FAQs}\footnote{Frequently Asked Questions} dos sÃ­tios que vocÃª estiver acessando \url{https://cloud.r-project.org/bin/windows/base/rw-FAQ.html}, ou em \url{https://cran.r-project.org/doc/manuals/R-admin.html}
+
+
+
+\subsection{Instalando o RStudio}
+
+O RStudio Ã© um ambiente de desenvolvimento integrado para o R. Incorpora um conjunto de funÃ§Ãµes que facilita o desenvolvimento de programas em R e a sua execuÃ§Ã£o. O RStudio nÃ£o Ã© uma interface grÃ¡fica para a execuÃ§Ã£o de rotinas do R, Ã© um ambiente que permite implementar e executar programas. Ã um pacote comercial com partes de uso livre onde Ã© necessÃ¡rio pagar pelos recursos extras.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-05}
+	\caption{PÃ¡gina inicial do Rstudio}
+	\label{fig:f01-05}
+\end{figure}
+
+Para iniciar o download da plataforma Rstudio Ã© preciso acessar o site (\url{https://www.rstudio.com/}). Na parte superior hÃ¡ a aba \textbf{Products} que darÃ¡ acesso ao item \textbf{Rstudio} como pode ser visto na figura \ref{fig:f01-05}. 
+
+ApÃ³s clicar no item \textbf{Rstudio} na aba \textbf{Products}, vocÃª serÃ¡ redirecionado para a pÃ¡gina da figura \ref{fig:f01-06}. Nesta etapa Ã© preciso clicar na opÃ§Ã£o \textbf{Rstudio Desktop}.
+
+\newpage
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-06}
+	\caption{Aba de produtos do Rstudio}
+	\label{fig:f01-06}
+\end{figure}
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-07}
+	\caption{DiferenÃ§a entre planos}
+	\label{fig:f01-07}
+\end{figure}
+
+ApÃ³s clicar em \textbf{Rstudio Desktop} na figura \ref{fig:f01-06}, serÃ¡ possÃ­vel ter acesso a figura \ref{fig:f01-07} que mostra algumas das principais diferenÃ§as entre a plataforma de cÃ³digo aberto e a plataforma de licenÃ§a comercial. Ainda na figura \ref{fig:f01-07}, para continuar o processo de download, Ã© preciso clicar na aba \textbf{DOWNLOAD RSTUDIO DESKTOP}. 
+
+ApÃ³s os procedimentos da figura \ref{fig:f01-07}, vocÃª terÃ¡ acesso a interface da figura \ref{fig:f01-08} que mostrarÃ¡ cada plano oferecido pelo \textbf{Rstudio}, bem como os benefÃ­cios e preÃ§os. O plano utilizado nesse curso serÃ¡ o primeiro da esquerda para direita, intulado \textbf{RStudio Desktop Open Source License}. EntÃ£o para ter acesso ao download desse plano, basta clicar na respectiva aba de \textbf{download} do plano.
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-08}
+	\caption{Planos, preÃ§os e benefÃ­cios}
+	\label{fig:f01-08}
+\end{figure}
+
+Por fim, apÃ³s os passos da figura \ref{fig:f01-08}, basta escolher o sistema operacional conforme a figura \ref{fig:f01-09}
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-09}
+	\caption{Fim! Escolha o sistema operacional}
+	\label{fig:f01-09}
+\end{figure}
+
+ApÃ³s o download basta executar o arquivo \textbf{RStudio-1.1.463.exe} e fazer a instalaÃ§Ã£o padrÃ£o.
+
+\section{Checando a InstalaÃ§Ã£o Existente e os Requisitos}
+
+
+\url{https://stackoverflow.com/questions/11103189/how-to-find-out-which-package-version-is-loaded-in-r}
+
+\url{https://www.r-bloggers.com/list-of-user-installed-r-packages-and-their-versions/}
+
+\url{https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670}
+
+
+\section{Pacotes no R}
+
+\subsection{O conceito de pacote e para que serve}
+
+\url{https://www.datacamp.com/community/tutorials/r-packages-guide}
+
+\url{https://www.rstudio.com/products/rpackages/}
+
+\url{http://r-pkgs.had.co.nz/}
+
+\subsection{Como sei que pacotes eu preciso?}
+
+\url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+
+\url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+
+\url{https://cran.r-project.org/web/packages/}
+
+\subsection{Baixando os pacotes}
+
+\url{https://www.r-bloggers.com/installing-r-packages/}
+
+\url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+
+\url{http://kbroman.org/pkg_primer/pages/build.html}
+
+
+\subsection{Resolvendo problemas de compilaÃ§Ã£o}
+
+\url{https://stackoverflow.com/questions/23135703/package-install-error-compilation-failed}
+
+\url{https://support.rstudio.com/hc/en-us/community/posts/200522573-Can-t-install-packages}
+
+\url{http://mazamascience.com/WorkingWithData/?p=1185}
+
+
+\subsection{Utilizando os pacotes no seu programa R}
+
+\url{https://www.statmethods.net/interface/packages.html}
+
+\url{https://www.dummies.com/programming/r/how-to-install-load-and-unload-packages-in-r/}
+
+
+
+
+

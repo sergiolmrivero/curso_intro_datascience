@@ -1,0 +1,211 @@
+\documentclass[12pt,a4paper,oneside]{erdc}
+%\documentclass{erdc}
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversÃ£o automÃ¡tica dos acentos)
+%\usepackage{lastpage}			% Usado pela Ficha catalogrÃ¡fica
+\usepackage{indentfirst}		% Indenta o primeiro parÃ¡grafo de cada seÃ§Ã£o.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% InclusÃ£o de grÃ¡ficos
+%\usepackage{microtype} 			% para melhorias de justificaÃ§Ã£o
+\usepackage[brazil]{babel}
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citaÃ§Ãµes na bibl
+%\usepackage[alf]{abntex2cite}	% CitaÃ§Ãµes padrÃ£o ABNT
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\usepackage{lipsum}
+
+
+\begin{document}
+\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+
+\frontmatter
+
+\laboratory{PPGE-UFPA}
+
+\reportnum{BP/EcoS - Curso-DataScience-00-2019}
+
+\program{ConstruÃ§Ã£o de Modelos e Indicadores EconÃ´micos}
+
+\title{IntroduÃ§Ã£o ao Tratamento e AnÃ¡lise de Dados em R}
+
+%\subtitle{Assessments and Report from Socioeconomic and Demographic Data in \\
+%	      Small Cities in Amazon Delta}
+
+\subtitle{ou Data Science para todos!}
+
+\date{\today}
+
+\author{S.~Rivero \and H.~Farias}
+
+\affiliation{Programa de PÃ³s-GraduaÃ§Ã£o em Economia\\
+  Instituto de CiÃªncias Sociais Aplicadas\\
+  Universidade Federal do ParÃ¡\\
+  Rua Augusto Correia, 1\\
+  BelÃ©m, ParÃ¡ - 66.075-200}
+
+\author{Equipe UFPA }
+
+
+\affiliation{Faculdade de Economia \\
+	Instituto de CiÃªncias Sociais Aplicadas\\
+	Universidade Federal do ParÃ¡\\
+	Rua Augusto Correia, 1\\
+	BelÃ©m, ParÃ¡ - 66.075-200}
+
+
+\coverart[width=\linewidth]{../figs/Capa}
+
+\reporttype{Produto: Cursos}
+
+\distribution{Propriedade BANPARÃ e PPGE-UFPA \\ (DistribuiÃ§Ã£o Restrita)}
+
+% \distribution{Distribution authorized to U.S. Government Agencies
+% only; Test and Evaluation; November 2005.  Other requests should be
+% referred to U.S. Army Engineer Research and Development Center}
+
+%\additionalinfo{Supersedes ERDC/CREL AF-01-23}
+
+\begin{abstract}
+  \lipsum[12-13]
+\end{abstract}
+
+\disclaimer{
+	
+	This document is an output from the Â BanparÃ¡ Project 
+	
+	PPGE-UFPA report
+	
+	Distribution Restrictions
+	
+	\copyright 2019, All rights reserved
+	
+	\pagebreak
+	
+	}
+
+\preparedfor{BanparÃ¡} 
+
+\contractnum{FADESP-NO-CONTRATO}
+
+\monitoredby{BanparÃ¡}
+
+%\preparedfor{}
+
+
+
+
+\maketitle
+
+\tableofcontents
+
+
+%\chapter*{Resumo Executivo}
+
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Chamadas de Bibliotecas e Variaveis Globais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<>>=
+library(knitr)
+#library(stargazer)
+@
+
+
+\SweaveInput{BP_Curso_TecComp_00_intro_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_01_c01_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 2
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_01_c02_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 3
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c03_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 4
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c04_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 5
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c05_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 6
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c06_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 7
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c07_2019.Rnw}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    CAPITULO 8
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
+
+\chapter{Onde aprender mais?}
+\addcontentsline{toc}{section}{Onde aprender mais?}
+
+
+
+%\bibliographystyle{unsrt}
+\bibliographystyle{alpha}
+\bibliography{../bib/bibliografia}
+
+%\appendix
+
+%\chapter{Tabelas demogrÃ¡ficas}
+
+%\lipsum[12-16]
+
+%\begin{equation}
+%  \label{eq:C}
+%  \frac{\partial H}{\partial x} = -X
+%\end{equation}
+
+%\chapter{PeCiDAm}
+
+%\lipsum[16-22]
+
+
+
+
+\end{document}
