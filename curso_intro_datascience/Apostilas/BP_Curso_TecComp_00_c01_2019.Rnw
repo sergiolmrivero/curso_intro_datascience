@@ -254,18 +254,73 @@ Algumas boas fontes de pacotes do \textit{GitHub} são:
 
 \subsection{Resolvendo problemas de compilação}
 
-\url{https://stackoverflow.com/questions/23135703/package-install-error-compilation-failed}
+A instalação de pacotes em R é feita usualmente com a função \textit{install.packages()}\footnote{\url{https://www.rdocumentation.org/packages/utils/versions/3.5.3/topics/install.packages}}. Nesta função, informamos uma \textit{cadeia de caracteres} com o nome do pacote que queremos instalar (por exemplo - \textit{install.packages("yaml")}). Há diversos tipos e pacotes em R, muitos destes pacotes podem ter sido escritos em R ou C, C++ ou Fortran. No caso de pacotes escritos em C, C++ e Fortran instalados com o tipo \textit{fonte}, é necessária a compilação deste pacote. O R faz isso automaticamente, não é necessária nenhuma intervenção do usuário. 
 
-\url{https://support.rstudio.com/hc/en-us/community/posts/200522573-Can-t-install-packages}
+Certos pacotes, como \textit{ggplot2} são escritos em R e não necessitam de uma compilação. Pode haver, porém, pacotes que necessitam de bibliotecas do sistema operacional ou programas (como o Java, por exemplo) que não estejam instaladas no seu computador. Neste caso, é necessário instalar a biblioteca utilizando esta função no seu sistema operacional, para depois instalar o pacote no R.
 
-\url{http://mazamascience.com/WorkingWithData/?p=1185}
+Abaixo um caso típico.
+
+
+\begin{verbatim}
+
+> install.packages('fftw')
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'https://cloud.r-project.org/src/contrib/fftw_1.0-5.tar.gz'
+Content type 'application/x-gzip' length 38684 bytes (37 KB)
+==================================================
+downloaded 37 KB
+
+* installing *source* package ‘fftw’ ...
+** package ‘fftw’ successfully unpacked and MD5 sums checked
+checking for gcc... gcc -std=gnu99
+checking whether the C compiler works... yes
+
+...
+etc
+...
+
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for FFTW... configure: error: Package requirements (fftw3) were not met:
+
+No package 'fftw3' found
+
+...
+etc
+...
+
+ERROR: configuration failed for package ‘fftw’
+* removing ‘/usr/local/lib/R/site-library/fftw’
+
+The downloaded source packages are in
+‘/tmp/RtmpT62d7h/downloaded_packages’
+Warning message:
+In install.packages("fftw") :
+installation of package ‘fftw’ had non-zero exit status
+> 
+\end{verbatim}
+
+Neste caso acima, o pacote \textit{fftw}\footnote{\url{https://cran.r-project.org/web/packages/fftw/index.html}}, para utilização de transformadas de Fourier necessita de uma biblioteca (\textit{fftw3})que deve ser instalad no sistema operacional, antes de se instalar o pacote R. Você pode descobrir isto olhando as mensagens da instalação di pacote. Nestas mensagens há a informação de que \textbf{"checking for FFTW... configure: error: Package requirements (fftw3) were not met:"} e a instalação terminou com \textit{status} "não-zero", o que significa erro. Para corrigir o erro será necessário instalar a biblioteca que o sistema informa que está faltando.
+
+Mais informação pode ser encontrada abaixo:
+
+\begin{itemize}
+	\item \url{https://stackoverflow.com/questions/23135703/package-install-error-compilation-failed}
+	
+	\item \url{https://support.rstudio.com/hc/en-us/community/posts/200522573-Can-t-install-packages}
+	
+	\item \url{http://mazamascience.com/WorkingWithData/?p=1185}
+	
+\end{itemize}
+ 
 
 
 \subsection{Utilizando os pacotes no seu programa R}
 
-\url{https://www.statmethods.net/interface/packages.html}
+Para utilizar um pacote em R você necessita simplesmente executar o comando \textit{library(nomeDoPacote)}. 
 
-\url{https://www.dummies.com/programming/r/how-to-install-load-and-unload-packages-in-r/}
+Eventualmente, se você precisar retirar o pacote da memória do seu computador, se não quiser mais utilizá-lo durante a execução daquele programa é só utilizar o comando detach. Ex.: \textit{detach(package:nomeDoPacote)}
 
 
 
