@@ -11,8 +11,65 @@
 \chapter{Aula 3 - Limpando e organizando seus dados}
 
 	\section{O que é uma boa base de dados e que tipos de bases existem?}
+	Boas bases de dados para trabalhar, sobretudo com tidy, são bases que possuem variáveis nas colunas e observações nas linhas. 
+	Podemos identificar tal estrutura na figura \ref{fig:f03-01} a baixo:
 	
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-01}
+	\caption{Ogarnização ideal para base de dados}
+	\label{fig:f03-01}
+\end{figure}
+
+Há três tipos bases de dados principais que comportam a estrutura de variáveis nas colunas e observações nas linhas que são:
+
+\subsection{Série Temporal}
+
+Séries temporais(ou longitudinais) são identificadas como observações ordenadas ao longo do "tempo". Exemplos:
+\begin{itemize}
+\item PIB distribuído anualmente;
+\item Arrecadação mensal de um ou mais Estados;
+\item Taxa de câmbio diária.
+\end{itemize}
+
+Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco Central. Segue o link a baixo:
+
+\url{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-02}
+	\caption{Exemplo de série temporal}
+	\label{fig:f03-02}
+\end{figure}
+
+\subsection{Corte Transversal}
+
+Dados transversais(ou cross-section) são identificados quando não há importância de ordenação das observações, além de representar dados em um único ponto do "tempo". Exemplos:
+
+\begin{itemize}
+\item Arrecadação de ICSM para todos Estados do Brasil para o ano de 2018;
+\item Dados demográficos para todos os municípios do Pará para o ano de 2010.
+\end{itemize}
+
+Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IBGE. Segue o link a baixo:
+
+\url{https://sidra.ibge.gov.br/home}
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=.3\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-03}
+	\caption{Exemplo de corte transversal}
+	\label{fig:f03-03}
+\end{figure}
+
+\subsection{Dados em Painel}
+
+
+
 	\section{dplyr}
+	
+	
 	
 	\section{tidyr}
 	
