@@ -32,7 +32,7 @@ Séries temporais(ou longitudinais) são identificadas como observações ordena
 \item Taxa de câmbio diária.
 \end{itemize}
 
-Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco Central. Segue o link a baixo:
+Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco Central. Segue o link abaixo:
 
 \url{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}
 
@@ -52,7 +52,7 @@ Dados transversais(ou cross-section) são identificados quando não há importâ
 \item Dados demográficos para todos os municípios do Pará para o ano de 2010.
 \end{itemize}
 
-Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IBGE. Segue o link a baixo:
+Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IBGE. Segue o link abaixo:
 
 \url{https://sidra.ibge.gov.br/home}
 
@@ -68,9 +68,82 @@ Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IB
 
 
 	\section{dplyr}
+	Dplyr é um pacote do R que fornece bastante capacidade de manipulação de dados, possuindo um conjunto de funções de remodelagem de dados, filtragem de dados e combinação de dados.
 	
+	Para ter acesso ao dplyr e suas ferramentas, é preciso instalar o pacote.
+	A função de instalação para o dplyr é a seguinte: 
 	
-	
+<<eval=false, echo=TRUE>>=
+install.packages("dplyr")
+@
+  Após a instalação, é preciso "ler" o pacote. Para isso, utiliza-se a seguinte função:
+  
+<<eval=false,echo=true>>=
+library(dplyr)
+@
+
+  Nesta seção utilizaremos a base de dado "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
+  
+<<eval=FALSE,echo=TRUE>>=
+data("starwars")
+@
+  
+  \subsection{Funções de Remodalagem}
+A primeira função apresentada é a função \textbf{arrange}, que consiste em ordenar uma coluna(variável) de forma crescente ou decrescente. As função é escrita da seguinte forma:
+
+<<eval=FALSE, echo=TRUE>>=
+starwars11 <- arrange(starwars, mass) #Para ordenamento crescente
+starwars12 <- arrange(starwars, desc(height)) #Para ordenamento decrescente
+@
+  
+Estão apresentadas a seguir as funções utilizadas para renomear rótulos(nomes) de colunas(variáveis).
+
+<<eval=FALSE, echo=TRUE>>=
+starwars21 <- rename(starwars, nome = name)
+starwars22 <- rename(starwars, altura = height)
+starwars23 <- rename(starwars, massa = mass)
+@
+
+\subsection{Funções de Filtragem}
+A função \textbf{filter} extrai linhas de uma base de dados a partir de um critério lógico. Essa função é bastante útil quando é preciso extrair um conjunto de dados que apresentam determinadas características. Por exemplo quando é preciso criar um novo objeto sem os outliers. A função está descrita abaixo:
+
+<<eval=FALSE,echo=TRUE>>=
+starwars31 <- filter(starwars, mass < 70)
+@
+
+A função \textbf{distinct} remove todas as linhas que se encontram duplicadas na base de dados, permanecendo apenas uma de cada linha duplicada. Utilizamos a função da seguinte forma:
+
+Observação: Para que possamos usar a função \textbf{distinct}, criamos o objeto \emph{starwars32} com as linhas 31 até a 60 duplicadas.
+
+<<eval=false,echo=true>>=
+starwars32 <- rbind(starwars, starwars[31:60,])
+starwars32 <- distinct(starwars32)
+@
+
+A função \textbf{sample\_frac} seleciona aleatoriamente o número de linhas correspondentes a fração determinada na função. O exemplo abaixo seleciona aleatoriamente 40\% das linhas da base de dados.
+
+<<eval=false,echo=true>>=
+starwars41 <- sample_frac(starwars, 0.4, replace = TRUE)
+@
+
+A função \textbf{sample\_n} seleciona um número $N$ de linhas. Onde $N$ é o número de linhas que devem ser extraídas.
+<<eval=false,echo=true>>=
+starwars42 <- sample_n(starwars, 25, replace = TRUE)
+@
+
+A função slice extrai linhas de acordo com as posições das linhas. Para o exemplo abaixo, criamos um novo objeto com as linhas 10 até a linha 50.
+
+<<eval=false, echo=true>>=
+starwars51 <- slice(starwars, 10:50)
+@
+
+A função select seleciona colunas a partir dos rótulos especificados na função.
+
+<<eval=false,echo=true>>=
+starwars61 <- select(starwars, name, height, mass)
+starwars62 <- select(starwars, name, gender, species)
+@
+
 	\section{tidyr}
 	
 	\section{tidyverse}
