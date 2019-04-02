@@ -15,9 +15,93 @@ Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os princ
 
 \section{O ciclo de tratamento e análise de dados}
 
+Atividades que utilizam dados e fazem algum tratamento formal (estatístico, matemático) destes dados são comuns tanto no mundo acadêmico quanto no mundo corporativo. Muitas vezes, os dados correspondem a milhões de observações em diversas bases de dados. Estas bases de dados, muitas vezes têm estruturas complexas e diferentes formas de organização, armazenamento, codificação, mecanismos de busca, etc. Tratar e analisar estes dados exige planejamento, avaliação, organização, o que implica em uma atividade sistemática e no uso de ferramentas adequadas para a tarefa.
+
+Um outro aspecto relevante também é que muitos dados podem ser analisados, usando técnicas, objetivos e/ou perspectivas diferentes. O que significa que os mesmos dados, coletados e tratados, podem ter um reuso para diferentes projetos e análises. Esta possibilidade de reuso torna ainda mais importante o seu tratamento e armazenamento sistematizado. 
+
+Podemos então dizer que os dados tem um \textit{ciclo de vida} e este ciclo pode ser pensado como um conjunto de atividades que vão do planejamento de seu uso até a sua análise. Abaixo, na figura \ref{fig:f02-01}, apresentamos um exemplo de ciclo de vida que pode ser encontrado em  \url{https://www.dataone.org/data-life-cycle}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+	\caption{O Ciclo de Tratamento e Análise de Dados}
+	\label{fig:f02-01}
+\end{figure}
+
+
+Este ciclo de vida tem oito componentes:
+
+
+O ciclo de vida dos dados DataONE possui oito componentes \footnote{\url{https://www.dataone.org/data-life-cycle}}:
+
+\begin{itemize}
+	\item Planejar: descrição dos dados que serão compilados e como os dados serão gerenciados e disponibilizados ao longo de sua vida útil
+	\item Coletar: as observações são feitas manualmente, com sensores ou outros instrumentos ou os dados são adquiridos de instituições que os produzem
+	\item Validar: a qualidade dos dados é assegurada por meio de verificações e checagens
+	\item Descrever: os dados são descritos com precisão e detalhadamente usando os padrões de metadados apropriados
+	\item Preservar: os dados são submetidos a um arquivo de longo prazo apropriado (ou seja, data center)
+	\item Descobrir: dados potencialmente úteis são localizados e obtidos, juntamente com as informações relevantes sobre os dados (metadados)
+	\item Integrar: dados de fontes diferentes são combinados para formar um conjunto homogêneo de dados que podem ser prontamente analisados
+	\item Analisar: os dados são analisados
+	
+\end{itemize}
+
+Algumas atividades de pesquisa podem usar apenas parte do ciclo de vida; por exemplo, um projeto envolvendo metanálise pode se concentrar nas etapas de Descobrir, Integrar e Analisar, enquanto um projeto focado na coleta e análise de dados primários pode ignorar as etapas de Descobrir e Integrar. Além disso, outros projetos podem não seguir o caminho linear descrito aqui, ou várias revoluções do ciclo podem ser necessárias. Além disso, alguns cientistas ou equipes (por exemplo, aqueles envolvidos em modelagem e síntese) podem criar novos dados no processo de descobrir, integrar, analisar e sintetizar os dados existentes.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-02}
+	\caption{Tratamento de Dados Estatísticos}
+	\label{fig:f02-02}
+\end{figure}
+
+Uma outra abordagem para o ciclo de vida, mais focada no tratamento de dados estatísticos para modelagem é a que podemos ter em \url{https://paulvanderlaken.com/2017/07/07/tidyverse-101-simplifying-life-for-users/}. Neste caso, estamos falando de dados já adquiridos e digitalizados de alguma forma. Então a fase de aquisição de dados é feita a partir da importação de dados já coletados. O trabalho de economistas, é, na sua maioria das vezes, feito a partir de dados secundários adquiridos de instituições de pesquisa. Neste caso, esta abordagem (Figura \ref{fig:f02-02}) é mais próxima do ciclo normalmente utilizado em análises de dados secundários.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-03}
+	\caption{Ferramentas de Tratamento de Dados em R}
+	\label{fig:f02-03}
+\end{figure}
+
+Como podemos ver na figura \ref{fig:f02-03}, temos muitos pacotes para cada tipo de tratamento. A lista acima não é exaustiva. Muito provavelmente há mais pacotes que são especializados para a resolução de problemas mais específicos, como o acesso a bases de dados SQL ou a geração de páginas na internet para visualização ou o acesso a arquivos JSON ou YAML. Por isso, é importante sempre avaliar quais os pacotes mais adequados para a solução do seu problema de tratamento de dados.
+
+ O \textit{readr}, por exemplo \footnote{\url{https://cran.r-project.org/web/packages/readr/index.html}} é um pacote genérico para dados em formato matricial (\textit{retangular data}), tais como arquivos csv, tsv, fwf. Para ler arquivos \textit{xls} e \textit{xlsx} há pacotes como o \textit{readxl} e o \textit{xlsx}\footnote{\url{https://cran.r-project.org/web/packages/readxl/index.html} e \url{https://cran.r-project.org/web/packages/xlsx/index.html}}
+
+
+O tratamento dos dados pode facilmente consumir a maior parte do tempo de um projeto de análise e modelagem. A existência de ferramentas que facilitem esta tarefa e reduzam o tempo despendido nela é uma ajuda que vem bem a calhar.
+
+Há no R um conjunto de pacotes feitos especialmente para a fase de tratamento dos dados. O \textit{tydiverse} \cite{Wickham2014} permite a redução dos erros de codificação e a construção de um código mais simples, claro e eficaz, resduzindo assim o tempo necessário para o tratamento e limpeza dos dados \footnote{\url{https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html}}
+
+
+O \textit{tidyverse} tem  pacotes  que fornecem funcionalidades para executar eficazmente as atividades de tratamentos e análise de dados, reduzindo o esforço de codificação e a possibilidade de erros. 
+
+A maioria das vezes neste tipo de cenário os dados estão armazenados em formatos externos ao R e devem ser importados\footnote{por exemplo, Excel, SPSS, Spyder, Jupyter}. 
+
+Uma segunda etapa do trabalho é garantir a correção dos dados. Para isso é necessário "limpar" e "arrumar" os dados. Nesta fase é necessário eliminar erros, inconsistências de tipos de dados, problemas de codificação e representação dos dados e, eventualmente, gerar novas variáveis a partir dos próprios dados que sejam necessárias para a análise. Este processo é cíclico e também parte da análise. Durante o processo de análise dos dados é possível que surja a necessidade de novas variáveis ou que se descubra erros ainda existentes nos dados de entrada, o que implica em sua correção. 
+
+O processo então continua até que se tenha o modelo suficientemente eficaz e testado para que resultados significativos possam ser comunicados.
+
+
+Mas uma pergunta é, o que são dados limpos?
+
+
+
 \section{Tipos de Dados em R}
 
-Os tipos de dados do R incluem: dados escalares, vetores, matrizes, listas e quadro de dados.
+Os tipos de dados do R incluem: dados escalares, vetores, matrizes, listas e quadro de dados (Dataframe).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-04}
+	\caption{Uma representação gráfica dos tipos de dados em R. \\ Fonte: \url{http://venus.ifca.unican.es/Rintro/index.html}}
+	\label{fig:f02-04}
+\end{figure}
+
+
 
 \subsection{Escalares}
 Determinada variável pode ser um escalar, ou seja, simplesmente um número:
