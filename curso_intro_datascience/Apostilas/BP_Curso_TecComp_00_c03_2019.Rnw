@@ -131,17 +131,50 @@ A função \textbf{sample\_n} seleciona um número $N$ de linhas. Onde $N$ é o 
 starwars42 <- sample_n(starwars, 25, replace = TRUE)
 @
 
-A função slice extrai linhas de acordo com as posições das linhas. Para o exemplo abaixo, criamos um novo objeto com as linhas 10 até a linha 50.
+A função \textbf{slice} extrai linhas de acordo com as posições das linhas. Para o exemplo abaixo, criamos um novo objeto com as linhas 10 até a linha 50.
 
 <<eval=false, echo=true>>=
 starwars51 <- slice(starwars, 10:50)
 @
 
-A função select seleciona colunas a partir dos rótulos especificados na função.
+A função \textbf{select} seleciona colunas a partir dos rótulos especificados na função.
 
 <<eval=false,echo=true>>=
 starwars61 <- select(starwars, name, height, mass)
 starwars62 <- select(starwars, name, gender, species)
+@
+
+Para combinação de duas ou mais bases de dados temos as funções de \textbf{"join"}. A primeira é a função \textbf{left\_join} que insere uma base de dados a outra pela esquerda. 
+
+<<eval=false,echo=true>>=
+starwars71 <- left_join(starwars61, starwars62, by = "name")
+@
+
+A função \textbf{right\_join} insere uma base a outra pela direita.
+
+<<eval=false,echo=true>>=
+starwars72 <- right_join(starwars61, starwars62, by = "name")
+@
+
+A função \textbf{full\_join} insere uma base a outra a partir de uma chave comum nas duas bases.
+
+<<eval=false,echo=true>>=
+starwars73 <- full_join(starwars61, starwars62, by = "name")
+@
+
+Além de todas essas funções apresentadas anteriormente, o dplyr permite concatenar funções por meio de um mecanismo chamado \textbf{pipe}. Para utilizar o pipe é preciso colocar tais símbolos: 
+
+\begin{itemize}
+\item \%>\%
+\end{itemize}
+
+Abaixo temos um exemplo da utilização do pipe. O exemplo consiste em calcular média e desvio padrão a partir de um agrupamento por espécie da base de dados starwars.
+
+<<eval=false,echo=true>>=
+starwars81 <- starwars %>%
+  group_by(species) %>%
+  summarise(desvpad = sd(birth_year, na.rm = TRUE),
+            avg = mean(birth_year, na.rm = TRUE))
 @
 
 	\section{tidyr}
