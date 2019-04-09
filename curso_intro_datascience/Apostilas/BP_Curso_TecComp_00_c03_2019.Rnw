@@ -178,5 +178,57 @@ starwars81 <- starwars %>%
 @
 
 	\section{tidyr}
+	\textbf{Tidyr} é um pacote de tratamento de dados que fornece funções baseadas na organização de observações nas linhas e variáveis nas colunas, além de possuir boa relação com outros pacotes, como o \textbf{dplyr} para tratamento de dados e \textbf{ggplot} para apresentação de resultados.
 	
+Para utilizar o pacote precisamos efetuar a instalação do pacote e depois executar o mesmo.
+
+<<eval=false, echo=true>>=
+install.packages("tidyr")
+library(tidyr)
+@
+
+Para os exemplos desta seção utilizaremos as bases de dados \textbf{population} e \textbf{table2} do próprio tidyr. Para utilizar as duas bases precisamos efetuar dois comandos, que são:
+
+<<eval=false,echo=true>>=
+data("population")
+data("table2")
+@
+
+O \textbf{tidyr} possui quatro funções de remodelagem que são:
+
+\subsection{Spread}
+A função \textbf{spread} transforma linhas em colunas. É bastante útil quando é preciso transformar dados categóricos em variáveis.
+
+No exemplo abaixo transformamos um painel de dados em uma série temporal, sendo as variáveis os países presentes na base de dados \textbf{population}.
+
+<<eval=false,echo=true>>=
+View(population)
+population11 <- population %>% spread(country, population)
+View(population11)
+@
+	
+\subsection{Gather}	
+A função \textbf{gather} é oposta a função \textbf{spread}, visto que \textbf{gather} transforma os rótulos das variáveis(nome das colunas) em observações(linhas). Para tal exemplo utilizaremos a base de dados \textbf(table2).
+
+Primeiro transformaremos o fator(cases, count) em colunas.
+
+<<eval=false,echo=true>>=
+View(table2)
+population12 <- table2 %>% spread(type, count) 
+View(population12)
+@
+
+Depois retornaremos com o fator(cases, count) para as linhas, retornando ao painel de dados anteriormente.
+
+<<eval=false,echo=true>>=
+population13 <- population12 %>% gather(type, count, cases:population)
+View(population13)
+@
+
+\subsection{Unite}
+
+	
+\subsection{Separate}
+
+
 	\section{tidyverse}
