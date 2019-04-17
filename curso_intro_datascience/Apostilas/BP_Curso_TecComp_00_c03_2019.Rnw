@@ -67,7 +67,8 @@ Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IB
 
 
 
-	\section{dplyr}
+\section{dplyr}
+
 	Dplyr é um pacote do R que fornece bastante capacidade de manipulação de dados, possuindo um conjunto de funções de remodelagem de dados, filtragem de dados e combinação de dados.
 	
 	Para ter acesso ao dplyr e suas ferramentas, é preciso instalar o pacote.
@@ -88,7 +89,7 @@ library(dplyr)
 data("starwars")
 @
   
-  \subsection{Funções de Remodalagem}
+  \subsection{Funções de Remodelagem}
 A primeira função apresentada é a função \textbf{arrange}, que consiste em ordenar uma coluna(variável) de forma crescente ou decrescente. As função é escrita da seguinte forma:
 
 <<eval=FALSE, echo=TRUE>>=
@@ -196,16 +197,6 @@ data("table2")
 
 O \textbf{tidyr} possui quatro funções de remodelagem que são:
 
-\subsection{Spread}
-A função \textbf{spread} transforma linhas em colunas. É bastante útil quando é preciso transformar dados categóricos em variáveis.
-
-No exemplo abaixo transformamos um painel de dados em uma série temporal, sendo as variáveis os países presentes na base de dados \textbf{population}.
-
-<<eval=false,echo=true>>=
-View(population)
-population11 <- population %>% spread(country, population)
-View(population11)
-@
 	
 \subsection{Gather}	
 A função \textbf{gather} é oposta a função \textbf{spread}, visto que \textbf{gather} transforma os rótulos das variáveis(nome das colunas) em observações(linhas). Para tal exemplo utilizaremos a base de dados \textbf(table2).
@@ -218,17 +209,115 @@ population12 <- table2 %>% spread(type, count)
 View(population12)
 @
 
+	
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-04.png}
+	\caption{Exemplo da função gather: gather(table4a, `1999`, `2000`,key = "year", value = "cases")}
+	\label{fig:bpcursoteccomp002019f03-04}
+\end{figure}
+
 Depois retornaremos com o fator(cases, count) para as linhas, retornando ao painel de dados anteriormente.
 
 <<eval=false,echo=true>>=
 population13 <- population12 %>% gather(type, count, cases:population)
 View(population13)
 @
+	
+
+\subsection{Spread}
+A função \textbf{spread} transforma linhas em colunas. É bastante útil quando é preciso transformar dados categóricos em variáveis.
+
+No exemplo abaixo transformamos um painel de dados em uma série temporal, sendo as variáveis os países presentes na base de dados \textbf{population}.
+
+<<eval=false,echo=true>>=
+View(population)
+population11 <- population %>% spread(country, population)
+View(population11)
+@
+
+
+	
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-05.png}
+	\caption{Exemplo da função spread: spread(table2, type, count)}
+	\label{fig:bpcursoteccomp002019f03-05}
+\end{figure}
+
+
 
 \subsection{Unite}
 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-06.png}
+	\caption{Exemplo da função unite: unite(table5, century, year,
+		col = "year", sep = ``""``)}
+	\label{fig:bpcursoteccomp002019f03-06}
+\end{figure}
+	
+	
+	
+	
+	
 	
 \subsection{Separate}
 
 
-	\section{tidyverse}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-07.png}
+	\caption{Exemplo da função separate: separate(table3, rate,
+		into = c("cases", "pop"))}
+	\label{fig:bpcursoteccomp002019f03-07}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-08.png}
+	\caption{Exemplo da função separate\_rows: separate\_rows(table3, rate)}
+	\label{fig:bpcursoteccomp002019f03-08}
+\end{figure}
+
+
+
+
+\subsection{Lidando com valores omissos}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-09.png}
+	\caption{Exemplo da função drop\_na: drop\_na(x, x2)}
+	\label{fig:bpcursoteccomp002019f03-09}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-10.png}
+	\caption{Exemplo da função fill: fill(x,x2)}
+	\label{fig:bpcursoteccomp002019f03-10}
+\end{figure}
+
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-11.png}
+	\caption{Exemplo da função replace\_na: replace\_na(x, list(x2 = 2))}
+	\label{fig:bpcursoteccomp002019f03-11}
+\end{figure}
+
+
+
+
+\section{tidyverse}

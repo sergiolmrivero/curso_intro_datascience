@@ -86,8 +86,28 @@ Uma segunda etapa do trabalho é garantir a correção dos dados. Para isso é n
 O processo então continua até que se tenha o modelo suficientemente eficaz e testado para que resultados significativos possam ser comunicados.
 
 
-Mas uma pergunta é, o que são dados limpos?
+Mas uma pergunta é, o que são dados limpos? Os dados limpos têm algumas características fundamentais:
 
+\begin{enumerate}
+	\item Cada coluna da sua base de dados tem apenas um tipo de dado e corresponde a apenas uma variável;
+	\item Cada linha de sua base de dados corresponde a apenas uma observação;
+	\item Cada elemento da base corresponde a um dado de uma variável em uma observação. 
+	\item Preferencialmente, o número de observações faltantes é mínimo.
+\end{enumerate}
+
+
+Alguns dos pacotes utilizados para importar dados no R são:
+
+\begin{itemize}
+	\item \textit{haven} - para importar arquivos SPSS, Stata, e SAS;
+	\item \textit{readxl} e \textit{xlsx} - arquivos excel (.xls e .xlsx);
+	\item \textit{DBI} - arquivos de bancos de dados;
+	\item \textit{jsonlite} - arquivos \textit{json};
+	\item \textit{xml2} - arquivos padrão \textit{XML}
+	\item \textit{httr} - \textit{APIs} na \textit{Web}
+\end{itemize}
+
+Há um conjunto grande de pacotes em R para importação de dados. O ideal é, na fase do planejamento do tratamento dos dados, você definir qual estratégia utilizar para importar os dados para o R.
 
 
 \section{Tipos de Dados em R}
@@ -219,6 +239,56 @@ Dados
 \url{https://www.statmethods.net/input/importingdata.html}
 
 \section{Acessando Arquivos no computador}
+
+Para acessar um conjunto de documentos e manusear seus dados no R, primeiramente salve o arquivo no computador ou então obtenha os dados através da internet ou outras fontes. Importante prestar atenção quanto ao tipo de arquivo que se esta trabalhando, pois a prática de importar os dados para o R requer uma própria função a depender do tipo de arquivo, que pode ser: HTML, XML, Json, dados espaçados por TAB, linhas de arquivo de texto, HDF5, SPSS, Stata e outros, com inúmeros tutoriais disponíveis a pesquisa para mais informações, ficando este material no enfoque da apresentação de dois formatos de arquivos que são bastante utilizados: o csv e o xlsx..
+
+\subsection{Importando arquivo CSV (Comma separated values) em R}
+
+
+Ao salvar um arquivo em formato csv, execute o comando abaixo no R:
+
+<<echo=true>>=
+MyData <- read.csv(file="aux/PIB_BR_1996-2016.csv", header=TRUE, sep=",")
+@
+
+Onde:
+
+file = Parâmetro que representa o arquivo que se vai importar no R. 
+
+Observação: Copie e cole o arquivo ou endereço, conforme o exemplo, que vai ser lido em um quadro de dados chamado MyData
+
+header = Parâmetro que especifica que esses dados incluem uma linha de cabeçalho.
+ 
+ Observação: no trabalho com planilhas, a primeira linha é geralmente reservada para o cabeçalho.
+
+sep = Parâmetro de indicativo que os dados vão ser separados, neste caso, por vírgulas, pois arquivos separados por vírgulas são mais fáceis de trabalhar.
+
+Observação: em seu conjunto de dados evite nomes,valores ou campos com espaços em branco, pois cada palavra será interpretada como uma variável separada, o que resulta em erros relacionados ao número de elementos por linha em seu conjunto de dados. Para concatenar palavras insira . entre as palavras em vez de espaço. Nomes curtos são mais adequados em nomes mais longos. Evitar nomes que contenham símbolos como os seguintes: (\verb+$%^&*()-#?<>/|\[]{}+). Estes símbolos não poderão ser utilizados.
+
+\section{Importando arquivo xlsx em R  }
+
+Ao salvar um arquivo em formato xlsx, execute os comandos abaixo no R:
+<<echo=true>>=
+library(xlsx)
+
+xlsxFile = "aux/PIB_BR_1996-2016.xlsx"
+
+myFile = read.xlsx(xlsxFile, 1, rowIndex = 1)
+@
+
+Onde:
+
+xlsxFile = Parâmetro que representa o arquivo xlsx, objeto de pasta de trabalho ou URL para o arquivo xlsx.
+
+o segundo parâmetro é o número da planilha que você vai importar
+
+o parâmetro "rowIndex", indica onde você vai começar a ler o arquivo.
+
+A documentação do pacote está em: \url{https://cran.r-project.org/web/packages/xlsx/xlsx.pdf}
+
+\subsection{Mais informações}
+
+Informações mais detalhadas sobre importação de dados, podem
 
 \url{https://www.datacamp.com/community/tutorials/r-data-import-tutorial?utm_source=adwords_ppc&utm_campaignid=1455363063&utm_adgroupid=65083631748&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=1t1&utm_creative=332602034364&utm_targetid=dsa-473406573035&utm_loc_interest_ms=&utm_loc_physical_ms=1001610&gclid=Cj0KCQiA5NPjBRDDARIsAM9X1GLkgYWekNMkjHQnsTnRAzV7_gVEiwAqyW9CPisvAqFv2mNXzwarSlIaAgdZEALw_wcB}
 
