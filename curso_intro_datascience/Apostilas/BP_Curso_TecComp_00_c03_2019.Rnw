@@ -178,8 +178,12 @@ starwars81 <- starwars %>%
             avg = mean(birth_year, na.rm = TRUE))
 @
 
-	\section{tidyr}
-	\textbf{Tidyr} é um pacote de tratamento de dados que fornece funções baseadas na organização de observações nas linhas e variáveis nas colunas, além de possuir boa relação com outros pacotes, como o \textbf{dplyr} para tratamento de dados e \textbf{ggplot} para apresentação de resultados.
+\section{tidyr}
+
+\textbf{Tidyr} é um pacote de tratamento de dados que fornece funções baseadas na organização de observações nas linhas e variáveis nas colunas, além de possuir boa relação com outros pacotes, como o \textbf{dplyr} para tratamento de dados e \textbf{ggplot} para apresentação de resultados.
+	
+A fonte para parte das figuras desta seção está em \url{https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf}
+	
 	
 Para utilizar o pacote precisamos efetuar a instalação do pacote e depois executar o mesmo.
 
