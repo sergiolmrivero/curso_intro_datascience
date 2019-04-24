@@ -12,16 +12,22 @@
 
 	\section{O que é uma boa base de dados e que tipos de bases existem?}
 	Boas bases de dados para trabalhar, sobretudo com tidy, são bases que possuem variáveis nas colunas e observações nas linhas. 
-	Podemos identificar tal estrutura na figura \ref{fig:f03-01} a baixo:
+	Podemos identificar tal estrutura na figura \ref{fig:f03-01}  abaixo:
 	
 \begin{figure}[htpb!]
 	\centering
 	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-01}
-	\caption{Ogarnização ideal para base de dados}
+	\caption{Organização ideal para base de dados}
 	\label{fig:f03-01}
 \end{figure}
 
 Há três tipos bases de dados principais que comportam a estrutura de variáveis nas colunas e observações nas linhas que são:
+
+\begin{itemize}
+	\item Séries Temporais
+	\item Cortes Transversais
+	\item Dados em Painel
+\end{itemize}
 
 \subsection{Série Temporal}
 
