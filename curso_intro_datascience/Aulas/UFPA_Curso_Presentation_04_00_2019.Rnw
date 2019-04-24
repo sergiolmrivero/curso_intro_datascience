@@ -1,0 +1,186 @@
+\documentclass[11pt]{beamer}
+\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+
+\author{Sérgio Rivero}
+
+\title{Gráficos no R}
+\subtitle{Introdução ao Tratamento e Análise de Dados em R}
+\subtitle{Faculdade de Ciências Econômicas \\ Programa de Pós-Graduação em Economia  \\ PPGE-FACECON-ICSA-UFPA}
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\institute{PPGE-FACECON-ICSA} 
+\date{\today}
+\logo{%
+    \makebox[0.95\paperwidth]{%
+        \includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+
+   %\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+       \hfill%
+       \includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+       \includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+       %\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+   }%
+}
+%\logo{\includegraphics[scale=.1]{/home/rivero/Dropbox/Workspace_Current/UFPA/BasesDocs/logos/Logo_FACECON}} 
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\begin{multicols}{2}
+		\tableofcontents
+\end{multicols}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivos da Aula}
+\section{Objetivos da Aula}
+\begin{center}
+Apresentar a biblioteca ggplot2, seus principais casos de usos e exemplos
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que é o ggplot2?}
+\section{O que é o ggplot2?}
+ 
+ O \textbf{ggplot2} é uma \textit{\textbf{G}ramática de \textbf{G}ráficos}.
+ 
+ \bigskip
+
+Uma gramática de gráficos é um arcabouço que segue uma abordagem em camadas para descrever e construir visualizações ou gráficos de uma maneira estruturada.
+
+\bigskip
+
+Uma visualização envolvendo dados multidimensionais geralmente tem múltiplos componentes ou aspectos, em termos de dados, estética, escala, objetos etc.
+
+\bigskip
+ 
+ A gramática original da estrutura gráfica foi proposta por Leland Wilkinson \cite{Wilkinson2012}.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{A estrutura do ggplot2}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-01}
+	\caption{A estrutura de um gráfico no ggplot2 \cite{Wilkinson2012}}
+	\label{fig:bpcursoteccomp002019f06-01}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Explicando a estrutura}
+
+Explicando os componentes de um gráfico ggplot2
+\begin{itemize}
+	\item  Dados: identifique as dimensões que você deseja visualizar;
+	\item  Estética: Define-se os eixos , posições pontos de dados e eventualmente tamanho, forma, cor etc;
+	\item Escala: uma escala específica para representar vários valores ou um intervalo;
+	\item Objetos geométricos:  "\textit{geoms}". Devem ser pontos, barras, linhas, etc.; 
+	\item Estatística: medidas de tendência central, \textit{spread}, intervalos de confiança, etc.;
+	\item Facetas: espaço para sub-gráficos a partir de dimensões específicas 
+	\item Sistema de coordenadas: cartesiana, polar?
+	
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Dúvidas?????}
+\section{Dúvidas}
+
+Esclarecendo as Dúvidas
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Avaliação}
+\section{Avaliação}
+
+Avaliação
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Para levar para casa}
+\section{Para Levar para Casa}
+
+Fechamento da Aula
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Agradecimentos}
+\section{Agradecimentos}
+
+Ao Monstro do Espaguete Voador
+
+À UFPA
+
+Etc...
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+       \section{Referências}
+
+\bibliographystyle{alpha}
+\bibliography{../bib/bibliografia}
+\end{frame}
+
+
+
+
+\end{document}
