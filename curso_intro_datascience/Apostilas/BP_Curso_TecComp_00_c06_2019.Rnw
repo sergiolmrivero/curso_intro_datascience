@@ -12,6 +12,12 @@
 \chapter{Aula 6 - Apresentando Resultados}
 
 	\section{ggplot}
+	O pacote \textbf{ggplot2} é uma ferramente de visualização gráfica bastante útil para apresentasação de dados com muitos componentes. A estrutura de construção de gráficos utilizando o ggplot2 é basicamente definir os dados a serem plotados e o sistema de coordenadas. Uma boa forma de entender como funciona o \textbf{ggplot2} é por meio da metáfora de camadas. Cada detalhe do gráfico é uma camada de comando definido a partir das camadas principais(dados e coordenadas).
 	
+	A figura abaixo mostra as principais camadas:
+
+
+	
+	A figura de \cite{Wilkinson2012} mostra cada camada do processo de construção de gráficos utilizando o ggplot2 
 
 	\section{shiny}
