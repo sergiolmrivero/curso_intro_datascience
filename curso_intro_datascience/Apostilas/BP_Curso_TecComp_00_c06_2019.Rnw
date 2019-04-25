@@ -12,6 +12,6 @@
 \chapter{Aula 6 - Apresentando Resultados}
 
 	\section{ggplot}
-	xá
+	
 
 	\section{shiny}

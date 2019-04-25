@@ -261,45 +261,14 @@ Certos pacotes, como \textit{ggplot2} são escritos em R e não necessitam de um
 Abaixo um caso típico.
 
 
-\begin{verbatim}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/erro_R}
+	\caption{}
+	\label{fig:error}
+\end{figure}
 
-> install.packages('fftw')
-Installing package into ‘/usr/local/lib/R/site-library’
-(as ‘lib’ is unspecified)
-trying URL 'https://cloud.r-project.org/src/contrib/fftw_1.0-5.tar.gz'
-Content type 'application/x-gzip' length 38684 bytes (37 KB)
-==================================================
-downloaded 37 KB
 
-* installing *source* package ‘fftw’ ...
-** package ‘fftw’ successfully unpacked and MD5 sums checked
-checking for gcc... gcc -std=gnu99
-checking whether the C compiler works... yes
-
-...
-etc
-...
-
-checking for pkg-config... /usr/bin/pkg-config
-checking pkg-config is at least version 0.9.0... yes
-checking for FFTW... configure: error: Package requirements (fftw3) were not met:
-
-No package 'fftw3' found
-
-...
-etc
-...
-
-ERROR: configuration failed for package ‘fftw’
-* removing ‘/usr/local/lib/R/site-library/fftw’
-
-The downloaded source packages are in
-‘/tmp/RtmpT62d7h/downloaded_packages’
-Warning message:
-In install.packages("fftw") :
-installation of package ‘fftw’ had non-zero exit status
-> 
-\end{verbatim}
 
 Neste caso acima, o pacote \textit{fftw}\footnote{\url{https://cran.r-project.org/web/packages/fftw/index.html}}, para utilização de transformadas de Fourier necessita de uma biblioteca (\textit{fftw3})que deve ser instalad no sistema operacional, antes de se instalar o pacote R. Você pode descobrir isto olhando as mensagens da instalação di pacote. Nestas mensagens há a informação de que \textbf{"checking for FFTW... configure: error: Package requirements (fftw3) were not met:"} e a instalação terminou com \textit{status} "não-zero", o que significa erro. Para corrigir o erro será necessário instalar a biblioteca que o sistema informa que está faltando.
 

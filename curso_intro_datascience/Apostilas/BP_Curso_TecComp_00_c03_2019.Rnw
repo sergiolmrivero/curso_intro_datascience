@@ -256,8 +256,24 @@ View(population11)
 \end{figure}
 
 
-
+\newpage
 \subsection{Unite}
+
+A função \textbf{unite} agrega o conteúdo de todas as linhas de duas colunas distintas em uma única coluna. Para o exemplo dessa função utilizaremos o dataset \textbf{table1} para unir o conteúdo de duas colunas.
+
+Primeiramente acessamos o dataset \textbf{table1}:
+
+<<eval=false,echo=true>>=
+data("table1")
+head(table1)
+@
+
+Após ter acesso ao dataset, podemos executar a função \textbf{unite} para juntar os conteúdos \textbf{country} e \texttt{year} em uma única coluna. Fazemos a ação da seguinte forma:
+
+<<eval=false,echo=true>>=
+table2 <- unite(table1, "country_year", c("country","year"))
+head(table2)
+@
 
 \begin{figure}[htpb]
 	\centering
@@ -265,15 +281,25 @@ View(population11)
 	\caption{Exemplo da função unite: unite(table5, century, year,
 		col = "year", sep = ``""``)}
 	\label{fig:bpcursoteccomp002019f03-06}
-\end{figure}
-	
-	
-	
-	
+\end{figure}	
 	
 	
 \subsection{Separate}
 
+A função \textbf{separate} desagrega o conteúdo de uma coluna em duas novas colunas. Para o exemplo dessa função utilizaremos o dataframe \textbf{table2} criado no exemplo anterior.
+
+A função de seperação é a seguinte:
+
+<<eval=false,echo=true>>=
+table3 <- separate(table2, country_year, c("country", "year"), sep = "_")
+head(table3)
+@
+
+Como resultado da separação é preciso que obtenhamos um dataframe \textbf{table3} exatamente igual ao dataframe \textbf{table1}. Para checarmos o resultado está conforme o esperado, podemos executar o respectivo comando:
+
+<<eval=false,echo=true>>=
+table3 == table1
+@
 
 \begin{figure}[htpb]
 	\centering
