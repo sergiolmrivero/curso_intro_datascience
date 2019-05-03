@@ -14,10 +14,144 @@
 	\section{ggplot}
 	O pacote \textbf{ggplot2} é uma ferramenta de visualização gráfica bastante útil para apresentação de dados com muitos componentes. A estrutura de construção de gráficos utilizando o ggplot2 é basicamente definir os dados a serem plotados e o sistema de coordenadas. Uma boa forma de entender como funciona o \textbf{ggplot2} é por meio da metáfora de camadas. Cada detalhe do gráfico é uma camada de comando definido a partir das camadas principais(dados e coordenadas).
 	
-	A figura abaixo mostra as principais camadas:
-
-
+	A figura \ref{fig:f06-01} mostra cada camada do processo de construção de gráficos utilizando o ggplot2 
 	
-	A figura de \cite{Wilkinson2012} mostra cada camada do processo de construção de gráficos utilizando o ggplot2 
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-01}
+		\caption{Camadas do ggplot2}
+		\label{fig:f06-01}
+	\end{figure}
+
+Abaixo estão as descrições de cada camada da figura \ref{fig:f06-01}
+
+\begin{description}
+	\item [Data:] Base de dados que será utilizada;
+	\item [Asthetics:] Definição do conjunto de dados que a comporão o gráfico, bem como a posição de cada dado;
+	\item [Scale:] Difinição dos escala dos valores do gráfico;
+	\item [Objeto Geométrico:] Definição da geometria do gráfico;
+	\item [Statistics:] Estatística descritiva dos dados utilizados para gerar o gráfico;
+	\item [Facets:] Criação de subplots(divisão da janela de plots);
+	\item [Sistema de Coordenada:] Definição do sistema de coordenadas.
+\end{description}
+
+Para os exemplos do pacote \textbf{ggplot2} utilizaremos o dataset Iris. Essa base de dados possui 5 variáveis que são:
+
+\begin{description}
+	\item [Sepal.Length:] Comprimento da sépala;
+	\item [Petal.Length:] Comprimento da pétala;
+	\item [Sepal.Width:] Largura da sépala;
+	\item [Petal.Width:] Largura da pétala;
+	\item [Species:] Espécias da plantas. 
+\end{description}
+
+<<eval=false, echo=TRUE>>=
+data("iris")
+head(iris)
+@
+
+O primeiro gráfico apresentará a relação entre o comprimento da pétala e da sépala como pode ser visto na figura \ref{fig:f06-04}.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-04}
+	\caption{Relação de pontos entre os comprimentos Pétala e Sépala}
+	\label{fig:f06-04}
+\end{figure}
+
+\newpage
+
+Os comandos para gerar o gráfico são:
+
+<<eval=false, echo=TRUE>>=
+g1 <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + 
+geom_point() +
+ggtitle("Relação entre tamanho da Pétala e o tamanho da Sépala") +
+labs(x="Tamanho da Sépala", y="Tamanho da Pétala")
+plot(g1)
+@
+
+O objeto \textbf{g1} recebe a função que trata do acesso a base aos dados \textbf{iris} e a definição da posição das variáveis. Tal função está descrita abaixo:
+
+<<eval=false, echo=true>>=
+g1 <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length))
+#iris indica a base de dados e aes() indica a posição das variáveis
+@
+
+ próxima camada indica qual é a geometria do gráfico. Tal função é dada por:
+
+<<eval=false, echo=TRUE>>=
+geom_point()
+@
+
+As próximas camadas apresentam apenas títulos e legendas presentes nos gráficos, além da função plot para apresentar o gráfico na região de plot do \textbf{Rstudio}
+
+<<eval=false, echo=true>>=
+ggtitle("Relação entre tamanho da Pétala e o tamanho da Sépala") +
+labs(x="Tamanho da Sépala", y="Tamanho da Pétala")
+plot(g1)
+@
+
+É possível incluir mais de uma geometria no gráfico.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-05}
+	\caption{Relação de comprimento entre Pétala e Sépala}
+	\label{fig:f06-05}
+\end{figure}
+
+Para fazer o gráfico da figura \ref{fig:f06-05} podemos utilizar os comandos abaixo:
+
+<<eval=false, echo=true>>=
+g2 <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + 
+geom_point() +
+geom_smooth() +
+ggtitle("iris") +
+labs(x="Sepal length", y="Petal Length")
+plot(g2)
+@
+
+Podemos fazer uma separação por variáveis categóricas e apresentá-las com cores distintas. Na \textbf{aes()} adicionamos o parâmetro $color = Species$. Para o nosso exemplo, a variável categórica é \textbf{Species}.
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-06}
+	\caption{Relação de comprimento e largura das Sépalas}
+	\label{fig:f06-06}
+\end{figure}
+
+\newpage
+
+O exemplo para construir a figura \ref{fig:f06-06} está exemplificado abaixo:
+
+<<eval= false, echo=true>>=
+g3 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
+geom_point() +
+ggtitle("Relação entre comprimento e largura das sépalas por espécie") +
+labs(x="Comprimento da Sépala", y="Largura da Sépala", color = "Espécie")
+plot(g3)
+@
+
+Podemos incluir mais uma camada e criar vários ambientes de plot dividindo o ambiente principal. Para que isso seja possível utilizaremos a função \textbf{facet.wrap()}.
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-07}
+	\caption{Relação entre comprimento e largura das sépalas por espécie}
+	\label{fig:f06-07}
+\end{figure}
+
+O código para gerar o gráfico da figura \ref{fig:f06-07} está exposto abaixo:
+
+<<eval=false, echo=true>>=
+gf4 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
+geom_point() +
+facet_wrap(~Species) +
+ggtitle("Relação entre o comprimento e a largura das sépalas") +
+labs(x="Comprimento da Sépala", y="Largura da Sépala", color = "Espécie")
+plot(gf4)
+@
 
 	\section{shiny}
