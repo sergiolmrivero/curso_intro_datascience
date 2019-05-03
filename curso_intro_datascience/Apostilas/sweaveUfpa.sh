@@ -1,3 +1,8 @@
-R CMD Sweave --encoding=utf8 BP_Curso_TecComp_00_2019.Rnw
+R CMD Sweave --encoding=utf8 UFPA_Curso_TecComp_00_2019.Rnw
 
-pdflatex BP_Curso_TecComp_00_2019.tex
+pdflatex UFPA_Curso_TecComp_00_2019.tex
+
+bibtex UFPA_Curso_TecComp_00_2019.aux
+
+pdflatex UFPA_Curso_TecComp_00_2019.tex
+

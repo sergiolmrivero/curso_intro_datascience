@@ -30,7 +30,17 @@
 	
 	O \textit{Rmarkdown} (RMD) é a implementação do \textbf{Markdown} em R. R markdown \cite{Allaire2016} é um formato de documento  que foi introduzido inicialmente no pacote \textit{knitr} \cite{Xie2016,Xie2017}. O Knitr, na verdade suporta um conjunto grande de linguagens, como \LaTeX, HTML, AsciiDoc, reStructuredText e Textile.
 	
-	A ideia por trás do RMD é embutir comandos em uma linguagem qualquer (no nosso caso, o R) dentro de um documento. Assim, um arquivo .Rmd teria, ao mesmo tempo, comando que gerariam resultados como gráficos e tabelas, que seriam gerados num arquivo de resultados e compilados posteriormente num documento PDF, HTML, Word, etc.  A grande vantagem do RMD é sua simplicidade.
+	A ideia por trás do RMD (figura \ref{fig:bpcursoteccomp002019f04-01}) é embutir comandos em uma linguagem qualquer (no nosso caso, o R) dentro de um documento. Assim, um arquivo .Rmd teria, ao mesmo tempo, comando que gerariam resultados como gráficos e tabelas, que seriam gerados num arquivo de resultados e compilados posteriormente num documento PDF, HTML, Word, etc.  A grande vantagem do RMD é sua simplicidade.
+	
+	Documentos no R Markdown são salvos com um sufixo .Rmd. Este arquivo tem textos e comandos do Markdown e código R em partes específicas chamadas \textit{chunks}.
+	
+	
+		\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-03}
+		\caption{Um exemplo de saída de um .Rmd no Rstudio}
+		\label{fig:bpcursoteccomp002019f04-03}
+	\end{figure}	
 	
 	Para a instalação do Rmarkdown você pode simplesmente utilizar o comando \textit{install.packages()}. Você pode instalá-lo diretamente do CRAN
 		
@@ -52,12 +62,135 @@ if (!requireNamespace("devtools")){
 
 
 	\subsection{Como o Rmd funciona?}
+		
+	O processo de geração de documentos com o RMD é feito a partir da pressão do botão \textbf{Knit} (figura \ref{fig:bpcursoteccomp002019f04-02}) no RStudio. Para isso, você deve ter habilitado e configurado o Markdown no app.  A partir daí, o arquivo arquivo .rmd (Rmarkdown) tem seus códigos R executados e gera um código .md com os resultados da execução do R (figuras, tabelas, etc) que  é então processado pelo pandoc. Esse processamento, gera o arquivo de resultado desejado (HTML, DOC, PDF, etc)
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-02}
+		\caption{O Botão Knit no Rstudio}
+		\label{fig:bpcursoteccomp002019f04-02}
+	\end{figure}
+	
+	
+	A partir do arquivo .Rmd, você pode gerar resultados que combinem, textos, resultados de operações em R, tabelas geradas pelas bibliotecas do R (regressões, outras coisas), bem como gráficos. 
+		\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-01}
+		\caption{O processo de geração de documentos no RMD}
+		\label{fig:bpcursoteccomp002019f04-01}
+	\end{figure}
+	
+
+	Estes programas permitem um caminho mais suave entre a análise e a publicação dos resultados.
+
 	
 	
 	\subsection{A estrutura de um arquivo .Rmd}
 	
+	Um arquivo .Rmd tem basicamente, 3 partes.
+
+	\begin{enumerate}
+		\item 	Um cabeçalho escrito em YAML\footnote{YAML é um formato de serialização de dados legíveis por humanos inspirado em linguagens como XML, C, Python, Perl, assim como o formato de correio eletrônico especificado pela RFC 2822. YAML foi proposto por Clark Evans em 2001 em conjunto com Ingy döt Net e Oren Ben-Kiki (Wikipedia) - Mais informações em: \url{https://yaml.org/}}. Separados por "\verb|---|" ~no início e no final do bloco.
+		\item Textos e comandos em Linguagem Markdown
+		\item \textit{Chunks} em uma linguagem específica (no nosso casso, Comandos em R) - Separados por  "\verb|```|  " ~no início e no final do bloco.
+	\end{enumerate}	 
 	
-	\subsection{Os \textit{chunks}}
+	O cabeçalho (figura \ref{fig:bpcursoteccomp002019f04-04}) é posto uma vez e contém definições gerais do arquivo executado.  Há vários componentes do cabeçalho, sendo que os principais são o título, o nome do autor, a data e qual será a saída do arquivo executado (HTML, PDF, MSWord, etc)
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-04}
+		\caption{Um exemplo de Cabeçalho de um arquivo .Rmd}
+		\label{fig:bpcursoteccomp002019f04-04}
+	\end{figure}
+	
+
+\subsection{Sintaxe de Markdown}
+
+O texto em um documento R Markdown é gravado com a sintaxe Markdown. Precisamente falando, é o Markdown do Pandoc. Há muitos sabores de Markdown inventados por pessoas diferentes, e o sabor do Pandoc é o mais abrangente para o nosso conhecimento. Você pode encontrar a documentação completa do Markdown do Pandoc em \url{https://pandoc.org/MANUAL.html}. É altamente recomendável que você leia esta página pelo menos uma vez para conhecer todas as possibilidades com o Markdown da Pandoc, mesmo que você não use todas elas. Esta seção é adaptada da Seção 2.1 de Xie ( 2016 ) e abrange apenas um pequeno subconjunto da sintaxe Markdown do Pandoc.
+
+\subsubsection{Formatação em linha}
+
+O texto embutido será em itálico se estiver cercado por sublinhados ou asteriscos, por exemplo, \verb|_text_| ou \verb|*text*|. O texto em negrito é produzido usando um par de asteriscos duplos ( \verb|**text**|). Um par de tis (\verb|~~|) transformar texto para um subscrito (por exemplo, \verb|H~3~PO~4~|torna $H_3 PO_4$ ). Um par de circunflexos (\verb|^^|) produz um sobrescrito (por exemplo, \verb|Cu^2+^| renderiza $Cu^{2+}$).
+
+Para marcar o texto como código \textit{inline}, use um par de backticks, por exemplo \verb|`code`|
+
+Os hiperlinks são criados usando a sintaxe \verb|[text](link)|, por exemplo \verb|[RStudio](https://www.rstudio.com)|. 
+
+A sintaxe das imagens é semelhante: basta adicionar um ponto de exclamação, por exemplo \verb|![alt text or image title](path/to/image)|, 
+
+As notas de rodapé são colocadas dentro dos colchetes após um acento circunflexo \verb|^[]|, por exemplo \verb|^[This is a footnote.]|.
+
+
+\subsubsection{Elementos de nível de bloco}
+
+Cabeçalhos de seção podem ser escritos após um número de sinais de libra, por exemplo,
+
+\verb|# First-level header|
+
+\verb|## Second-level header|
+
+\verb|### Third-level header|
+
+Se você não quiser que um determinado título seja numerado, você pode adicionar \verb|{-}| ou \verb|{.unnumbered}| após o cabeçalho, por exemplo,
+
+\verb|# Preface {-}|
+
+Os itens da lista não ordenada começar com *, -ou +, e você pode aninhar uma lista dentro de outra lista pelo recuo da sub-lista, por exemplo,
+
+- one item\\
+- one item\\
+- one item\\
+~~~~- one more item\\
+~~~~- one more item\\
+~~~~- one more item
+
+A saída é:
+\begin{itemize}
+	\item um item
+	\item um item
+	\item um item
+	\begin{itemize}
+		\item mais um item
+		\item mais um item
+		\item mais um item
+	\end{itemize}
+\end{itemize}
+
+Os itens da lista ordenada começam com números (você também pode aninhar listas dentro de listas), por exemplo,
+
+1. o primeiro item\\
+2. o segundo item\\
+3. o terceiro item\\
+~~~~~~- um item não ordenado\\
+~~~~~~- um item não ordenado
+
+
+A saída não parece muito diferente com a fonte Markdown:
+
+\begin{enumerate}
+	\item o primeiro item
+	\item o segundo item
+	\item o terceiro item
+	\begin{itemize}
+		\item um item não ordenado
+		\item um item não ordenado
+	\end{itemize}
+\end{enumerate}
+
+
+
+	
+\subsection{Os \textit{chunks}}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-05}
+	\caption{Um \textit{chunk}}
+	\label{fig:bpcursoteccomp002019f04-05}
+\end{figure}
+
 	
 	
 	\subsection{Exemplos de uso do .Rmd}
