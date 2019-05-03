@@ -268,7 +268,8 @@ Observação: em seu conjunto de dados evite nomes,valores ou campos com espaço
 \section{Importando arquivo xlsx em R  }
 
 Ao salvar um arquivo em formato xlsx, execute os comandos abaixo no R:
-<<echo=true>>=
+
+<<echo=true,eval=F>>=
 library(xlsx)
 
 xlsxFile = "aux/PIB_BR_1996-2016.xlsx"
@@ -302,6 +303,111 @@ Informações mais detalhadas sobre importação de dados, podem
 
 
 \section{Acessando Bases de dados via \textit{APIs}}
+
+
+APIs são abreviatura para Application Programming Interface (Interface de Programação de Aplicativos), permite à mÃ¡quina o acesso à funcionalidade do programa dentro de outro programa, realizando a açãoodo programa automaticamente, para o uso de funcionalidades e leitura de dados.
+
+
+\subsection{Pacotes Obrigatórios}
+
+O acesso a APIs em R, pode ser feito com o pacote httr \footnote{produzido po Hadley Wickham - \url{http://hadley.nz/}} atua criando chamadas de APIs e lidando com autenticação destas;
+
+O pacote jsonlite, realiza suporte ao trabalho com dados JASON, para traduzir as estruturas de dados aninhadas do JSON em objetos R sensíveis; 
+
+O  pacote lubridate, atua na transformação e extração de datas, funções úteis para trabalhar com datas, fusos horá¡rios e operações aritméticas com datas; 
+\url{http://material.curso-r.com/lubridate/}
+
+
+Para obtê-los 
+
+\textbf{install.packages(c("httr", "jsonlite", "lubridate"))}
+
+
+Carregar os pacotes
+
+<<eval=F>>=
+library(httr)
+library(jsonlite)
+library(lubridate)
+@ 
+
+A funcionalidade do R em transformar automaticamente as cadeias de caracteres em variáveis de fator (de utilidade estatística), opera de maneira indesejada,e deverá ser efetuada uma chamada de desligamento (que atuará somente nesta sessão e depois retornará à funcionalidade anterior quando reiniciado, o R). 
+
+<<>>=
+options(stringsAsFactors = FALSE)
+@
+
+
+Argumentos de consulta:
+\begin{itemize}
+	\item GET(): Recupera o arquivo;
+	\item POST(): Adiciona um arquivo;
+	\item DELETE(): Remove um arquivo;
+	
+\end{itemize}
+
+\begin{enumerate}
+	\item As API's possuem estruturas de solicitação, para isso uma solicitação de HTTP referente à base de dados com que será trabalhada, segue as seguintes descrições:
+	\begin{enumerate}
+		\item Verbo HTTP ( GET, POST, DELETE, etc.);
+		\item O URL base da API;
+		\item O caminho da URL ou o endpoint;
+		\item Argumentos de consulta de URL (por exemplo, ?foo=bar);
+		\item Cabeçalhos opcionais;
+		\item Um corpo de solicitação opcional;
+	\end{enumerate}
+	
+	\item usa-se a função download.file() para baixar um arquivo para o seu computador e trabalhar com ele mantendo salva uma cópia dos dados no seu computador).
+	
+	\item É necessário fazer analise a saída em um objeto R. podendo verificar O pacote que realiza suporte ao trabalho com dados JASON (para traduzir as estruturas de dados JSON em objetos R),faça a intalação do pacote jasolite.
+	
+	\item Em seguida use a função fromJSON() no pacote rjson para importar esses dados para um objeto data.frame."
+	
+	\item Com os dados em um formato data.frame, é possível limpá-los. 
+	
+	
+\end{enumerate}
+
+Exemplo de base de dados JASON retirada do Banco Central do Brasil:
+
+Instala o pacote (apenas uma vez)
+
+install.packages("jsonlite")
+
+Comando para fazer o download
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.4329/dados?formato=json\&amp;dataInicial=01/01/2001","ICMS")
+
+<<echo=T,eval=F>>=
+library(jsonlite)
+
+
+ICMS_json <- jsonlite::fromJSON("ICMS")
+
+ICMS <- as.data.frame(ICMS_json)
+ICMS$valor <- as.numeric(ICMS$valor)
+str(ICMS)
+
+ICMS$data <- as.Date(ICMS$data)
+str(ICMS)
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json&amp;dataInicial=01/01/2001","IPCA")
+IPCA <- jsonlite::fromJSON("IPCA")
+as.numeric(IPCA[,2])
+ICMS <- ICMS[31:325,]
+IPCA <- IPCA[175:469,]
+IPCA <- IPCA[,2]
+IPCA_new <- as.numeric(IPCA)
+IPCA <- IPCA_new
+IPCS_new <- NULL
+data <- cbind(ICMS, IPCA)
+
+deflator <- as.numeric(data[295,3])
+
+VR <- (deflator/(as.numeric(data[,3])))*data[,2]
+
+plot.ts(VR)
+@
 
 \url{https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/}
 

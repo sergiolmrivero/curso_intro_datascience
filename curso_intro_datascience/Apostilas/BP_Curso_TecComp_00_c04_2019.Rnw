@@ -6,12 +6,74 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
-\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+\SweaveOpts{concordance=TRUE,echo=FALSE,eval=TRUE}
 
 
 \chapter{Aula 4 - Apresentando Resultados}
 
+	Nesta aula discutiremos dois aspectos importantes do trabalho com dados em R. Primeiramente veremos as funcionalidades implementadas no R para a produção de relatórios dinâmicos, execução de comandos R e apresentação de resultados utilizando uma linguagem simples chamada \textbf{Markdown} \footnote{Uma definição do Markdown pode ser achada em : \url{https://tools.ietf.org/html/rfc7763}}. Depois veremos as ferramentas para apresentação de resultados gerados no R em tabelas, com a utilização dos pacotes xtable e stargazer.
+		
+	
 	\section{Rmarkdown - Preparando o relatório enquanto você analisa os dados}
+	
+	R Markdown é um formato de arquivo que permite a produção documentos dinâmicos utilizando R. Um documento R Markdown é escrito na linguagem \textbf{Markdown} e contém partes  de código R incorporado em seções específicas do arquivo, chamadas \textit{chunks}:
+	\begin{quotation}
+		\textbf{Markdown} é duas coisas: (1) uma sintaxe de formatação de texto simples; e (2) uma ferramenta de software, escrita em Perl, que converte a formatação de texto simples em HTML. Consulte a página Sintaxe para obter detalhes relacionados à sintaxe de formatação do Markdown. Você pode experimentá-lo agora mesmo, usando o Dingus online .
+		
+		A meta de design predominante da sintaxe de formatação do Markdown é torná-la o mais legível possível. A ideia é que um documento formatado com Markdown seja publicável como está, como texto simples, sem parecer ter sido marcado com tags ou instruções de formatação. Embora a sintaxe do Markdown tenha sido influenciada por vários filtros de texto para HTML existentes, a maior fonte de inspiração para a sintaxe do Markdown é o formato do email em texto simples (Gruber, 2004).\footnote{ \url{https://daringfireball.net/projects/markdown/}}
+	\end{quotation}	
+	
+	O uso da linguagem \textbf{Markdown} para a produção de documentos quando se analisa dados utilizando o R, permite uma transição suave e contínua entre o processo de análise e a elaboração de um Relatório de resultados. Neste sentido um arquivo \textit{Rmarkdown} (Rmd) funciona como uma espécie de \textit{bloco de notas} que pode evoluir para o formato de um relatório final em um arquivo Html, PDF, docx, etc. Isto economiza tempo e esforço. 
+	
+	
+	\subsection{O que é o Rmarkdown?}
+	
+	O \textit{Rmarkdown} (RMD) é a implementação do \textbf{Markdown} em R. R markdown \cite{Allaire2016} é um formato de documento  que foi introduzido inicialmente no pacote \textit{knitr} \cite{Xie2016,Xie2017}. O Knitr, na verdade suporta um conjunto grande de linguagens, como \LaTeX, HTML, AsciiDoc, reStructuredText e Textile.
+	
+	A ideia por trás do RMD é embutir comandos em uma linguagem qualquer (no nosso caso, o R) dentro de um documento. Assim, um arquivo .Rmd teria, ao mesmo tempo, comando que gerariam resultados como gráficos e tabelas, que seriam gerados num arquivo de resultados e compilados posteriormente num documento PDF, HTML, Word, etc.  A grande vantagem do RMD é sua simplicidade.
+	
+	Para a instalação do Rmarkdown você pode simplesmente utilizar o comando \textit{install.packages()}. Você pode instalá-lo diretamente do CRAN
+		
+<<eval=F,echo=T>>=
+install.packages("rmarkdown")
+@
+	
+	Ou instalar a versão de desenvolvimento do \textit{GitHub}. Para isso é necessário utilizar o pacote \textit{devtools}.
+	
+<<echo=T,eval=F>>=
+if (!requireNamespace("devtools")){
+	install.packages('devtools')
+	devtools::install_github('rstudio/rmarkdown')
+	}
+@
+
+	Para conseguir gerar o pdf no windows a partir de um arquivo RMD é necessário instalar o \LaTeX. O \LaTeX ~é um conjunto de pacotes que permite a edição e geração de textos formatados de alta qualidade.
+	
+
+
+	\subsection{Como o Rmd funciona?}
+	
+	
+	\subsection{A estrutura de um arquivo .Rmd}
+	
+	
+	\subsection{Os \textit{chunks}}
+	
+	
+	\subsection{Exemplos de uso do .Rmd}
+	
+	
+	\subsection{Algumas referências}
+	
+	\url{https://daringfireball.net/projects/markdown/}
+	
+	\url{https://rmarkdown.rstudio.com/authoring_quick_tour.html}
+	
+	\url{https://www.markdownguide.org/getting-started/}
+	
+	\url{https://ourcodingclub.github.io/2016/11/24/rmarkdown-1.html}
+	
+	\url{https://github.com/yihui/knitr-book}
 	
 	\section{Gerando dados sintetizados - Utilizando dataframes}
 	

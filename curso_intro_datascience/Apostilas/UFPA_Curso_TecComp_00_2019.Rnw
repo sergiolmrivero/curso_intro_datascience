@@ -180,7 +180,6 @@ library(knitr)
 \SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
 
 \chapter{Onde aprender mais?}
-\addcontentsline{toc}{section}{Onde aprender mais?}
 
 
 

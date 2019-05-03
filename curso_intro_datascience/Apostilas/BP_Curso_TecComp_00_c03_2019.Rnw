@@ -42,7 +42,8 @@ Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco C
 
 \url{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}
 
-\begin{figure}[htpb!]
+
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-02}
 	\caption{Exemplo de série temporal}
@@ -62,50 +63,36 @@ Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IB
 
 \url{https://sidra.ibge.gov.br/home}
 
+
 \begin{figure}[htpb!]
 	\centering
-	\includegraphics[width=.3\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-03}
-	\caption{Exemplo de corte transversal}
-	\label{fig:f03-03}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-03}
+	\caption{Base de dados de Série Temporal}
+	\label{fig:bpcursoteccomp002019f03-03}
 \end{figure}
 
-\subsection{Dados em Painel}
 
-
-
-\section{dplyr}
-
-	Dplyr é um pacote do R que fornece bastante capacidade de manipulação de dados, possuindo um conjunto de funções de remodelagem de dados, filtragem de dados e combinação de dados.
-	
-	Para ter acesso ao dplyr e suas ferramentas, é preciso instalar o pacote.
-	A função de instalação para o dplyr é a seguinte: 
-	
-<<eval=false, echo=TRUE>>=
-install.packages("dplyr")
-@
-  Após a instalação, é preciso "ler" o pacote. Para isso, utiliza-se a seguinte função:
-  
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 library(dplyr)
 @
 
   Nesta seção utilizaremos a base de dado "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
   
-<<eval=FALSE,echo=TRUE>>=
+<<eval=T,echo=T>>=
 data("starwars")
 @
   
   \subsection{Funções de Remodelagem}
 A primeira função apresentada é a função \textbf{arrange}, que consiste em ordenar uma coluna(variável) de forma crescente ou decrescente. As função é escrita da seguinte forma:
 
-<<eval=FALSE, echo=TRUE>>=
+<<eval=T,echo=TRUE>>=
 starwars11 <- arrange(starwars, mass) #Para ordenamento crescente
 starwars12 <- arrange(starwars, desc(height)) #Para ordenamento decrescente
 @
   
 Estão apresentadas a seguir as funções utilizadas para renomear rótulos(nomes) de colunas(variáveis).
 
-<<eval=FALSE, echo=TRUE>>=
+<<eval=T,echo=TRUE>>=
 starwars21 <- rename(starwars, nome = name)
 starwars22 <- rename(starwars, altura = height)
 starwars23 <- rename(starwars, massa = mass)
@@ -114,7 +101,7 @@ starwars23 <- rename(starwars, massa = mass)
 \subsection{Funções de Filtragem}
 A função \textbf{filter} extrai linhas de uma base de dados a partir de um critério lógico. Essa função é bastante útil quando é preciso extrair um conjunto de dados que apresentam determinadas características. Por exemplo quando é preciso criar um novo objeto sem os outliers. A função está descrita abaixo:
 
-<<eval=FALSE,echo=TRUE>>=
+<<eval=T,echo=T>>=
 starwars31 <- filter(starwars, mass < 70)
 @
 
@@ -122,50 +109,50 @@ A função \textbf{distinct} remove todas as linhas que se encontram duplicadas 
 
 Observação: Para que possamos usar a função \textbf{distinct}, criamos o objeto \emph{starwars32} com as linhas 31 até a 60 duplicadas.
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 starwars32 <- rbind(starwars, starwars[31:60,])
 starwars32 <- distinct(starwars32)
 @
 
 A função \textbf{sample\_frac} seleciona aleatoriamente o número de linhas correspondentes a fração determinada na função. O exemplo abaixo seleciona aleatoriamente 40\% das linhas da base de dados.
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 starwars41 <- sample_frac(starwars, 0.4, replace = TRUE)
 @
 
 A função \textbf{sample\_n} seleciona um número $N$ de linhas. Onde $N$ é o número de linhas que devem ser extraídas.
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars42 <- sample_n(starwars, 25, replace = TRUE)
 @
 
 A função \textbf{slice} extrai linhas de acordo com as posições das linhas. Para o exemplo abaixo, criamos um novo objeto com as linhas 10 até a linha 50.
 
-<<eval=false, echo=true>>=
+<<eval=F,echo=F>>=
 starwars51 <- slice(starwars, 10:50)
 @
 
 A função \textbf{select} seleciona colunas a partir dos rótulos especificados na função.
 
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars61 <- select(starwars, name, height, mass)
 starwars62 <- select(starwars, name, gender, species)
 @
 
 Para combinação de duas ou mais bases de dados temos as funções de \textbf{"join"}. A primeira é a função \textbf{left\_join} que insere uma base de dados a outra pela esquerda. 
 
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars71 <- left_join(starwars61, starwars62, by = "name")
 @
 
 A função \textbf{right\_join} insere uma base a outra pela direita.
 
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars72 <- right_join(starwars61, starwars62, by = "name")
 @
 
 A função \textbf{full\_join} insere uma base a outra a partir de uma chave comum nas duas bases.
 
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars73 <- full_join(starwars61, starwars62, by = "name")
 @
 
@@ -177,7 +164,7 @@ Além de todas essas funções apresentadas anteriormente, o dplyr permite conca
 
 Abaixo temos um exemplo da utilização do pipe. O exemplo consiste em calcular média e desvio padrão a partir de um agrupamento por espécie da base de dados starwars.
 
-<<eval=false,echo=true>>=
+<<eval=F,echo=T>>=
 starwars81 <- starwars %>%
   group_by(species) %>%
   summarise(desvpad = sd(birth_year, na.rm = TRUE),
@@ -193,14 +180,17 @@ A fonte para parte das figuras desta seção está em \url{https://github.com/rs
 	
 Para utilizar o pacote precisamos efetuar a instalação do pacote e depois executar o mesmo.
 
-<<eval=false, echo=true>>=
+<<eval=F,echo=T>>=
 install.packages("tidyr")
-library(tidyr)
 @
 
+
+<<eval=T,echo=T>>=
+library(tidyr)
+@
 Para os exemplos desta seção utilizaremos as bases de dados \textbf{population} e \textbf{table2} do próprio tidyr. Para utilizar as duas bases precisamos efetuar dois comandos, que são:
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 data("population")
 data("table2")
 @
@@ -213,7 +203,7 @@ A função \textbf{gather} é oposta a função \textbf{spread}, visto que \text
 
 Primeiro transformaremos o fator(cases, count) em colunas.
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 View(table2)
 population12 <- table2 %>% spread(type, count) 
 View(population12)
@@ -229,7 +219,7 @@ View(population12)
 
 Depois retornaremos com o fator(cases, count) para as linhas, retornando ao painel de dados anteriormente.
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 population13 <- population12 %>% gather(type, count, cases:population)
 View(population13)
 @
@@ -240,7 +230,7 @@ A função \textbf{spread} transforma linhas em colunas. É bastante útil quand
 
 No exemplo abaixo transformamos um painel de dados em uma série temporal, sendo as variáveis os países presentes na base de dados \textbf{population}.
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 View(population)
 population11 <- population %>% spread(country, population)
 View(population11)
@@ -263,14 +253,14 @@ A função \textbf{unite} agrega o conteúdo de todas as linhas de duas colunas 
 
 Primeiramente acessamos o dataset \textbf{table1}:
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 data("table1")
 head(table1)
 @
 
 Após ter acesso ao dataset, podemos executar a função \textbf{unite} para juntar os conteúdos \textbf{country} e \texttt{year} em uma única coluna. Fazemos a ação da seguinte forma:
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 table2 <- unite(table1, "country_year", c("country","year"))
 head(table2)
 @
@@ -290,14 +280,14 @@ A função \textbf{separate} desagrega o conteúdo de uma coluna em duas novas c
 
 A função de seperação é a seguinte:
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 table3 <- separate(table2, country_year, c("country", "year"), sep = "_")
 head(table3)
 @
 
 Como resultado da separação é preciso que obtenhamos um dataframe \textbf{table3} exatamente igual ao dataframe \textbf{table1}. Para checarmos o resultado está conforme o esperado, podemos executar o respectivo comando:
 
-<<eval=false,echo=true>>=
+<<eval=T,echo=T>>=
 table3 == table1
 @
 
@@ -353,7 +343,3 @@ table3 == table1
 	\label{fig:bpcursoteccomp002019f03-11}
 \end{figure}
 
-
-
-
-\section{tidyverse}
