@@ -154,4 +154,19 @@ labs(x="Comprimento da Sépala", y="Largura da Sépala", color = "Espécie")
 plot(gf4)
 @
 
+\newpagess
+
+Percebam que na figura \ref{fig:f06-07} utilizamos a mesma variável para o parâmetro \textbf{color} e para o parâmetro \textbf{facet\_wrap}. Em um novo exemplo usando a base de dados \textbf{mpg}, utilizaremos os dois parâmetros citados anteriormente, mas com variáveis distintas para cada um.
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-08}
+	\caption{Autonomia de combustível de veículos}
+	\label{fig:f06-08}
+\end{figure}
+
+O código que gera a figura \ref{fig:f06-08} está escrito abaixo:
+
+
+
 	\section{shiny}
