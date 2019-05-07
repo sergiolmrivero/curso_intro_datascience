@@ -139,12 +139,12 @@ Se você não quiser que um determinado título seja numerado, você pode adicio
 
 Os itens da lista não ordenada começar com *, -ou +, e você pode aninhar uma lista dentro de outra lista pelo recuo da sub-lista, por exemplo,
 
-- one item\\
-- one item\\
-- one item\\
-~~~~- one more item\\
-~~~~- one more item\\
-~~~~- one more item
+- um item\\
+- um item\\
+- um item\\
+~~~~- mais um item\\
+~~~~- mais um item\\
+~~~~- mais um item
 
 A saída é:
 \begin{itemize}
@@ -184,19 +184,50 @@ A saída não parece muito diferente com a fonte Markdown:
 	
 \subsection{Os \textit{chunks}}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-05}
-	\caption{Um \textit{chunk}}
-	\label{fig:bpcursoteccomp002019f04-05}
-\end{figure}
+	Um \textit{chunk} é uma parte de código (no nosso caso, R) incluído num arqivo \textbf{Rmarkdown}. Chunks iniciam com \verb|```{opcoes do chunk}| e terminam com \verb|```|. Na figura \ref{fig:bpcursoteccomp002019f04-05} podemos ver um exemplo de um chunk típico gerando um gráfico em R. 
 
+
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-05}
+		\caption{Um \textit{chunk}}
+		\label{fig:bpcursoteccomp002019f04-05}
+	\end{figure}
+	
+	Algumas dicas importantes sobre as opções em um \textit{chunk} \footnote{O texto original pode ser encontrado em \url{https://yihui.name/knitr/options/}}:
+	
+	\begin{enumerate}
+		\item Opções de \textit{chunk} devem ser escritas em uma linha; 
+		\item não são permitidas quebras de linha dentro das opções de \textit{chunk};
+		\item Evite espaços e pontos em rótulos de partes e nomes de diretórios; 
+		\item Se sua saída for um documento TeX, esses caracteres podem causar problemas (em geral, é recomendável usar caracteres alfabéticos com palavras separadas por \verb|-| e evitar outros caracteres), por exemplo, \verb|setup-options| é um bom label, enquanto \verb|setup.options| e \verb|chunk 1| são ruins;
+		\item Todos os valores de opções devem ser expressões R válidas, assim como escrevemos argumentos de função;
+		\item para opções lógicas, deve-se usar \verb|TRUE| ou \verb|FALSE| ou \verb|T| ou \verb|F| mas, importante, "true" e "false"  não funcionam
+	\end{enumerate}
+	
+	Abaixo falamos de algumas opções relevantes do cabeçalho de um chunk
+	
+	Primeiro o código pode ou não ser executado. O opção \verb|eval = FALSE| faz com que o código seja avaliado mas não executado. Sem nenhuma opção, o código é avaliado.
+	
+	Algumas opções que configuram os padrões de saída de um \textit{chunk} são:
+	\begin{itemize}
+		\item \textbf{echo:} (\verb|TRUE|) se deve incluir o código-fonte R no arquivo de saída; além de \verb|TRUE / FALSE| que liga / desliga completamente o código-fonte, também podemos usar um vetor numérico para selecionar quais expressões R ecoar em um trecho, por exemplo, \verb|echo = 2:3| significa apenas ecoar a segunda e terceira expressões, e \verb|echo = -4| significa excluir a quarta expressão;
+		\item \textbf{results}: ('markup'; character) pega esses valores possíveis:
+			\begin{itemize}
+				\item \textbf{markup}: marque os resultados usando o gancho de saída, por ex. colocar resultados em um ambiente especial do \LaTeX;
+				\item \textbf{asis}: saída como é, ou seja, grava os resultados brutos de R no documento de saída;
+				\item \textbf{hold}: segura todas as saídas e as empurra para o final de um \textit{chunk}
+				\item \textbf{hide}: oculta resultados.  esta opção só se aplica à saída R normal (não avisos, mensagens ou erros)				
+			\end{itemize}
+		\item \textbf{warning}: (default é VERDADEIRO;) preserva os avisos (produzidos por warning()) na saída como se executássemos código R em um terminal (se for  FALSO, todos os avisos serão impressos no console ao invés do documento de saída);
+		\item \textbf{error}: (default é VERDADEIRO) preserva os erros (de stop()). A avaliação não será interrompida mesmo em caso de erros!! Se quisermos que R pare nos erros, precisamos definir essa opção como FALSO;
+		\item \textbf{message}: (default é VERDADEIRO) preserva as mensagens emitidas por message() (semelhante ao warning).
+	\end{itemize}
+
+	Um detalhamento maior das opções de chunks no Rmarkdown podem ser achados em \url{https://yihui.name/knitr/options/}
 	
 	
-	\subsection{Exemplos de uso do .Rmd}
-	
-	
-	\subsection{Algumas referências}
+	\subsection{Algumas referências sobre o Rmarkdown}
 	
 	\url{https://daringfireball.net/projects/markdown/}
 	
@@ -207,6 +238,10 @@ A saída não parece muito diferente com a fonte Markdown:
 	\url{https://ourcodingclub.github.io/2016/11/24/rmarkdown-1.html}
 	
 	\url{https://github.com/yihui/knitr-book}
+	
+	\url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
+	
+	\url{https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf}
 	
 	\section{Gerando dados sintetizados - Utilizando dataframes}
 	
