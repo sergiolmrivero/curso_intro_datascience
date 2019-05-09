@@ -8,18 +8,30 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
-\chapter{Aula 5 - Gerando estatísticas dos Dados}
+\chapter{Analisando dados com R}
 
-	\section{Estatísticas Descritivas}
+	\section{Gerando dados sintetizados - Utilizando dataframes}
+
+	\section{Gerando Tabelas}
 	
-	\section{Correlação}
+		\subsection{xtable}
 	
-	\section{Apresentando os Resultados em Gráficos}
+		\subsection{stargazer}
 	
-		\subsection{Gráficos Simples}
+	\section{Gerando estatísticas dos Dados}
+	
+		\subsection{Estatísticas Descritivas}
 		
-		\subsection{Bibliotecas de Gráficos}
-
-
+		\subsection{Correlação}
+		
+	\section{Utilizando modelos}
+	
+		\subsection{Regressão}
+	
+		\subsection{Executando a Regressão}
+	
+		\subsection{Apresentando os resultados da Regressão}
+	
+		\subsection{Gerando Dashboards}
 
 

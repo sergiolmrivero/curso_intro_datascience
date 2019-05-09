@@ -8,7 +8,7 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
-\chapter{Aula 7 - Utilizando modelos}
+\chapter{Utilizando modelos}
 
 	\section{Regressão}
 	

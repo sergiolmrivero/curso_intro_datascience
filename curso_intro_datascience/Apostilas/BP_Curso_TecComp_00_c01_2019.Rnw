@@ -8,7 +8,7 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=TRUE, eval=TRUE}
 
-\chapter{Aula 1 - Instalando e Configurando o R e RStudio}
+\chapter{Instalando e Configurando o R e RStudio}
 
 
 Nesta aula os alunos aprenderão a baixar o R e RStudio bem como aprenderão a utilizar bibliotecas em R

@@ -29,22 +29,20 @@
 
 \title{Introdução ao Tratamento e Análise de Dados em R}
 
-%\subtitle{Assessments and Report from Socioeconomic and Demographic Data in \\
-%	      Small Cities in Amazon Delta}
 
 \subtitle{ou Data Science para todos!}
 
 \date{\today}
 
-\author{S.~Rivero \and H.~Farias}
+\author{Sérgio Rivero \and Hilder Farias}
 
 \affiliation{Programa de Pós-Graduação em Economia\\
-  Instituto de Ciências Sociais Aplicadas\\
-  Universidade Federal do Pará\\
-  Rua Augusto Correia, 1\\
-  Belém, Pará - 66.075-200}
+	Instituto de Ciências Sociais Aplicadas\\
+	Universidade Federal do Pará\\
+	Rua Augusto Correia, 1\\
+	Belém, Pará - 66.075-200}
 
-\author{Equipe UFPA }
+\author{Murilo Gomes, Lais Conte \and Erwin Braga }
 
 
 \affiliation{Faculdade de Economia \\
@@ -131,6 +129,12 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\SweaveInput{BP_Curso_TecComp_00_c04_2019.Rnw}
+
+
+
+
+
 \SweaveInput{BP_Curso_TecComp_00_c02_2019.Rnw}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,13 +151,16 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\SweaveInput{BP_Curso_TecComp_00_c04_2019.Rnw}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    CAPITULO 5
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SweaveInput{BP_Curso_TecComp_00_c06_2019.Rnw}
+
+
 
 \SweaveInput{BP_Curso_TecComp_00_c05_2019.Rnw}
 
@@ -163,7 +170,6 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\SweaveInput{BP_Curso_TecComp_00_c06_2019.Rnw}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -171,7 +177,7 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\SweaveInput{BP_Curso_TecComp_00_c07_2019.Rnw}
+%\SweaveInput{BP_Curso_TecComp_00_c07_2019.Rnw}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -179,7 +185,7 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
+%\SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
 
 \chapter{Onde aprender mais?}
 \addcontentsline{toc}{section}{Onde aprender mais?}

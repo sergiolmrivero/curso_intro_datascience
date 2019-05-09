@@ -9,13 +9,10 @@
 \SweaveOpts{concordance=TRUE,echo=FALSE,eval=TRUE}
 
 
-\chapter{Aula 4 - Apresentando Resultados}
+\chapter{Produzindo Relatórios Usando R Markdown}
 
-	Nesta aula discutiremos dois aspectos importantes do trabalho com dados em R. Primeiramente veremos as funcionalidades implementadas no R para a produção de relatórios dinâmicos, execução de comandos R e apresentação de resultados utilizando uma linguagem simples chamada \textbf{Markdown} \footnote{Uma definição do Markdown pode ser achada em : \url{https://tools.ietf.org/html/rfc7763}}. Depois veremos as ferramentas para apresentação de resultados gerados no R em tabelas, com a utilização dos pacotes xtable e stargazer.
+	Neste capítulo discutiremos dois aspectos importantes do trabalho com dados em R. Primeiramente veremos as funcionalidades implementadas no R para a produção de relatórios dinâmicos, execução de comandos R e apresentação de resultados utilizando uma linguagem simples chamada \textbf{Markdown} \footnote{Uma definição do Markdown pode ser achada em : \url{https://tools.ietf.org/html/rfc7763}}. Depois veremos as ferramentas para apresentação de resultados gerados no R em tabelas, com a utilização dos pacotes xtable e stargazer.
 		
-	
-	\section{Rmarkdown - Preparando o relatório enquanto você analisa os dados}
-	
 	R Markdown é um formato de arquivo que permite a produção documentos dinâmicos utilizando R. Um documento R Markdown é escrito na linguagem \textbf{Markdown} e contém partes  de código R incorporado em seções específicas do arquivo, chamadas \textit{chunks}:
 	\begin{quotation}
 		\textbf{Markdown} é duas coisas: (1) uma sintaxe de formatação de texto simples; e (2) uma ferramenta de software, escrita em Perl, que converte a formatação de texto simples em HTML. Consulte a página Sintaxe para obter detalhes relacionados à sintaxe de formatação do Markdown. Você pode experimentá-lo agora mesmo, usando o Dingus online .
@@ -26,7 +23,7 @@
 	O uso da linguagem \textbf{Markdown} para a produção de documentos quando se analisa dados utilizando o R, permite uma transição suave e contínua entre o processo de análise e a elaboração de um Relatório de resultados. Neste sentido um arquivo \textit{Rmarkdown} (Rmd) funciona como uma espécie de \textit{bloco de notas} que pode evoluir para o formato de um relatório final em um arquivo Html, PDF, docx, etc. Isto economiza tempo e esforço. 
 	
 	
-	\subsection{O que é o Rmarkdown?}
+	\section{O que é o Rmarkdown?}
 	
 	O \textit{Rmarkdown} (RMD) é a implementação do \textbf{Markdown} em R. R markdown \cite{Allaire2016} é um formato de documento  que foi introduzido inicialmente no pacote \textit{knitr} \cite{Xie2016,Xie2017}. O Knitr, na verdade suporta um conjunto grande de linguagens, como \LaTeX, HTML, AsciiDoc, reStructuredText e Textile.
 	
@@ -61,7 +58,7 @@ if (!requireNamespace("devtools")){
 	
 
 
-	\subsection{Como o Rmd funciona?}
+	\section{Como o Rmd funciona?}
 		
 	O processo de geração de documentos com o RMD é feito a partir da pressão do botão \textbf{Knit} (figura \ref{fig:bpcursoteccomp002019f04-02}) no RStudio. Para isso, você deve ter habilitado e configurado o Markdown no app.  A partir daí, o arquivo arquivo .rmd (Rmarkdown) tem seus códigos R executados e gera um código .md com os resultados da execução do R (figuras, tabelas, etc) que  é então processado pelo pandoc. Esse processamento, gera o arquivo de resultado desejado (HTML, DOC, PDF, etc)
 
@@ -86,7 +83,7 @@ if (!requireNamespace("devtools")){
 
 	
 	
-	\subsection{A estrutura de um arquivo .Rmd}
+	\section{A estrutura de um arquivo .Rmd}
 	
 	Um arquivo .Rmd tem basicamente, 3 partes.
 
@@ -106,7 +103,7 @@ if (!requireNamespace("devtools")){
 	\end{figure}
 	
 
-\subsection{Sintaxe de Markdown}
+\section{Sintaxe de Markdown}
 
 O texto em um documento R Markdown é gravado com a sintaxe Markdown. Precisamente falando, é o Markdown do Pandoc. Há muitos sabores de Markdown inventados por pessoas diferentes, e o sabor do Pandoc é o mais abrangente para o nosso conhecimento. Você pode encontrar a documentação completa do Markdown do Pandoc em \url{https://pandoc.org/MANUAL.html}. É altamente recomendável que você leia esta página pelo menos uma vez para conhecer todas as possibilidades com o Markdown da Pandoc, mesmo que você não use todas elas. Esta seção é adaptada da Seção 2.1 de Xie ( 2016 ) e abrange apenas um pequeno subconjunto da sintaxe Markdown do Pandoc.
 
@@ -182,7 +179,7 @@ A saída não parece muito diferente com a fonte Markdown:
 
 
 	
-\subsection{Os \textit{chunks}}
+\section{Os \textit{chunks}}
 
 	Um \textit{chunk} é uma parte de código (no nosso caso, R) incluído num arqivo \textbf{Rmarkdown}. Chunks iniciam com \verb|```{opcoes do chunk}| e terminam com \verb|```|. Na figura \ref{fig:bpcursoteccomp002019f04-05} podemos ver um exemplo de um chunk típico gerando um gráfico em R. 
 
@@ -227,7 +224,7 @@ A saída não parece muito diferente com a fonte Markdown:
 	Um detalhamento maior das opções de chunks no Rmarkdown podem ser achados em \url{https://yihui.name/knitr/options/}
 	
 	
-	\subsection{Algumas referências sobre o Rmarkdown}
+	\section{Algumas referências sobre o Rmarkdown}
 	
 	\url{https://daringfireball.net/projects/markdown/}
 	
@@ -243,13 +240,5 @@ A saída não parece muito diferente com a fonte Markdown:
 	
 	\url{https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf}
 	
-	\section{Gerando dados sintetizados - Utilizando dataframes}
-	
-	\section{Gerando Tabelas}
-	
-		\subsection{xtable}
-		
-		\subsection{stargazer}
-
 
 

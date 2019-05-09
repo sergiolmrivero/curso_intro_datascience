@@ -9,7 +9,7 @@
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
 		
-\chapter{Aula 2 - Acessando e Utilizando Bases de Dados}
+\chapter{Acessando e Utilizando Bases de Dados}
 
 Apresentar o conceito de Dataframe, os tipos de dados utilizados no R e os principais comandos  
 

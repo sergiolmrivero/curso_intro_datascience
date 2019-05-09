@@ -8,7 +8,7 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
-\chapter{Aula 8 - Encerramento do Curso}
+\chapter{Encerramento do Curso}
 
 
 Aqui colocamos as coisas que precisa lembrar e algumas idéias sobre o que pode fazer

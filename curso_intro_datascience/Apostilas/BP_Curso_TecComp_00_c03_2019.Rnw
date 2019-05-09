@@ -8,7 +8,7 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
-\chapter{Aula 3 - Limpando e organizando seus dados}
+\chapter{Limpando e organizando seus dados}
 
 	\section{O que é uma boa base de dados e que tipos de bases existem?}
 	Boas bases de dados para trabalhar, sobretudo com tidy, são bases que possuem variáveis nas colunas e observações nas linhas. 

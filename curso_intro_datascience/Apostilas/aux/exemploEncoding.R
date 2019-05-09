@@ -1,0 +1,1 @@
+xx <- read.csv(file = 'PIB_BR_1996-2016.csv', fileEncoding = "UTF-8")

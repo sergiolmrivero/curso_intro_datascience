@@ -1,0 +1,45 @@
+---
+title: "Analisando o PIB usando valores correntes"
+author: "A classe de Métodos Computacionais de 2-2019"
+date: "May 8, 2019"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introdução 
+
+Este artigo pretende analisar a variação do PIB  usando valores correntes o que é, obviamente, errado.
+
+```{r importaPIB, echo=FALSE}
+PIB <- read.csv(file = 'PIB_BR_1996-2016.csv', fileEncoding = "UTF-8")
+```
+
+## A tabela do PIB
+
+```{r tabelaPIB, echo=FALSE, results='asis'}
+library(xtable)
+xtable(PIB, type='latex')
+
+```
+
+
+### O gráfico
+
+
+
+```{r graficoPIBpc, echo=FALSE}
+library(ggplot2)
+gPIB <- ggplot(PIB, aes(x=Ano, y=PIB.per.capita...valores.correntes..Reais.)) +
+  geom_point() +
+  geom_smooth()
+plot(gPIB)
+```
+
+Como podemos ver no gráfico, o PIB per capita nominal subiu nos anos da série.
