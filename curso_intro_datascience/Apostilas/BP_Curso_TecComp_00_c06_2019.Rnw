@@ -255,55 +255,50 @@ A figura \ref{fig:bpcursoteccomp002019f06-14} mostra um exemplo da função \tex
 	\label{fig:bpcursoteccomp002019f06-15}
 \end{figure}
 
+A função \textit{flowLayout()} (Figura \ref{fig:bpcursoteccomp002019f06-14}) permite uma distribuição automática dos objetos dentro da página.
 
-\begin{figure}
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-16}
-	\caption{}
+	\caption{Exemplo da função sidebarLayout()}
 	\label{fig:bpcursoteccomp002019f06-16}
 \end{figure}
 
+A função \textit{sidebarLayout()} (Figura \ref{fig:bpcursoteccomp002019f06-16}) é extremamente útil para termos painéis onde opções em um painel alteram a saída em um painel principal. Muitas apresentações e aplicações em páginas que mostram dados têm esse layout. 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-17}
-	\caption{}
-	\label{fig:bpcursoteccomp002019f06-17}
-\end{figure}
 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-18}
-	\caption{}
-	\label{fig:bpcursoteccomp002019f06-18}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-19}
-	\caption{}
+	\includegraphics[width=0.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-19}
+	\caption{Painéis no \textit{shiny}}
 	\label{fig:bpcursoteccomp002019f06-19}
 \end{figure}
 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-11}
-	\caption{Tipos de entradas}
-	\label{fig:bpcursoteccomp002019f06-11}
-\end{figure}
-
+Um outro conjunto funções bastante útil que aumenta a densidade de informações apresentadas na página são as que colocam painéis (As funções \textit{tabesetPanel(), navlistPanel()} combinadas com a função \textit{tabPanel()}. Estas funções permitem a apresentação de resultados selecionados a partir de um conjunto de painéis com diferentes conteúdos para cada painel (Figura \ref{fig:bpcursoteccomp002019f06-19})
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-12}
-	\caption{Tipos de Entradas (cont.)}
+	\caption{Alguns Tipos de Entradas}
 	\label{fig:bpcursoteccomp002019f06-12}
 \end{figure}
 
+Os objetos que permitem diversos tipos de entradas no \textit{shiny} são incluidos na seção ui. Na figura \ref{fig:bpcursoteccomp002019f06-12} vemos alguns dos tipos de objetos que podem ser utilizados. É possível fazer uma entrada de um valor numérico com \textit{numericInput()}, de um valor que permite escolha entre alternativas com (\textit{radioButtons()} e \textit{selectInput()}  entre diversas outras possibilidades.
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-20}
+	\caption{Funções de Renderização e Saída}
+	\label{fig:bpcursoteccomp002019f06-20}
+\end{figure}
+
+
+Finalmente, o \textit{shiny} combina funções de renderização e saída para produzir as suas páginas. As funções de renderização funcionam combinadas com as funções de saída (Figura \ref{fig:bpcursoteccomp002019f06-20}) e são também combinadas ou disparadas por eventos que ocorrem na interface de usuário. Este padrão é uma das características do modelo de programação das páginas geradas pelo \textit{shiny} chamado de \textit{programação reativa}. Mais informações sobre o modelo de programação reativa, podem ser encontradas em \url{https://shiny.rstudio.com/articles/reactivity-overview.html}
 
 
 \subsection{Alguns links úteis}
