@@ -166,7 +166,58 @@ Percebam que na figura \ref{fig:f06-07} utilizamos a mesma variável para o par�
 
 O código que gera a figura \ref{fig:f06-08} está escrito abaixo:
 
+<<eval=false,echo=true>>=
+gf8 <- ggplot(mpg, aes(x = cty, y = hwy, color = class)) + 
+geom_point() +
+geom_line() +
+facet_wrap(~manufacturer) +
+ggtitle("Autonomia de combustível por Companhia e modelo de veículo") +
+labs(x="Milhas por galão na cidade", y="Milhas por galão na estrada")
+plot(gf8)
+@
 
+É possível adicionar os tamanhos dos pontos pra indicar o impacto de outra variável. Para fazer isso basta adicionar uma camada na função \textbf{geom_point(size $=$ cyl)}. O código fica da seguinte forma:
+
+<<eval=false, echo=true>>=
+gf9 <- ggplot(mpg, aes(x = cty, y = hwy, color = class)) +
+geom_point(aes(size = cyl)) +
+geom_line() +
+facet_wrap(~year) +
+ggtitle("Autonomia de combustível") +
+labs(x="Autonomia na Cidade", y="Autonomia na Estrada",
+color = "Classe do Veículo", size = "Cilindro")
+plot(gf9)
+@
+
+É possível determinar novas posições para as legendas. Para o nosso exemplo, as legendas serão movidas para baixo:
+
+<<eval=false, echo=true>>=
+gf11 <- ggplot(mpg, aes(x = cty, y = hwy, color = class)) +
+geom_point() +
+geom_line() +
+facet_wrap(~year) +
+ggtitle("Autonomia de combustível") +
+labs(x="Autonomia na Cidade", y="Autonomia na Estrada",
+color = "Classe do Veículo", size = "Cilindro") +
+theme(legend.position = "bottom") # "bottom", "top", "lef", ou "right" 
+plot(gf11)
+@
+
+Por último, podemos mudar o tema dos gráficos, para isso adicionamos uma nova camada:
+
+<<eval=false, echo=true>>=
+gf10 <- ggplot(mpg, aes(x = cty, y = hwy, color = class)) +
+geom_point() +
+geom_line() +
+facet_wrap(~year) +
+ggtitle("Autonomia de combustível") +
+labs(x="Autonomia na Cidade", y="Autonomia na Estrada",
+color = "Classe do Veículo", size = "Cilindro") +
+theme_minimal() 
+plot(gf10)
+@
+
+Todos os temas disponíveis podem ser checados em \url{https://ggplot2.tidyverse.org/reference/ggtheme.html}
 
 \section{Shiny}
 
