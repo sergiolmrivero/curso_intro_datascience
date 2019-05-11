@@ -95,13 +95,16 @@ A saída da regressão, porém, não está adequada para apresentação. Então,
 
 <<tabHPMPC,echo=TRUE,results=tex>>=
 
-lm.hpmpg.tab <- xtable(hpmpg, caption = 'Resultado do Modelo Consumo versus HP', label  = 'tabreg:consumohp')
+lm.hpmpg.tab <- xtable(hpmpg, 
+                       caption = 'Resultado do Modelo Consumo versus HP', 
+                       label  = 'tabreg:consumohp'
+                       )
 
 print.xtable(lm.hpmpg.tab, caption.placement = 'top')
 @
 
 
-Agora, podemos incluir outros detalhes na tabela, como títulos, por exemplo.
+Note que podemos incluir outros detalhes na tabela, como títulos, por exemplo (usando caption no xtable) bem como colocar um identificador da tabela (o label) e, na função \textit{print.xtable()} modificar a posição do título. 
 
 
 	

@@ -176,7 +176,7 @@ labs(x="Milhas por galão na cidade", y="Milhas por galão na estrada")
 plot(gf8)
 @
 
-É possível adicionar os tamanhos dos pontos pra indicar o impacto de outra variável. Para fazer isso basta adicionar uma camada na função \textbf{geom_point(size $=$ cyl)}. O código fica da seguinte forma:
+É possível adicionar os tamanhos dos pontos pra indicar o impacto de outra variável. Para fazer isso basta adicionar uma camada na função \textbf{geom\_point(size $=$ cyl)}. O código fica da seguinte forma:
 
 <<eval=false, echo=true>>=
 gf9 <- ggplot(mpg, aes(x = cty, y = hwy, color = class)) +
