@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
-\SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
+\SweaveOpts{concordance=TRUE, echo=TRUE, eval=TRUE}
 
 
 \chapter{Gráficos em R}

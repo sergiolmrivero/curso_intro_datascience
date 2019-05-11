@@ -10,20 +10,125 @@
 
 \chapter{Analisando dados com R}
 
-	\section{Gerando dados sintetizados - Utilizando dataframes}
+	Neste capítulo veremos como é possível gerar um grande conjunto de tabelas em R (utilizando o \textit{Markdown} bem como discutiremos a apresentação de resultados de modelos com estas bibliotecas.
+	
 
-	\section{Gerando Tabelas}
+\section{Gerando dados sintetizados - Utilizando dataframes}
 	
-		\subsection{xtable}
+	Muitas vezes, como já vimos aqui, é necessário tratar e sintetizar os dados em um dataframe para podermos analisá-los. Então, faremos, neste capítulo um conjunto de tabelas que serão apresentadas utilizando algumas ferramentas específicas para geração de tabelas em R. 
 	
-		\subsection{stargazer}
+\section{Gerando Tabelas}
+	
+	A geração de tabelas no R pode ser feita utilizando alguns pacotes específicos adequados para tal. Estes pacotes leem dataframes ou matrizes e geram tabelas a partir destes. Muitos destes pacotes têm também a capacidade de ler objetos específicos do R (como resultados de regressões, análise de cluster, etc) e gerar tabelas correspondentes às saídas normais de apresentação destes resultados em 
+	
+	\subsection{xtable}
+		
+		\url{https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf}
+		
+		\url{https://www.rdocumentation.org/packages/xtable/versions/1.8-4/topics/xtable}
+		
+		\url{http://bcb.dfci.harvard.edu/~aedin/courses/ReproducibleResearch/RR/exampleSweave.Rnw}
+		
+		
+		Abaixo aqui uma seção utilizando xtable
+		
+		
+Aqui temos o nosso velho conhecido banco de dados MTCARS. Utilizando a opção auto, o xtable define o tipo de saída em termos de casas decimais, automaticamente.
+
+<<eval=TRUE,echo=TRUE, results=tex>>=
+    library(xtable)
+  		
+		mtc2 <- xtable(head(mtcars), auto = TRUE)
+		
+		print.xtable(mtc2)
+		
+@
+		
+A apresentação da tabela nestes termos, com este nível de detalhamento não faz nenhum sentido para a nossa análise. Claramente o gostaríamos de ter é uma tabela mais sintética. Para isso, precisamos gerar um novo dataframe que sintetize os nossos resultados de interesse e, a partir daí, gera-se a tabela.		
+
+<<eval=TRUE,echo=TRUE, results=tex>>=
+
+library(dplyr)
+		
+data(mtcars)
+		
+sintesePot <- as.data.frame(mtcars %>% group_by(cyl) %>%
+                    summarize(potenciaMedia = mean(hp,na.rm = TRUE),
+                              sigmaPotencia = sd(hp, na.rm = TRUE),
+                              n = n()
+                            )
+                    )
+	
+tabelaPot <- xtable(sintesePot)
+		print(tabelaPot, type = "latex")
+@
+
+	
+Para a análise, no entanto, podemos aqui pensar na relação entre consumo e número de hp.
+
+
+\begin{figure}
+<<consumHP, fig=TRUE, height=4, width=6, echo=TRUE>>=
+library(ggplot2)
+
+ggplot(mtcars, aes(x=hp, y=mpg)) +
+  geom_point() +
+  geom_smooth() +
+  labs(x='Potência (HP)', y = 'Consumo (MPG)')
+@
+
+\caption{Comparação de Potência em HP com Consumo (mpg)}
+
+\end{figure}
+	
+	Podemos então pensar em uma regressão que olhe para a relação entre potência e  consumo
+	
+	
+<<regrHPMPG, echo=TRUE>>=
+hpmpg <- lm(mpg~hp, data = mtcars)
+
+summary(hpmpg)
+@
+
+
+A saída da regressão, porém, não está adequada para apresentação. Então, utilizamos o xtable para gerar uma tabela bem mais apresentável.
+
+<<tabHPMPC,echo=TRUE,results=tex>>=
+
+lm.hpmpg.tab <- xtable(hpmpg, caption = 'Resultado do Modelo Consumo versus HP', label  = 'tabreg:consumohp')
+
+print.xtable(lm.hpmpg.tab, caption.placement = 'top')
+@
+
+
+Agora, podemos incluir outros detalhes na tabela, como títulos, por exemplo.
+
+
+	
+	
+\subsection{stargazer}
+
+
+Uma outra função que podemos utilizar que apresenta os resultados da nossa análise em uma forma um pouco diferente e bem mais detalhada é o stargazer. Abaixo um exemplo de tabela utilizando esta biblioteca.
+
+<<tabSG, echo=TRUE, results=tex>>=
+library(stargazer)
+
+stargazer(hpmpg, type='latex', 
+          title = 'Resultado do Modelo Consumo versus HP'
+          )
+@
+
+
+É o mesmo resultado da tabela anterior, apenas utilizando outra biblioteca de geração de tabelas.
+		
 	
 	\section{Gerando estatísticas dos Dados}
 	
 		\subsection{Estatísticas Descritivas}
 		
 		\subsection{Correlação}
-		
+		 
 	\section{Utilizando modelos}
 	
 		\subsection{Regressão}
