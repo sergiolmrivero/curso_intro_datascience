@@ -72,27 +72,27 @@ Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IB
 \end{figure}
 
 
-<<eval=T,echo=T>>=
-library(dplyr)
+<<eval=false,echo=T>>=
+ library(dplyr)
 @
 
   Nesta seção utilizaremos a base de dado "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
   
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 data("starwars")
 @
   
   \subsection{Funções de Remodelagem}
 A primeira função apresentada é a função \textbf{arrange}, que consiste em ordenar uma coluna(variável) de forma crescente ou decrescente. As função é escrita da seguinte forma:
 
-<<eval=T,echo=TRUE>>=
+<<eval=false,echo=TRUE>>=
 starwars11 <- arrange(starwars, mass) #Para ordenamento crescente
 starwars12 <- arrange(starwars, desc(height)) #Para ordenamento decrescente
 @
   
 Estão apresentadas a seguir as funções utilizadas para renomear rótulos(nomes) de colunas(variáveis).
 
-<<eval=T,echo=TRUE>>=
+<<eval=false,echo=TRUE>>=
 starwars21 <- rename(starwars, nome = name)
 starwars22 <- rename(starwars, altura = height)
 starwars23 <- rename(starwars, massa = mass)
@@ -101,7 +101,7 @@ starwars23 <- rename(starwars, massa = mass)
 \subsection{Funções de Filtragem}
 A função \textbf{filter} extrai linhas de uma base de dados a partir de um critério lógico. Essa função é bastante útil quando é preciso extrair um conjunto de dados que apresentam determinadas características. Por exemplo quando é preciso criar um novo objeto sem os outliers. A função está descrita abaixo:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 starwars31 <- filter(starwars, mass < 70)
 @
 
@@ -109,14 +109,14 @@ A função \textbf{distinct} remove todas as linhas que se encontram duplicadas 
 
 Observação: Para que possamos usar a função \textbf{distinct}, criamos o objeto \emph{starwars32} com as linhas 31 até a 60 duplicadas.
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 starwars32 <- rbind(starwars, starwars[31:60,])
 starwars32 <- distinct(starwars32)
 @
 
 A função \textbf{sample\_frac} seleciona aleatoriamente o número de linhas correspondentes a fração determinada na função. O exemplo abaixo seleciona aleatoriamente 40\% das linhas da base de dados.
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 starwars41 <- sample_frac(starwars, 0.4, replace = TRUE)
 @
 
@@ -159,7 +159,7 @@ starwars73 <- full_join(starwars61, starwars62, by = "name")
 Além de todas essas funções apresentadas anteriormente, o dplyr permite concatenar funções por meio de um mecanismo chamado \textbf{pipe}. Para utilizar o pipe é preciso colocar tais símbolos: 
 
 \begin{itemize}
-\item \%>\%
+	\item \%>\%
 \end{itemize}
 
 Abaixo temos um exemplo da utilização do pipe. O exemplo consiste em calcular média e desvio padrão a partir de um agrupamento por espécie da base de dados starwars.
@@ -185,12 +185,12 @@ install.packages("tidyr")
 @
 
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 library(tidyr)
 @
 Para os exemplos desta seção utilizaremos as bases de dados \textbf{population} e \textbf{table2} do próprio tidyr. Para utilizar as duas bases precisamos efetuar dois comandos, que são:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 data("population")
 data("table2")
 @
@@ -203,7 +203,7 @@ A função \textbf{gather} é oposta a função \textbf{spread}, visto que \text
 
 Primeiro transformaremos o fator(cases, count) em colunas.
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 View(table2)
 population12 <- table2 %>% spread(type, count) 
 View(population12)
@@ -219,7 +219,7 @@ View(population12)
 
 Depois retornaremos com o fator(cases, count) para as linhas, retornando ao painel de dados anteriormente.
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 population13 <- population12 %>% gather(type, count, cases:population)
 View(population13)
 @
@@ -230,7 +230,7 @@ A função \textbf{spread} transforma linhas em colunas. É bastante útil quand
 
 No exemplo abaixo transformamos um painel de dados em uma série temporal, sendo as variáveis os países presentes na base de dados \textbf{population}.
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 View(population)
 population11 <- population %>% spread(country, population)
 View(population11)
@@ -253,14 +253,14 @@ A função \textbf{unite} agrega o conteúdo de todas as linhas de duas colunas 
 
 Primeiramente acessamos o dataset \textbf{table1}:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 data("table1")
 head(table1)
 @
 
 Após ter acesso ao dataset, podemos executar a função \textbf{unite} para juntar os conteúdos \textbf{country} e \texttt{year} em uma única coluna. Fazemos a ação da seguinte forma:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 table2 <- unite(table1, "country_year", c("country","year"))
 head(table2)
 @
@@ -280,14 +280,14 @@ A função \textbf{separate} desagrega o conteúdo de uma coluna em duas novas c
 
 A função de seperação é a seguinte:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 table3 <- separate(table2, country_year, c("country", "year"), sep = "_")
 head(table3)
 @
 
 Como resultado da separação é preciso que obtenhamos um dataframe \textbf{table3} exatamente igual ao dataframe \textbf{table1}. Para checarmos o resultado está conforme o esperado, podemos executar o respectivo comando:
 
-<<eval=T,echo=T>>=
+<<eval=false,echo=T>>=
 table3 == table1
 @
 
