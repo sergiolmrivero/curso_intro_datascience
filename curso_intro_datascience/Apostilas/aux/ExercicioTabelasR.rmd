@@ -1,0 +1,89 @@
+---
+title: "Gerando Tabelas no Rmd"
+author: "Curso de Tratamento de Dados"
+date: "May 10, 2019"
+output: 
+  html_document:
+          number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(ggthemes)
+library(forecast)
+
+```
+
+# Importando os arquivos para o R
+```{r importandoDados}
+data <- read.csv2('data.csv', header=T, sep=';', dec=',')
+data$date <- as.Date(data$date, format='%d/%m/%Y')
+
+tail(data)
+
+```
+
+# Organizando os dados
+
+Aqui vai ler os diversos arquivos que estão no diretorio aux. 
+
+Usa-se o readxl.
+
+Depois, organiza-se os arquivos montando uma série temporal em painel para os dados.
+
+
+# Juntando os arquivos
+
+Aqui junta-se os arquivos utilizando o full join.
+
+# Tratando os dados
+```{r tratandoDados}
+
+data$prevreal <- data[,3]*(tail(data[,2],1)/data[,2]) 
+
+```
+
+
+# Gerando arquivos de síntese dos dados 
+
+Aqui se utiliza o dplyr-summarize para gerar tabelas síntese e apresentar
+
+# Gerando gráficos dos dados
+
+```{r graficoDespesaPrevidenciaria}
+ggplot(data, aes(date, previdencia/1000))+geom_line(size=.8)+
+  xlab('')+ylab('R$ bilhoes')+
+  labs(title='Despesa com Beneficios Previdenciarios')
+
+```
+
+
+```{r GraficoConjuntoReal}
+
+ggplot(data, aes(date, previdencia/1000))+
+  geom_line(size=.8, aes(color='Serie Nominal'))+
+  geom_line(size=.8, aes(date, prevreal/1000, color='Serie Real'))+
+  xlab('')+ylab('R$ bilhoes')+
+  labs(title='Despesa com Beneficios Previdenciarios',
+       colour='',
+       caption='analisemacro.com.br')+
+  theme(legend.position="top")
+
+```
+
+
+Aqui se gera gráficos dos dados
+
+# Executando Regressões
+
+Aqui se executa as regressões dos arquivos do Hilder.
+
+Também seria interessante colocar alguma coisa do Ricardo
+
+
+# Apresentando diversos tipos de tabelas.
+
+Aqui se apresenta algumas tabelas e se discute as possibilidades do xtable e stargazer.
+
+

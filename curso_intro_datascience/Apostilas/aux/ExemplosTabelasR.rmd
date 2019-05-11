@@ -1,7 +1,7 @@
 ---
-title: "Gerando Tabelas no Rmd"
+title: "Exemplos de Uso do xtable e stargazer"
 author: "Curso de Tratamento de Dados"
-date: "May 10, 2019"
+date: "May 11, 2019"
 output: 
   html_document:
           number_sections: true
@@ -10,70 +10,66 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
-library(ggthemes)
-library(forecast)
-
+library(xtable)
+library(stargazer)
+library(dplyr)
 ```
 
 # Importando os arquivos para o R
-```{r importandoDados}
-data <- read.csv2('data.csv', header=T, sep=';', dec=',')
-data$date <- as.Date(data$date, format='%d/%m/%Y')
+```{r importandoMtcars, results='asis'}
+  
+  data(mtcars)
 
-tail(data)
-
+  mtc2 <- xtable(head(mtcars), auto = TRUE)
+	
+  print.xtable(mtc2, type='html')
 ```
 
-# Organizando os dados
-
-Aqui vai ler os diversos arquivos que estão no diretorio aux. 
-
-Usa-se o readxl.
-
-Depois, organiza-se os arquivos montando uma série temporal em painel para os dados.
-
-
-# Juntando os arquivos
-
-Aqui junta-se os arquivos utilizando o full join.
-
-# Tratando os dados
-```{r tratandoDados}
-
-data$prevreal <- data[,3]*(tail(data[,2],1)/data[,2]) 
-
-```
-
-
-# Gerando arquivos de síntese dos dados 
+# Organizando os dados e Gerando arquivos de síntese
 
 Aqui se utiliza o dplyr-summarize para gerar tabelas síntese e apresentar
 
-# Gerando gráficos dos dados
 
-```{r graficoDespesaPrevidenciaria}
-ggplot(data, aes(date, previdencia/1000))+geom_line(size=.8)+
-  xlab('')+ylab('R$ bilhoes')+
-  labs(title='Despesa com Beneficios Previdenciarios')
+```{r organizandoMtcars, results='asis'}
 
+sintesePot <- as.data.frame(mtcars %>% group_by(cyl) %>%
+                    summarize(potenciaMedia = mean(hp,na.rm = TRUE),
+                              sigmaPotencia = sd(hp, na.rm = TRUE),
+                              n = n()
+                            )
+                    )
+	
+tabelaPot <- xtable(sintesePot)
+		print(tabelaPot, type = "html")
 ```
 
 
-```{r GraficoConjuntoReal}
 
-ggplot(data, aes(date, previdencia/1000))+
-  geom_line(size=.8, aes(color='Serie Nominal'))+
-  geom_line(size=.8, aes(date, prevreal/1000, color='Serie Real'))+
-  xlab('')+ylab('R$ bilhoes')+
-  labs(title='Despesa com Beneficios Previdenciarios',
-       colour='',
-       caption='analisemacro.com.br')+
-  theme(legend.position="top")
 
+# Gerando gráficos dos dados
+
+```{r, graficoHPMPG, fig.width=6, fig.height=6, fig.align='center'}
+ggplot(mtcars, aes(x=hp, y=mpg)) +
+  geom_point() +
+  geom_smooth() +
+  labs(x='Potência (HP)', y = 'Consumo (MPG)')
 ```
 
 
 Aqui se gera gráficos dos dados
+
+Mais alguns gráficos para a análise.
+
+```{r, graficoCylMPG, fig.width=6, fig.height=6, fig.align='center'}
+ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
+  geom_boxplot() +
+  labs(x='Cilindros', y = 'Consumo (MPG)')
+```
+
+
+
+
+
 
 # Executando Regressões
 

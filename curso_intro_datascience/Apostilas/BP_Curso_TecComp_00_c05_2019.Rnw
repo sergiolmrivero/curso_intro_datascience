@@ -12,23 +12,13 @@
 
 	Neste capítulo veremos como é possível gerar um grande conjunto de tabelas em R (utilizando o \textit{Markdown} bem como discutiremos a apresentação de resultados de modelos com estas bibliotecas.
 	
-
-\section{Gerando dados sintetizados - Utilizando dataframes}
-	
 	Muitas vezes, como já vimos aqui, é necessário tratar e sintetizar os dados em um dataframe para podermos analisá-los. Então, faremos, neste capítulo um conjunto de tabelas que serão apresentadas utilizando algumas ferramentas específicas para geração de tabelas em R. 
 	
-\section{Gerando Tabelas}
+\section{Gerando Tabelas com Xtable e Stargazer}
 	
-	A geração de tabelas no R pode ser feita utilizando alguns pacotes específicos adequados para tal. Estes pacotes leem dataframes ou matrizes e geram tabelas a partir destes. Muitos destes pacotes têm também a capacidade de ler objetos específicos do R (como resultados de regressões, análise de cluster, etc) e gerar tabelas correspondentes às saídas normais de apresentação destes resultados em 
+	A geração de tabelas no R pode ser feita utilizando alguns pacotes específicos adequados para tal. Estes pacotes leem dataframes ou matrizes e geram tabelas a partir destes. Muitos destes pacotes têm também a capacidade de ler objetos específicos do R (como resultados de regressões, análise de cluster, etc) e gerar tabelas correspondentes às saídas normais de apresentação destes resultados.
 	
-	\subsection{xtable}
-		
-		\url{https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf}
-		
-		\url{https://www.rdocumentation.org/packages/xtable/versions/1.8-4/topics/xtable}
-		
-		\url{http://bcb.dfci.harvard.edu/~aedin/courses/ReproducibleResearch/RR/exampleSweave.Rnw}
-		
+
 		
 		Abaixo aqui uma seção utilizando xtable
 		
@@ -36,11 +26,13 @@
 Aqui temos o nosso velho conhecido banco de dados MTCARS. Utilizando a opção auto, o xtable define o tipo de saída em termos de casas decimais, automaticamente.
 
 <<eval=TRUE,echo=TRUE, results=tex>>=
-    library(xtable)
+library(xtable)
   		
-		mtc2 <- xtable(head(mtcars), auto = TRUE)
+mtc2 <- xtable(head(mtcars), 
+       	auto = TRUE, 
+       	caption = 'Base mtcars, primeiras linhas')
 		
-		print.xtable(mtc2)
+print.xtable(mtc2, caption.placement='top')
 		
 @
 		
@@ -59,16 +51,18 @@ sintesePot <- as.data.frame(mtcars %>% group_by(cyl) %>%
                             )
                     )
 	
-tabelaPot <- xtable(sintesePot)
-		print(tabelaPot, type = "latex")
+tabelaPot <- xtable(sintesePot, 
+			 caption = 'Média e Desvio Padrão da potência por no. de cilindros')
+
+print(tabelaPot, type = "latex", caption.palcement='bottom')
 @
 
 	
 Para a análise, no entanto, podemos aqui pensar na relação entre consumo e número de hp.
 
 
-\begin{figure}
-<<consumHP, fig=TRUE, height=4, width=6, echo=TRUE>>=
+\begin{figure}[htpb]
+<<consumHP, fig=TRUE, height=4, width=4, echo=TRUE>>=
 library(ggplot2)
 
 ggplot(mtcars, aes(x=hp, y=mpg)) +
@@ -80,6 +74,21 @@ ggplot(mtcars, aes(x=hp, y=mpg)) +
 \caption{Comparação de Potência em HP com Consumo (mpg)}
 
 \end{figure}
+
+
+
+
+%Vendo outro gráfico para melhorar a perspectiva da análise.
+%
+%\begin{figure}
+%<<CylvsHP, fig=TRUE, height=4, width=4, echo=TRUE>>=
+%ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
+%  geom_boxplot() +
+%  labs(x='Cilindros', y = 'Consumo (MPG)')
+%@
+%\caption{Comparação número de cilindros com Consumo (mpg)}
+%\end{figure}
+%
 	
 	Podemos então pensar em uma regressão que olhe para a relação entre potência e  consumo
 	
@@ -107,13 +116,6 @@ print.xtable(lm.hpmpg.tab, caption.placement = 'top')
 Note que podemos incluir outros detalhes na tabela, como títulos, por exemplo (usando caption no xtable) bem como colocar um identificador da tabela (o label) e, na função \textit{print.xtable()} modificar a posição do título. 
 
 
-	
-	
-\subsection{stargazer}
-
-
-Uma outra função que podemos utilizar que apresenta os resultados da nossa análise em uma forma um pouco diferente e bem mais detalhada é o stargazer. Abaixo um exemplo de tabela utilizando esta biblioteca.
-
 <<tabSG, echo=TRUE, results=tex>>=
 library(stargazer)
 
@@ -122,24 +124,186 @@ stargazer(hpmpg, type='latex',
           )
 @
 
+Uma outra função que podemos utilizar que apresenta os resultados da nossa análise em uma forma um pouco diferente e bem mais detalhada é o stargazer. Abaixo um exemplo de tabela utilizando esta biblioteca.
 
 É o mesmo resultado da tabela anterior, apenas utilizando outra biblioteca de geração de tabelas.
 		
 	
-	\section{Gerando estatísticas dos Dados}
+xtable e stargazer têm uma variedade imensa de possibilidade que permitem a geração de tabelas de diversos tipos. 
+
+
+\section{Gerando Dashboards utilizando o Shiny}
+
+O \textit{shiny} é um pacote R que facilita a criação de aplicativos interativos com uma interface web Web direto do R.
+
+Para baixar o \textit{shiny} usamos nosso velho conhecido \textit{install.packages()}
+
+<<eval=FALSE,echo=TRUE>>=
+
+install.packages('shiny')
+
+@
+
+
+\subsection{Estrutura de um aplicativo \textit{shiny}}
+
+Esta seção está fortemente baseada na \textit{cheat sheet} do \textit{shiny} publicada em  \url{https://shiny.rstudio.com/images/shiny-cheatsheet.pdf}
+
+Aplicativos \textit{shiny} estão contidos em um único script chamado app.R. O script app.R reside em um diretório (por exemplo, newdir/) e o aplicativo pode ser executado com runApp("newdir").
+
+
+app.R tem três componentes:
+
+\begin{enumerate}
+	\item um objeto de interface do usuário
 	
-		\subsection{Estatísticas Descritivas}
-		
-		\subsection{Correlação}
-		 
-	\section{Utilizando modelos}
+	\item uma função de servidor
 	
-		\subsection{Regressão}
+	\item uma chamada para a função shinyApp
 	
-		\subsection{Executando a Regressão}
-	
-		\subsection{Apresentando os resultados da Regressão}
-	
-		\subsection{Gerando Dashboards}
+\end{enumerate}
+
+O objeto \textit{ui} da interface com o usuário controla o layout e a aparência do seu aplicativo. A função \textit{server} contém as instruções que seu computador precisa para criar seu aplicativo. Finalmente, a função \textit{shinyApp} cria objetos do \textit{shiny} a partir de um par de interface do usuário/servidor explícito.
+
+O objeto de interface de usuário e a função servidor podem tanto estar em dois arquivos ("ui.R" e "server.R") quanto em um arquivo único. Utilizando um arquivo único permite um compartilhamento muito mais simples do código escrito em \textit{shiny}.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-09}
+	\caption{Estrutura de um arquivo de aplicação shiny}
+	\label{fig:bpcursoteccomp002019f06-09}
+\end{figure}
+
+Um arquivo de aplicação em \textit{shiny}, então, conterá 3 partes (Figura \ref{fig:bpcursoteccomp002019f06-09}). Uma primeira parte é a descrição  da estrutura da página a ser publicada, bem como com os elementos da interface do usuário (ui). Este componentes terão os elementos de entrada e também indicarão onde ficariam os gráficos, tabelas e textos que resultariam nas \textbf{reações} as mudanças nos valores que estiverem conectados com estas saídas. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-10}
+	\caption{Entrada, servidor e aplicação em detalhe}
+	\label{fig:bpcursoteccomp002019f06-10}
+\end{figure}
+
+
+A segunda parte é a descrição das ações que ocorrem quando há uma mudança nos valores observados e quais as funções específicas serão utilizadas. Nesta segunda parte também é incluída a estratégia de renderização dos resultados (Figura \ref{fig:bpcursoteccomp002019f06-10}).
+
+
+
+
+\subsection{Layouts do shiny}
+
+A interface de usuário do shiny permite uma quantidade razoável de opções de layout, podendo também combinar conjuntos diferentes de elementos em entradas únicas. Abaixo (Figura \ref{fig:bpcursoteccomp002019f06-13}) vemos o exemplo de um painel com um campo de entrada tipo data e um botão para incluir o valor da variável.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-13}
+	\caption{Um painel composto e as diversas funções de painéis compostos}
+	\label{fig:bpcursoteccomp002019f06-13}
+\end{figure}
+
+Na definição da interface, ao utilizarmos a função \textit{fluidPage()} (Figura \ref{fig:bpcursoteccomp002019f06-14} podemos montar um conjunto grande de layouts com uma flexibilidade que permite diversos padrões de distribuição das informações na sua home page gerada pelo \textit{shiny}. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-14}
+	\caption{Exemplo da função fluidRow()}
+	\label{fig:bpcursoteccomp002019f06-14}
+\end{figure}
+
+A figura \ref{fig:bpcursoteccomp002019f06-14} mostra um exemplo da função \textit{fluidRow()} com duas linhas e duas colunas de tamanhos diferentes dentro do layout de uma página.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-15}
+	\caption{Exemplo da função flowLayout()}
+	\label{fig:bpcursoteccomp002019f06-15}
+\end{figure}
+
+A função \textit{flowLayout()} (Figura \ref{fig:bpcursoteccomp002019f06-14}) permite uma distribuição automática dos objetos dentro da página.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-16}
+	\caption{Exemplo da função sidebarLayout()}
+	\label{fig:bpcursoteccomp002019f06-16}
+\end{figure}
+
+A função \textit{sidebarLayout()} (Figura \ref{fig:bpcursoteccomp002019f06-16}) é extremamente útil para termos painéis onde opções em um painel alteram a saída em um painel principal. Muitas apresentações e aplicações em páginas que mostram dados têm esse layout. 
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-19}
+	\caption{Painéis no \textit{shiny}}
+	\label{fig:bpcursoteccomp002019f06-19}
+\end{figure}
+
+
+Um outro conjunto funções bastante útil que aumenta a densidade de informações apresentadas na página são as que colocam painéis (As funções \textit{tabesetPanel(), navlistPanel()} combinadas com a função \textit{tabPanel()}. Estas funções permitem a apresentação de resultados selecionados a partir de um conjunto de painéis com diferentes conteúdos para cada painel (Figura \ref{fig:bpcursoteccomp002019f06-19})
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-12}
+	\caption{Alguns Tipos de Entradas}
+	\label{fig:bpcursoteccomp002019f06-12}
+\end{figure}
+
+Os objetos que permitem diversos tipos de entradas no \textit{shiny} são incluidos na seção ui. Na figura \ref{fig:bpcursoteccomp002019f06-12} vemos alguns dos tipos de objetos que podem ser utilizados. É possível fazer uma entrada de um valor numérico com \textit{numericInput()}, de um valor que permite escolha entre alternativas com (\textit{radioButtons()} e \textit{selectInput()}  entre diversas outras possibilidades.
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-20}
+	\caption{Funções de Renderização e Saída}
+	\label{fig:bpcursoteccomp002019f06-20}
+\end{figure}
+
+
+Finalmente, o \textit{shiny} combina funções de renderização e saída para produzir as suas páginas. As funções de renderização funcionam combinadas com as funções de saída (Figura \ref{fig:bpcursoteccomp002019f06-20}) e são também combinadas ou disparadas por eventos que ocorrem na interface de usuário. Este padrão é uma das características do modelo de programação das páginas geradas pelo \textit{shiny} chamado de \textit{programação reativa}. Mais informações sobre o modelo de programação reativa, podem ser encontradas em \url{https://shiny.rstudio.com/articles/reactivity-overview.html}
+
+
+\subsection{Alguns links úteis}
+
+
+
+\url{https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf}
+
+\url{https://www.rdocumentation.org/packages/xtable/versions/1.8-4/topics/xtable}
+
+\url{http://bcb.dfci.harvard.edu/~aedin/courses/ReproducibleResearch/RR/exampleSweave.Rnw}
+
+\url{https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf}
+
+\url{https://cran.r-project.org/web/packages/stargazer/index.html}
+
+\url{https://www.rdocumentation.org/packages/stargazer/versions/5.2.2/topics/stargazer}
+
+\url{https://www.princeton.edu/~otorres/NiceOutputR.pdf}
+
+\url{https://www.r-statistics.com/2013/01/stargazer-package-for-beautiful-latex-tables-from-r-statistical-models-output/}
+
+\url{https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/}
+
+\url{https://shiny.rstudio.com/}
+
+\url{http://material.curso-r.com/shiny/}
+
+\url{https://www.rstudio.com/products/shiny/shiny-user-showcase/}
+
+\url{https://www.showmeshiny.com/category/topics/finance/}
+
+\url{https://shiny.rstudio.com/images/shiny-cheatsheet.pdf}
+
+\url{https://www.rstudio.com/wp-content/uploads/2015/02/shiny-cheatsheet.pdf}
+
+
+
+
+
+
+
 
 

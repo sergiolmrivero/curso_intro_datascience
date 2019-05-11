@@ -30,7 +30,7 @@
 \title{Introdução ao Tratamento e Análise de Dados em R}
 
 
-\subtitle{ou Data Science para todos!}
+%\subtitle{ou Data Science para todos!}
 
 \date{\today}
 
@@ -180,9 +180,8 @@ library(knitr)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
+\SweaveInput{BP_Curso_TecComp_00_c08_2019.Rnw}
 
-\chapter{Onde aprender mais?}
 
 
 

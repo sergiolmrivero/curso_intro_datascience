@@ -8,8 +8,45 @@
 % !Rnw root = BP_Curso_TecComp_00_2019.Rnw
 \SweaveOpts{concordance=TRUE, echo=FALSE, eval=TRUE}
 
-\chapter{Encerramento do Curso}
+\chapter{Onde Aprender Mais?}
+
+Este material é apenas um conjunto bem pequeno de informações básicas sobre tratamento de dados em R. 
+
+O R é uma ferramenta que evoluiu de um conjunto de programas execução de modelos estatísticos para uma suíte bastante completa de análise e tratamento de dados, com boa parte do que há de mais sofisticado neste campo atualmente.
+
+É também um projeto colaborativo, onde milhares de pessoas contribuem com seu conhecimento e expertise para a construção de um ambiente aberto e em rápida evolução. É um exemplo do que se pode fazer a partir a ideia de software livre.
+
+No decorrer deste livro, sempre que foi necessário, apresentamos as fontes de maior informação para aqueles que são curiosos ou que têm necessidades mais complexas e específicas. 
+
+Há uma profusão de sites na internet com informação sobre o R. Quando da ocorrência de erros e de problemas específicos ou dúvidas vale sempre a pena fazer a busca com palavras chaves o mais específicas que for possível. Isso muito provavelmente lhe levará a uma lista de discussão onde alguém eventualmente já postou o mesmo problema recebeu a ajuda de usuários mais experientes. Esta é uma forma bastante eficaz de encontrar respostas.
+
+Uma boa sugestão é tentar a pergunta em inglês (pode-se usar o Google translator ou outra app de tradução). Há uma quantidade muito grande de sites e respostas prontas nesta língua.
+
+Abaixo alguns sites que são referência para a comunidade R.
+
+\url{https://cran.r-project.org/}
+
+O CRAN (Comprehensive R Archive Network) é o principal site do R. Lá que se encontram as versões mais atualizadas do R  e as bibliotecas aprovadas pelo pessoal que controla o desenvolvimento do programa. No CRAN você também pode encontrar a documentação das bibliotecas do R.
 
 
-Aqui colocamos as coisas que precisa lembrar e algumas idéias sobre o que pode fazer
+\url{https://www.rstudio.com/}
 
+O Rstudio parece ter se tornado a IDE preferida no R. Também o grupo que o desenvolve produziu um conjunto de ferramentas de análise e tratamento de dados que rapidamente se tornaram um padrão. Há também muitos tutoriais extremamente úteis. 
+
+
+\url{https://www.rdocumentation.org/}
+
+O RDocumentation contém informações sobre mais de 17 mil pacotes em R, listados no CRAN, Biocondutor e GitHub. Uma fonte importante de referência para as funções. 
+
+
+\url{https://www.bioconductor.org/} 
+
+O Biocondutor é um site com pacotes específicos para Biologia, mas tem muita coisa útil para diversas outras aplicações lá.
+
+
+
+\bigskip
+
+Divirtam-se.
+
+  
