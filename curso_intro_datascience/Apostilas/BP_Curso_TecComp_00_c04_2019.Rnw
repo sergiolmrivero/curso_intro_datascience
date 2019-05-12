@@ -11,7 +11,7 @@
 
 \chapter{Produzindo Relatórios Usando R Markdown}
 
-	Neste capítulo discutiremos dois aspectos importantes do trabalho com dados em R. Primeiramente veremos as funcionalidades implementadas no R para a produção de relatórios dinâmicos, execução de comandos R e apresentação de resultados utilizando uma linguagem simples chamada \textbf{Markdown} \footnote{Uma definição do Markdown pode ser achada em : \url{https://tools.ietf.org/html/rfc7763}}. Depois veremos as ferramentas para apresentação de resultados gerados no R em tabelas, com a utilização dos pacotes xtable e stargazer.
+	Neste capítulo discutiremos dois aspectos importantes do trabalho com dados em R. Primeiramente veremos as funcionalidades implementadas no R para a produção de relatórios dinâmicos, execução de comandos R e apresentação de resultados utilizando uma linguagem simples chamada \textbf{Markdown} \footnote{Uma definição do Markdown pode ser achada em : \url{https://tools.ietf.org/html/rfc7763}}. Depois veremos como estes resultados podem ser apresentados em relatórios, utilizando exemplos práticos.
 		
 	R Markdown é um formato de arquivo que permite a produção documentos dinâmicos utilizando R. Um documento R Markdown é escrito na linguagem \textbf{Markdown} e contém partes  de código R incorporado em seções específicas do arquivo, chamadas \textit{chunks}:
 	\begin{quotation}
@@ -32,7 +32,7 @@
 	Documentos no R Markdown são salvos com um sufixo .Rmd. Este arquivo tem textos e comandos do Markdown e código R em partes específicas chamadas \textit{chunks}.
 	
 	
-		\begin{figure}
+	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-03}
 		\caption{Um exemplo de saída de um .Rmd no Rstudio}
@@ -58,7 +58,7 @@ if (!requireNamespace("devtools")){
 	
 
 
-	\section{Como o Rmd funciona?}
+\section{Como o Rmd funciona?}
 		
 	O processo de geração de documentos com o RMD é feito a partir da pressão do botão \textbf{Knit} (figura \ref{fig:bpcursoteccomp002019f04-02}) no RStudio. Para isso, você deve ter habilitado e configurado o Markdown no app.  A partir daí, o arquivo arquivo .rmd (Rmarkdown) tem seus códigos R executados e gera um código .md com os resultados da execução do R (figuras, tabelas, etc) que  é então processado pelo pandoc. Esse processamento, gera o arquivo de resultado desejado (HTML, DOC, PDF, etc)
 
@@ -71,7 +71,8 @@ if (!requireNamespace("devtools")){
 	
 	
 	A partir do arquivo .Rmd, você pode gerar resultados que combinem, textos, resultados de operações em R, tabelas geradas pelas bibliotecas do R (regressões, outras coisas), bem como gráficos. 
-		\begin{figure}
+
+	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f04-01}
 		\caption{O processo de geração de documentos no RMD}

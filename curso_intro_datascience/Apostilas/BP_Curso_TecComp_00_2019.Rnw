@@ -27,7 +27,7 @@
 
 \program{Construção de Modelos e Indicadores Econômicos}
 
-\title{Introdução ao Tratamento e Análise de Dados em R}
+\title{Introdução ao Tratamento \\ e Análise de Dados em R}
 
 
 %\subtitle{ou Data Science para todos!}

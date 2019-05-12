@@ -1,0 +1,205 @@
+\documentclass[11pt]{beamer}
+\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+
+\author{Sérgio Rivero}
+\subtitle{Aula 1 - Instalando e Configurando o R e RStudio}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\begin{multicols}{2}
+		\tableofcontents
+\end{multicols}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivos do Curso}
+\section{Objetivos do Curso}
+
+Neste curso queremos:
+
+\begin{enumerate}
+	\item Apresentar os conceitos e estratégias básicas para o tratamento de dados em R
+	\item Apresentar as principais ferramentas de tratamento de dados do R (e seu ecossistema)
+	\item Aprender a integrar estas estratégias e ferramentas para produzir documentos e relatórios
+\end{enumerate}
+
+Para isso utilizaremos uma estratégia onde:
+\begin{itemize}
+	\item 50\% do tempo será de apresentações sobre o R pelo instrutor
+	\item 50\% do tempo será de prática
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que é o R?}
+	\begin{itemize}
+		\item O R é uma suíte integrada de software que permite a recuperação, o tratamento, e a análise de dados\cite{Venables2011}. 
+	
+		\item Pode se dizer que o R é um ambiente de tratamento de dados que permite ao usuário, além a análise de dados propriamente dita, escrever extensões e ampliar o seu escopo.
+	
+		\item R é uma ferramenta de software livre que atende aos critérios da \textit{Free Software Foundation} e tem uma licença \textbf{GNU} - \url{https://www.gnu.org/}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Funcionalidades do R}
+
+Algumas das funcionalidade do R são\cite{Venables2011}:
+\begin{itemize}
+	\item Ferramentas para manuseio e armazenamento de dados
+	\item Um conjunto de operadores que permitem o cálculo numérico e a manipulação de matrizes
+	\item Um enorme conjunto de bibliotecas para análise de dados
+	\item Ferramentas para apresentação gráfica de dados e resultados
+	\item Uma linguagem de programação orientada a objetos e extensível
+	\item A possibilidade de estender a linguagem, suas bibliotecas e funções
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ciclo de uso de dados}
+Podemos então dizer que os dados tem um \textit{ciclo de vida} e este ciclo pode ser pensado como um conjunto de atividades que vão do planejamento de seu uso até a sua análise. Abaixo, na figura \ref{fig:f02-01}, apresentamos um exemplo de ciclo de vida que pode ser encontrado em  \url{https://www.dataone.org/data-life-cycle}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+	\caption{O Ciclo de Tratamento e Análise de Dados}
+	\label{fig:f02-01}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Exposição do Assunto}
+\section{Exposição do Assunto}
+
+A aula propriamente dita
+\cite{Almeida2017,Almeida2009a}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+
+\end{frame}
+
+
+\begin{frame}{Dúvidas?????}
+\section{Dúvidas}
+
+Esclarecendo as Dúvidas
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Avaliação}
+\section{Avaliação}
+
+Avaliação
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Para levar para casa}
+\section{Para Levar para Casa}
+
+Fechamento da Aula
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Agradecimentos}
+\section{Agradecimentos}
+
+Ao Monstro do Espaguete Voador
+
+À UFPA
+
+Etc...
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+       \section{Referências}
+
+\bibliographystyle{alpha}
+\bibliography{../bib/bibliografia}
+\end{frame}
+
+
+
+
+\end{document}

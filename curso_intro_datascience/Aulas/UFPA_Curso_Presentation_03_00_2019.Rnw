@@ -24,6 +24,8 @@
 %\usepackage{abnt-alf}
 %\usepackage[alf]{abntcite}
 
+\usepackage{Sweave}
+
 \author{Sérgio Rivero}
 
 \title{Limpando e organizando seus dados}

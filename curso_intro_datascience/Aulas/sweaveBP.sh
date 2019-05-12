@@ -1,3 +1,7 @@
-R CMD Sweave --encoding=utf8 BP_Curso_TecComp_00_2019.Rnw
+cnr=$1
+vr=$2
 
-pdflatex BP_Curso_TecComp_00_2019.tex
+#Rscript -e "library(knitr); knit('BP_Curso_Presentation_"$cnr"_"$vr"_2019.Rnw')"
+R CMD Sweave BP_Curso_Presentation_"$cnr"_"$vr"_2019.Rnw
+
+pdflatex BP_Curso_Presentation_"$cnr"_"$vr"_2019.tex

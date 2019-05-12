@@ -270,7 +270,7 @@ Abaixo um caso típico.
 
 
 
-Neste caso acima, o pacote \textit{fftw}\footnote{\url{https://cran.r-project.org/web/packages/fftw/index.html}}, para utilização de transformadas de Fourier necessita de uma biblioteca (\textit{fftw3})que deve ser instalad no sistema operacional, antes de se instalar o pacote R. Você pode descobrir isto olhando as mensagens da instalação di pacote. Nestas mensagens há a informação de que \textbf{"checking for FFTW... configure: error: Package requirements (fftw3) were not met:"} e a instalação terminou com \textit{status} "não-zero", o que significa erro. Para corrigir o erro será necessário instalar a biblioteca que o sistema informa que está faltando.
+Neste caso acima, o pacote \textit{fftw}\footnote{\url{https://cran.r-project.org/web/packages/fftw/index.html}}, para utilização de transformadas de Fourier necessita de uma biblioteca (\textit{fftw3})que deve ser instalado no sistema operacional, antes de se instalar o pacote R. Você pode descobrir isto olhando as mensagens da instalação di pacote. Nestas mensagens há a informação de que \textbf{"checking for FFTW... configure: error: Package requirements (fftw3) were not met:"} e a instalação terminou com \textit{status} "não-zero", o que significa erro. Para corrigir o erro será necessário instalar a biblioteca que o sistema informa que está faltando.
 
 Mais informação pode ser encontrada abaixo:
 

@@ -23,33 +23,33 @@
 \usepackage[brazil]{babel}
 %\usepackage{abnt-alf}
 %\usepackage[alf]{abntcite}
+\usepackage{Sweave}
 
-\author{Hilder Farias}
-\title{Construção de Modelos e Indicadores Econômicos}
-\subtitle{Curso de Estatística Básica - Aula 00 \\
-		  A Média e o Desvio Padrão São Seus Amigos}
-%\subtitle{Faculdade de Ciências Econômicas \\ Programa de Pós-Graduação em Economia  \\ PPGE-FACECON-ICSA-UFPA}
-%\setbeamercovered{transparent} 
-%\setbeamertemplate{navigation symbols}{} 
-\institute{PPGE-FACECON-ICSA} 
+\author{Sérgio Rivero}
+\subtitle{Aula 1 - Instalando e Configurando o R e RStudio}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
 \date{\today}
-%\logo{%
-%    \makebox[0.95\paperwidth]{%
-%        \includegraphics[scale=.02]{../logos/brasao-UFPA-preto}
-%        \includegraphics[scale=.18]{../logos/logoBP}
-%
-%   %\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
-%       \hfill%
-%       \includegraphics[scale=.01]{../logos/Logo_FACECON}
-%       \includegraphics[scale=.015]{../logos/Logo-PPGE}
-%       %\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
-%   }%
-%}
-%\logo{\includegraphics[scale=.1]{/home/rivero/Dropbox/Workspace_Current/UFPA/BasesDocs/logos/Logo_FACECON}} 
+
+\logo{
+	\makebox[0.95\paperwidth]{
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		\hfill
+		\includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+	}
+}
 \makeindex
  
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+
+\SweaveOpts{concordance=TRUE, echo=TRUE, eval=TRUE}
+
+<<setup, include=FALSE, cache=FALSE, echo=FALSE>>= 
+library(knitr)
+library(ggplot2)
+@
+
 
 \begin{frame}
 \titlepage
@@ -71,52 +71,276 @@
 \frametitle{Objetivos do Curso}
 \section{Objetivos do Curso}
 
+Neste curso queremos:
 
-O R é uma suíte integrada de software que permite a recuperação, o tratamento, e a análise de dados\cite{Venables2011}. Pode se dizer que o R é um ambiente de tratamento de dados que permite ao usuário, além a análise de dados propriamente dita, escrever extensões e ampliar o seu escopo.
+\begin{enumerate}
+	\item Apresentar os conceitos e estratégias básicas para o tratamento de dados em R
+	\item Apresentar as principais ferramentas de tratamento de dados do R (e seu ecossistema)
+	\item Aprender a integrar estas estratégias e ferramentas para produzir documentos e relatórios
+\end{enumerate}
 
-R é uma ferramenta de software livre que atende aos critérios da \textit{Free Software Foundation} e tem uma licença \textbf{GNU} - \url{https://www.gnu.org/}
-
+Para isso utilizaremos uma estratégia onde:
+\begin{itemize}
+	\item 50\% do tempo será de apresentações sobre o R pelo instrutor
+	\item 50\% do tempo será de prática
+\end{itemize}
 
 
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Funcionalidades do R}
+\frametitle{O que é o R?}
+\section{Conteúdo da Aula}
+	\begin{itemize}
+		\item O R é uma suíte integrada de software que permite a recuperação, o tratamento, e a análise de dados\cite{Venables2011}. 
+	
+		\item Pode se dizer que o R é um ambiente de tratamento de dados que permite ao usuário, além a análise de dados propriamente dita, escrever extensões e ampliar o seu escopo.
+	
+		\item R é uma ferramenta de software livre que atende aos critérios da \textit{Free Software Foundation} e tem uma licença \textbf{GNU} - \url{https://www.gnu.org/}
+	\end{itemize}
+\end{frame}
 
-Algumas das funcionalidade do R são\cite{Venables2011}:
+
+\begin{frame}
+\frametitle{Funcionalidades do R}
+	Algumas das funcionalidade do R são\cite{Venables2011}:
+	\begin{itemize}
+		\item Ferramentas para manuseio e armazenamento de dados
+		\item Um conjunto de operadores que permitem o cálculo numérico e a manipulação de matrizes
+		\item Um enorme conjunto de bibliotecas para análise de dados
+		\item Ferramentas para apresentação gráfica de dados e resultados
+		\item Uma linguagem de programação orientada a objetos e extensível
+		\item A possibilidade de estender a linguagem, suas bibliotecas e funções
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instalando o R: selecione \textbf{download R}}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-01}
+		\caption{Nesta página clicar em \textbf{download R}}
+		\label{fig:f01-01}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instalando o R: selecione o espelho}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-02}
+		\caption{Aqui você seleciona o espelho que vai usar para baixar o R}
+		\label{fig:f01-02}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instalando o R: baixe de Acordo com seu S.O.}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-03}
+	\caption{Sítio para baixar o R de acordo com seu sistema operacional}
+	\label{fig:f01-03}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instalando o R: aqui para o Windows}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-04}
+	\caption{Página do Download do R}
+	\label{fig:f01-04}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Mais Informações sobre a Instalação do R}
+
+	Cheque os \textit{FAQs} - \textit{Frequently Asked Questions}
+
+	\bigskip 
+	 
+	\url{https://cloud.r-project.org/bin/windows/base/rw-FAQ.html} 
+	 
+	\bigskip
+	 
+	\url{https://cran.r-project.org/doc/manuals/R-admin.html}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instalando o RStudio}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-05}
+		\caption{\url{https://www.rstudio.com/}}
+		\label{fig:f01-05}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Aba de Produtos do RStudio}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-06}
+		\caption{Aba de produtos do RStudio}
+		\label{fig:f01-06}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Selecione seu RStudio}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-07}
+		\caption{Diferença entre planos}
+		\label{fig:f01-07}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Selecionando o "Plano"}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-08}
+		\caption{Planos, preços e benefícios}
+		\label{fig:f01-08}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Finalmente, instalando seu executável}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-09}
+		\caption{Fim! Escolha o sistema operacional}
+		\label{fig:f01-09}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Checando a Instalação Existente e os Requisitos}
+\begin{figure}
+	\centering
+	\includegraphics[width=7cm,keepaspectratio]{../figs/BP_Curso_TecComp_00_2019_f01-12}
+	\caption{Uma instalação em Linux}
+	\label{fig:f01-12}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pacotes em R}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-10.png}
+		\caption{Página dos Pacotes Mantidos por pessoas que contribuem com o R (CRAN)}
+		\label{fig:bpcursoteccomp002019f01-10}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Mais informações sobre pacotes}
+Mais informações podem ser encontradas abaixo:
+	\begin{itemize}
+		\item \url{https://blog.revolutionanalytics.com/2017/01/cran-10000.html}
+		
+		\item \url{https://cran.r-project.org/web/packages/available_packages_by_name.html}
+		
+		\item \url{https://cran.r-project.org/web/packages/}
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Baixando pacotes}
+\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-13}
+		\label{fig:bpcursoteccomp002019f01-13}
+\end{figure}
+
+Acima está o exemplo de instalação do pacote \textit{ggplot2} utilizando o R na linha de comando. O mesmo pacote, instalado via RStudio está no exemplo abaixo.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instalando um Pacote via RStudio}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f01-11.png}
+		\caption{Instalando o pacote ggplot2 via Rstudio}
+		\label{fig:bpcursoteccomp002019f01-11}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instalando Pacotes de outros sites}
+
 \begin{itemize}
-	\item Ferramentas para manuseio e armazenamento de dados
-	\item Um conjunto de operadores que permitem o cálculo numérico e a manipulação de matrizes
-	\item Um enorme conjunto de bibliotecas para análise de dados
-	\item Ferramentas para apresentação gráfica de dados e resultados
-	\item Uma linguagem de programação orientada a objetos e extensível
-	\item A possibilidade de estender a linguagem, suas bibliotecas e funções
+	\item A instalação de pacotes em R é feita usualmente com a função \textit{install.packages()}
+	
+	\item Nesta função, informamos uma \textit{cadeia de caracteres} com o nome do pacote que queremos instalar: por exemplo - \textit{install.packages("yaml")}
+	
+	\item Há diversos tipos e pacotes em R, muitos destes pacotes podem ter sido escritos em R ou C, C++ ou Fortran. 
+	
+	\item No caso de pacotes escritos em C, C++ e Fortran instalados com o tipo \textit{fonte}, é necessária a compilação deste pacote. 
+	
+	\item O R faz isso automaticamente, não é necessária, em geral nenhuma intervenção do usuário. 
+	
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Eventuais erros de compilação}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.7\linewidth]{../figs/erro_R}
+		\caption{Falta uma biblioteca (\textit{fftw3})que deve ser instalada no sistema operacional, antes de se instalar o pacote R}
+		\label{fig:error}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Utilizando os pacotes no seu programa R}
+\begin{itemize}
+	\item Para utilizar um pacote em R você necessita simplesmente executar o comando \textit{library(nomeDoPacote)}. 
+	
+	\item Eventualmente, se você precisar retirar o pacote da memória do seu computador, se não quiser mais utilizá-lo durante a execução daquele programa é só utilizar o comando detach. Ex.: \textit{detach(package:nomeDoPacote)}
+	
 \end{itemize}
 
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Ciclo de uso de dados}
-Podemos então dizer que os dados tem um \textit{ciclo de vida} e este ciclo pode ser pensado como um conjunto de atividades que vão do planejamento de seu uso até a sua análise. Abaixo, na figura \ref{fig:f02-01}, apresentamos um exemplo de ciclo de vida que pode ser encontrado em  \url{https://www.dataone.org/data-life-cycle}
+\frametitle{Mais informações sobre pacotes}
 
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
-	\caption{O Ciclo de Tratamento e Análise de Dados}
-	\label{fig:f02-01}
-\end{figure}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Exposição do Assunto}
-\section{Exposição do Assunto}
-
-A aula propriamente dita
-\cite{Almeida2017,Almeida2009a}
+	\begin{itemize}
+		\item \url{https://www.r-bloggers.com/installing-r-packages/}
+		
+		\item \url{https://www.r-bloggers.com/how-to-install-and-include-an-r-package/}
+		
+		\item \url{http://kbroman.org/pkg_primer/pages/build.html}
+		
+		\item \url{https://github.com/trending/r}
+		
+		\item \url{https://github.com/hadley}
+	\end{itemize}
 
 \end{frame}
 
@@ -139,39 +363,11 @@ Esclarecendo as Dúvidas
 \end{frame}
 
 
-
-\begin{frame}
-\frametitle{Avaliação}
-\section{Avaliação}
-
-Avaliação
-
-
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Para levar para casa}
-\section{Para Levar para Casa}
-
-Fechamento da Aula
-
-\end{frame}
-
-
-
-
-
 \begin{frame}
 \frametitle{Agradecimentos}
 \section{Agradecimentos}
 
-Ao Monstro do Espaguete Voador
-
-À UFPA
-
-Etc...
+Obrigado!
 
 \end{frame}
 

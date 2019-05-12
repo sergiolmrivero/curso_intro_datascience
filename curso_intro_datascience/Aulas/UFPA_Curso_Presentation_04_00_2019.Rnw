@@ -24,9 +24,11 @@
 %\usepackage{abnt-alf}
 %\usepackage[alf]{abntcite}
 
+\usepackage{Sweave}
+
 \author{Sérgio Rivero}
 
-\title{Gráficos no R}
+\title{Limpando e organizando seus dados}
 \subtitle{Introdução ao Tratamento e Análise de Dados em R}
 \subtitle{Faculdade de Ciências Econômicas \\ Programa de Pós-Graduação em Economia  \\ PPGE-FACECON-ICSA-UFPA}
 \setbeamercovered{transparent} 
@@ -70,63 +72,94 @@
 \begin{frame}
 \frametitle{Objetivos da Aula}
 \section{Objetivos da Aula}
-\begin{center}
-Apresentar a biblioteca ggplot2, seus principais casos de usos e exemplos
-\end{center}
+
+Discutir algumas funções de correção e limpeza de bases de dados em R.
+
 \end{frame}
 
 
 \begin{frame}
-\frametitle{O que é o ggplot2?}
-\section{O que é o ggplot2?}
- 
- O \textbf{ggplot2} é uma \textit{\textbf{G}ramática de \textbf{G}ráficos}.
- 
- \bigskip
+\frametitle{O que é uma boa base de dados e que tipos de bases existem?}
+\section{O que é uma boa base de dados e que tipos de bases existem?
+Algumas das funcionalidade do R são\cite{Venables2011}:
+	}
+Boas bases de dados para trabalhar, sobretudo com tidy, são bases que possuem variáveis nas colunas e observações nas linhas. 
+Podemos identificar tal estrutura na figura \ref{fig:f03-01} abaixo:
 
-Uma gramática de gráficos é um arcabouço que segue uma abordagem em camadas para descrever e construir visualizações ou gráficos de uma maneira estruturada.
-
-\bigskip
-
-Uma visualização envolvendo dados multidimensionais geralmente tem múltiplos componentes ou aspectos, em termos de dados, estética, escala, objetos etc.
-
-\bigskip
- 
- A gramática original da estrutura gráfica foi proposta por Leland Wilkinson \cite{Wilkinson2012}.
-\end{frame}
-
-
-\begin{frame}
-\frametitle{A estrutura do ggplot2}
-
-\begin{figure}
+\begin{figure}[htpb!]
 	\centering
-	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-01}
-	\caption{A estrutura de um gráfico no ggplot2 \cite{Wilkinson2012}}
-	\label{fig:bpcursoteccomp002019f06-01}
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-01}
+	\caption{Organização ideal para base de dados}
+	\label{fig:f03-01}
 \end{figure}
 
+\end{frame}
 
+
+\begin{frame}
+\frametitle{Tipos de Bases de Dados}
+Há três tipos bases de dados principais que comportam a estrutura de variáveis nas colunas e observações nas linhas que são:
+
+\begin{itemize}
+	\item Séries Temporais
+	\item Cortes Transversais
+	\item Dados em Painel
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Explicando a estrutura}
+\frametitle{Série Temporal}
 
-Explicando os componentes de um gráfico ggplot2
+Séries temporais(ou longitudinais) são identificadas como observações ordenadas ao longo do "tempo". Exemplos:
 \begin{itemize}
-	\item  Dados: identifique as dimensões que você deseja visualizar;
-	\item  Estética: Define-se os eixos , posições pontos de dados e eventualmente tamanho, forma, cor etc;
-	\item Escala: uma escala específica para representar vários valores ou um intervalo;
-	\item Objetos geométricos:  "\textit{geoms}". Devem ser pontos, barras, linhas, etc.; 
-	\item Estatística: medidas de tendência central, \textit{spread}, intervalos de confiança, etc.;
-	\item Facetas: espaço para sub-gráficos a partir de dimensões específicas 
-	\item Sistema de coordenadas: cartesiana, polar?
-	
+	\item PIB distribuído anualmente;
+	\item Arrecadação mensal de um ou mais Estados;
+	\item Taxa de câmbio diária.
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}
+\frametitle{ A base do BCB}
+
+Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco Central. Segue o link abaixo:
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-02}
+	\caption{Exemplo de série temporal}
+	\label{fig:f03-02}
+\end{figure}
+
+\url{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}
 
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Corte Transversal}
+
+Dados transversais(ou cross-section) são identificados quando não há importância de ordenação das observações, além de representar dados em um único ponto do "tempo". Exemplos:
+
+\begin{itemize}
+	\item Arrecadação de ICSM para todos Estados do Brasil para o ano de 2018;
+	\item Dados demográficos para todos os municípios do Pará para o ano de 2010.
+\end{itemize}
+
+Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IBGE. Segue o link abaixo:
+
+\url{https://sidra.ibge.gov.br/home}
+
+\begin{figure}[htpb!]
+	\centering
+	\includegraphics[width=.3\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-03}
+	\caption{Exemplo de corte transversal}
+	\label{fig:f03-03}
+\end{figure}
+
+\end{frame}
+
 
 \begin{frame}{Dúvidas?????}
 \section{Dúvidas}

@@ -26,7 +26,7 @@ Abaixo alguns sites que são referência para a comunidade R.
 
 \url{https://cran.r-project.org/}
 
-O CRAN (Comprehensive R Archive Network) é o principal site do R. Lá que se encontram as versões mais atualizadas do R  e as bibliotecas aprovadas pelo pessoal que controla o desenvolvimento do programa. No CRAN você também pode encontrar a documentação das bibliotecas do R.
+O CRAN (The Comprehensive R Archive Network) é o principal site do R. Lá que se encontram as versões mais atualizadas do R  e as bibliotecas aprovadas pelo pessoal que controla o desenvolvimento do programa. No CRAN você também pode encontrar a documentação das bibliotecas do R.
 
 
 \url{https://www.rstudio.com/}

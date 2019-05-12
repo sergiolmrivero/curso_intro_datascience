@@ -142,7 +142,7 @@ Vetor de classe numérica:
 <<echo=TRUE>>=
 a <- c(1,3500,5.3,543,-2,4000)
 @
-Vetor de classe de caractér:
+Vetor de classe de caracter:
 <<echo=TRUE>>=
 b <- c("taxa de juros","taxa de câmbio","reservas bancárias") 
 @
@@ -359,7 +359,7 @@ Argumentos de consulta:
 	
 	\item usa-se a função download.file() para baixar um arquivo para o seu computador e trabalhar com ele mantendo salva uma cópia dos dados no seu computador).
 	
-	\item É necessário fazer analise a saída em um objeto R. podendo verificar O pacote que realiza suporte ao trabalho com dados JASON (para traduzir as estruturas de dados JSON em objetos R),faça a intalação do pacote jasolite.
+	\item É necessário fazer análise a saída em um objeto R. podendo verificar O pacote que realiza suporte ao trabalho com dados JASON (para traduzir as estruturas de dados JSON em objetos R),faça a instalação do pacote jasolite.
 	
 	\item Em seguida use a função fromJSON() no pacote rjson para importar esses dados para um objeto data.frame."
 	
