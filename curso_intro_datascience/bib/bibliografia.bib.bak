@@ -97,4 +97,83 @@
   timestamp = {2019.02.27},
 }
 
+@Article{Wickham2014,
+  author     = {Hadley Wickham},
+  title      = {Tidy data},
+  journal    = {The Journal of Statistical Software},
+  year       = {2014},
+  volume     = {59},
+  issue      = {10},
+  url        = {http://www.jstatsoft.org/v59/i10/},
+  bdsk-url-1 = {http://www.jstatsoft.org/v59/i10/},
+  file       = {:software/R/v59i10.pdf:PDF},
+  owner      = {rivero},
+  selected   = {TRUE},
+  timestamp  = {2019.03.20},
+}
+
+@TechReport{Zimmermann2006,
+  author      = {Niklaus E Zimmermann and Katharina Steinmann},
+  title       = {A short Introduction to statistics using R},
+  institution = {CRAN},
+  year        = {2006},
+  file        = {:software/R/A_short_Introduction_to_statistics_using_R.pdf:PDF},
+  owner       = {rivero},
+  timestamp   = {2019.03.20},
+}
+
+@Article{Faherty1985,
+  author    = {Vincent Edward Faherty},
+  title     = {First Steps First},
+  journal   = {Health Marketing Quarterly},
+  year      = {1985},
+  volume    = {2},
+  number    = {4},
+  month     = {jun},
+  pages     = {25--33},
+  doi       = {10.1300/j026v02n04_05},
+  owner     = {rivero},
+  publisher = {Informa {UK} Limited},
+  timestamp = {2019.03.20},
+}
+
+@Book{Xie2017,
+  author    = {Xie, Yihui},
+  title     = {Dynamic Documents with R and knitr},
+  year      = {2017},
+  publisher = {Chapman and Hall/CRC},
+  owner     = {rivero},
+  timestamp = {2019.05.02},
+}
+
+@WWW{Allaire2016,
+  author       = {Allaire, J and Cheng, Joe and Xie, Yihui and McPherson, Jonathan and Chang, Winston and Allen, Jeff and Wickham, Hadley and Atkins, Aron and Hyndman, Rob and Arslan, Ruben},
+  title        = {rmarkdown: Dynamic Documents for R},
+  year         = {2016},
+  url          = {https://rmarkdown.rstudio.com/},
+  organization = {Rstudio},
+  urldate      = {2019-05-02},
+  owner        = {rivero},
+  timestamp    = {2019.05.02},
+}
+
+@Misc{Xie2016,
+  author    = {Xie, Y},
+  title     = {knitr: A general-purpose package for dynamic report generation in R [Software]},
+  year      = {2016},
+  owner     = {rivero},
+  timestamp = {2019.05.02},
+}
+
+@Book{Wilkinson1999,
+  author    = {Leland Wilkinson},
+  title     = {The Grammar of Graphics (Statistics and Computing)},
+  year      = {1999},
+  publisher = {Springer},
+  isbn      = {0-387-98774-6},
+  url       = {https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387987746?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0387987746},
+  owner     = {rivero},
+  timestamp = {2019.05.19},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

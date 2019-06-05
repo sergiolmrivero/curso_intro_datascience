@@ -1,0 +1,39 @@
+---
+title: "Relatório Produzido no R Markdown"
+author: "Sérgio Rivero"
+date: "Maio - 2019"
+output:
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+subtitle: Exemplos de Documentos Produzidos no R Markdown
+---
+# Mostrando Resultados de Gráficos
+
+Este gráfico abaixo é apenas um exemplo do que podemos fazer utilizando o RMD.
+
+```{r, echo=TRUE,fig.dim=.5}
+library(dplyr)
+library(ggplot2)
+data("iris")
+g1 <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + 
+geom_point() +
+ggtitle("Relação entre tamanho da Pétala e o tamanho da Sépala") +
+labs(x="sTamanho da Sépala", y="Tamanho da Pétala")
+plot(g1)
+```
+
+```{r, results = 'asis'}
+data("cars")
+library(xtable)
+library(dplyr)
+cars_by_cyl <- mtcars %>% group_by(cyl) %>%
+                  summarise(media_mpg = mean(mpg, na.rm = TRUE)
+                            )
+tb_cars <- xtable(cars_by_cyl)
+print.xtable(tb_cars,  type = 'html')
+```
+
+

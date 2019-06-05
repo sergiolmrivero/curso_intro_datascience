@@ -1,0 +1,247 @@
+\documentclass[11pt]{beamer}
+%\usetheme{Frankfurt}
+%\usetheme{Singapore}
+\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{verbatim}
+\usepackage{Sweave}
+
+\author{Sérgio Rivero}
+\subtitle{Gráficos em R}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivo da Aula}
+\section{Objetivo da Aula}
+\begin{center}
+Apresentar a biblioteca ggplot2, \\ seus principais casos de usos e exemplos
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que é o ggplot2?}
+\section{O que é o ggplot2?}
+
+O \textbf{ggplot2} é uma \textit{\textbf{G}ramática de \textbf{G}ráficos}.
+
+\bigskip
+
+Uma gramática de gráficos é um arcabouço que segue uma abordagem em camadas para descrever e construir visualizações ou gráficos de uma maneira estruturada.
+
+\bigskip
+
+Uma visualização envolvendo dados multidimensionais geralmente tem múltiplos componentes ou aspectos, em termos de dados, estética, escala, objetos etc.
+
+\bigskip
+
+A gramática original da estrutura gráfica foi proposta por Leland Wilkinson \cite{Wilkinson1999}.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{A estrutura do ggplot2}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-01}
+\caption{A estrutura de um gráfico no ggplot2 \cite{Wilkinson1999}}
+\label{fig:bpcursoteccomp002019f06-01}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Explicando a estrutura}
+
+	Explicando os componentes de um gráfico ggplot2
+	\begin{itemize}
+		\item  \textbf{Dados}: identifique as dimensões que você deseja visualizar;
+		\item  \textbf{Estética}: Define-se os eixos , posições pontos de dados e eventualmente tamanho, forma, cor etc;
+		\item \textbf{Escala}: uma escala específica para representar vários valores ou um intervalo;
+		\item \textbf{Objetos geométricos}:  "\textit{geoms}". Devem ser pontos, barras, linhas, etc.; 
+		\item \textbf{Estatística}: medidas de tendência central, \textit{spread}, intervalos de confiança, etc.;
+		\item \textbf{Facetas}: espaço para sub-gráficos a partir de dimensões específicas 
+		\item \textbf{Sistema de coordenadas}: cartesiana, polar?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\section{Construindo Gráficos}
+\frametitle{A estrutura básica de um gráfico}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-01}
+		\label{fig:bpcursoteccomp002019f06-03-01}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Incluindo componentes em um gráfico}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-02}
+		\label{fig:bpcursoteccomp002019f06-03-02}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Um comando ggplot}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-03}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f06-03-03}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mostrando e salvando gráficos com ggplot}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-04}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f06-03-04}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Gráficos de uma variável}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.45\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-05}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f06-03-05}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Duas variáveis contínuas}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-06}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f06-03-06}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Duas variáveis: uma discreta, uma contínua}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.55\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-07}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f06-03-07}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mostrando o erro}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.52\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-09}
+		\label{fig:bpcursoteccomp002019f06-03-09}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Facetas}
+\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-11}
+	\label{fig:bpcursoteccomp002019f06-03-11}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{"Decorations"}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-03-10}
+	\label{fig:bpcursoteccomp002019f06-03-10}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+\end{frame}
+
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Referências}
+       \section{Referências}
+
+\bibliographystyle{alpha}
+\bibliography{../bib/bibliografia}
+\end{frame}
+
+
+
+
+\end{document}

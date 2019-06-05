@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.17)  27 FEB 2019 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.5)  11 MAY 2019 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,135 +1057,133 @@ LaTeX Info: Redefining \nameref on input line 20.
 
 
 (./BP_Curso_TecComp_00_2019-concordance.tex)
-LaTeX Font Info:    Try loading font information for T1+aess on input line 100.
-
+LaTeX Font Info:    Try loading font information for T1+aess on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-LaTeX Font Info:    Try loading font information for OT1+zjgi on input line 100
-.
-LaTeX Font Info:    No file OT1zjgi.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for OT1+zjgi on input line 98.
+
+LaTeX Font Info:    No file OT1zjgi.fd. on input line 98.
 
 
 LaTeX Font Warning: Font shape `OT1/zjgi/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 100.
+(Font)              using `OT1/cmr/m/n' instead on input line 98.
 
-LaTeX Font Info:    Try loading font information for OML+zjgi on input line 100
-.
-LaTeX Font Info:    No file OMLzjgi.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for OML+zjgi on input line 98.
+
+LaTeX Font Info:    No file OMLzjgi.fd. on input line 98.
 
 LaTeX Font Warning: Font shape `OML/zjgi/m/it' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 100.
+(Font)              using `OML/cmm/m/it' instead on input line 98.
 
-LaTeX Font Info:    Try loading font information for OMS+zjgi on input line 100
-.
-LaTeX Font Info:    No file OMSzjgi.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for OMS+zjgi on input line 98.
+
+LaTeX Font Info:    No file OMSzjgi.fd. on input line 98.
 
 LaTeX Font Warning: Font shape `OMS/zjgi/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 100.
+(Font)              using `OMS/cmsy/m/n' instead on input line 98.
 
-LaTeX Font Info:    Try loading font information for OMX+zjgi on input line 100
-.
-LaTeX Font Info:    No file OMXzjgi.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for OMX+zjgi on input line 98.
+
+LaTeX Font Info:    No file OMXzjgi.fd. on input line 98.
 
 LaTeX Font Warning: Font shape `OMX/zjgi/m/n' undefined
-(Font)              using `OMX/cmex/m/n' instead on input line 100.
+(Font)              using `OMX/cmex/m/n' instead on input line 98.
 
-LaTeX Font Info:    Try loading font information for OML+zifg on input line 100
-.
-LaTeX Font Info:    No file OMLzifg.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for OML+zifg on input line 98.
+
+LaTeX Font Info:    No file OMLzifg.fd. on input line 98.
 
 LaTeX Font Warning: Font shape `OML/zifg/k/n' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 100.
+(Font)              using `OML/cmm/m/it' instead on input line 98.
 
 
 LaTeX Font Warning: Font shape `OML/zifg/d/n' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 100.
+(Font)              using `OML/cmm/m/it' instead on input line 98.
 
 
 LaTeX Font Warning: Font shape `T1/aess/k/n' undefined
-(Font)              using `T1/aess/m/n' instead on input line 100.
+(Font)              using `T1/aess/m/n' instead on input line 98.
 
-<../logos/logoBP.png, id=203, 422.57875pt x 120.45pt>
+<../logos/logoBP.png, id=246, 422.57875pt x 120.45pt>
 File: ../logos/logoBP.png Graphic file (type png)
 <use ../logos/logoBP.png>
-Package pdftex.def Info: ../logos/logoBP.png  used on input line 100.
+Package pdftex.def Info: ../logos/logoBP.png  used on input line 98.
 (pdftex.def)             Requested size: 65.0pt x 18.52618pt.
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 100
-.
-LaTeX Font Info:    No file TS1aess.fd. on input line 100.
+LaTeX Font Info:    Try loading font information for TS1+aess on input line 98.
+
+LaTeX Font Info:    No file TS1aess.fd. on input line 98.
 
 LaTeX Font Warning: Font shape `TS1/aess/bx/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textregistered' on input line 100.
+(Font)              for symbol `textregistered' on input line 98.
 
 
 LaTeX Font Warning: Font shape `T1/aess/k/it' undefined
-(Font)              using `T1/aess/k/n' instead on input line 100.
+(Font)              using `T1/aess/k/n' instead on input line 98.
 
 
 LaTeX Font Warning: Font shape `T1/aess/h/n' undefined
-(Font)              using `T1/aess/m/n' instead on input line 100.
+(Font)              using `T1/aess/m/n' instead on input line 98.
 
-<../figs/Capa.png, id=204, 803.0pt x 602.25pt>
+<../figs/Capa.png, id=247, 803.0pt x 602.25pt>
 File: ../figs/Capa.png Graphic file (type png)
 <use ../figs/Capa.png>
-Package pdftex.def Info: ../figs/Capa.png  used on input line 100.
+Package pdftex.def Info: ../figs/Capa.png  used on input line 98.
 (pdftex.def)             Requested size: 442.485pt x 331.8726pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../logos/logoBP.png> <../f
 igs/Capa.png (PNG copy)>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
  [2]
-Overfull \hbox (132.515pt too wide) in paragraph at lines 100--100
+Overfull \hbox (132.515pt too wide) in paragraph at lines 98--98
 [][][][]  
  []
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 100--100
+Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
 []$[]$[]  
  []
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 100--100
+Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
 []$[]$[]  
  []
 
 
-Overfull \hbox (80.0pt too wide) in paragraph at lines 100--100
+Overfull \hbox (80.0pt too wide) in paragraph at lines 98--98
 []$[]$  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 
-       [1]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 100.
-
+l.98 
+      [1]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 98.
  (/usr/share/texmf/tex/latex/R/tex/latex/ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <8.5> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 100.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 98.
 
 
 LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 100.
+(Font)              size <8> substituted on input line 98.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1194,21 +1192,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 98.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 
-       [2
+l.98 
+      [2
 
 ] (./BP_Curso_TecComp_00_2019.toc
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 43.
  [3
 
 
@@ -1217,430 +1215,1551 @@ Package babel Info: Redefining portuges shorthand "|
 \openout5 = `BP_Curso_TecComp_00_2019.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 105.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 105.
  [4]
+Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 115.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 116.
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 116.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 120.
+(babel)             in language  on input line 123.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 127.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <12> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 124.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 131.
 
-Underfull \hbox (badness 10000) detected at line 124
+Underfull \hbox (badness 10000) detected at line 131
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 125
+Underfull \hbox (badness 10000) detected at line 132
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 126
+Underfull \hbox (badness 10000) detected at line 133
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 127
+Underfull \hbox (badness 10000) detected at line 134
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 128
+Underfull \hbox (badness 10000) detected at line 135
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 129
+Underfull \hbox (badness 10000) detected at line 136
 []\TS1/cmr/m/n/12 ˆ[]
  []
 
-<../figs/f-Intro-01-Monetary-Policy.png, id=293, 1191.7022pt x 578.91281pt>
+<../figs/f-Intro-01-Monetary-Policy.png, id=340, 1191.7022pt x 578.91281pt>
 File: ../figs/f-Intro-01-Monetary-Policy.png Graphic file (type png)
 <use ../figs/f-Intro-01-Monetary-Policy.png>
 Package pdftex.def Info: ../figs/f-Intro-01-Monetary-Policy.png  used on input 
-line 134.
+line 141.
 (pdftex.def)             Requested size: 397.485pt x 193.09119pt.
 
 LaTeX Font Warning: Font shape `T1/aess/bx/it' undefined
-(Font)              using `T1/aess/bx/n' instead on input line 135.
+(Font)              using `T1/aess/bx/n' instead on input line 142.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 162.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 162.
 [1
 
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 162.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 162.
  [2 <../figs/f-Intro-01-Monetary-Policy.png>]
-Cap\'{\i }tulo 1.
+Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 162.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 156.
-<../figs/BP_Curso_TecComp_00_2019_f02-01.png, id=323, 903.375pt x 730.73pt>
-File: ../figs/BP_Curso_TecComp_00_2019_f02-01.png Graphic file (type png)
-<use ../figs/BP_Curso_TecComp_00_2019_f02-01.png>
-Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-01.png  used on i
-nput line 168.
+(babel)             in language  on input line 170.
+<../figs/BP_Curso_TecComp_00_2019_f01-01.png, id=373, 903.375pt x 730.73pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-01.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-01.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-01.png  used on i
+nput line 182.
 (pdftex.def)             Requested size: 397.485pt x 321.52219pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 174.
+(babel)             in language  on input line 188.
 [3
 
- <../figs/BP_Curso_TecComp_00_2019_f02-01.png>]
-<../figs/BP_Curso_TecComp_00_2019_f02-02.png, id=334, 968.61874pt x 966.61125pt
+ <../figs/BP_Curso_TecComp_00_2019_f01-01.png>]
+<../figs/BP_Curso_TecComp_00_2019_f01-02.png, id=384, 968.61874pt x 966.61125pt
 >
-File: ../figs/BP_Curso_TecComp_00_2019_f02-02.png Graphic file (type png)
-<use ../figs/BP_Curso_TecComp_00_2019_f02-02.png>
-Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-02.png  used on i
-nput line 179.
+File: ../figs/BP_Curso_TecComp_00_2019_f01-02.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-02.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-02.png  used on i
+nput line 193.
 (pdftex.def)             Requested size: 397.485pt x 396.66716pt.
-<../figs/BP_Curso_TecComp_00_2019_f02-03.png, id=337, 956.57375pt x 845.1575pt>
+<../figs/BP_Curso_TecComp_00_2019_f01-03.png, id=387, 956.57375pt x 845.1575pt>
 
-File: ../figs/BP_Curso_TecComp_00_2019_f02-03.png Graphic file (type png)
-<use ../figs/BP_Curso_TecComp_00_2019_f02-03.png>
-Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-03.png  used on i
-nput line 189.
+File: ../figs/BP_Curso_TecComp_00_2019_f01-03.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-03.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-03.png  used on i
+nput line 203.
 (pdftex.def)             Requested size: 397.485pt x 351.18518pt.
-<../figs/BP_Curso_TecComp_00_2019_f02-04.png, id=339, 835.12pt x 363.3575pt>
-File: ../figs/BP_Curso_TecComp_00_2019_f02-04.png Graphic file (type png)
-<use ../figs/BP_Curso_TecComp_00_2019_f02-04.png>
-Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-04.png  used on i
-nput line 199.
+<../figs/BP_Curso_TecComp_00_2019_f01-04.png, id=389, 835.12pt x 363.3575pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-04.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-04.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-04.png  used on i
+nput line 213.
 (pdftex.def)             Requested size: 397.485pt x 172.94589pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 220.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 206.
- [4 <../figs/BP_Curso_TecComp_00_2019_f02-02.png>]
+(babel)             in language  on input line 220.
+ [4 <../figs/BP_Curso_TecComp_00_2019_f01-02.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 220.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 206.
- [5 <../figs/BP_Curso_TecComp_00_2019_f02-03.png> <../figs/BP_Curso_TecComp_00_
-2019_f02-04.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 209.
+(babel)             in language  on input line 220.
+ [5 <../figs/BP_Curso_TecComp_00_2019_f01-03.png> <../figs/BP_Curso_TecComp_00_
+2019_f01-04.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 223.
+<../figs/BP_Curso_TecComp_00_2019_f01-05.png, id=407, 1371.1225pt x 770.88pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-05.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-05.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-05.png  used on i
+nput line 229.
+(pdftex.def)             Requested size: 397.485pt x 223.4789pt.
 
-Overfull \hbox (205.80649pt too wide) in paragraph at lines 226--227
-[][]$\T1/aett/m/n/12 https : / / stackoverflow . com / questions / 11103189 / h
-ow-[]to-[]find-[]out-[]which-[]package-[]version-[]is-[]loaded-[]in-[]r$[]  
- []
-
-
-Overfull \hbox (100.45128pt too wide) in paragraph at lines 228--229
-[][]$\T1/aett/m/n/12 https : / / www . r-[]bloggers . com / list-[]of-[]user-[]
-installed-[]r-[]packages-[]and-[]their-[]versions/$[]  
- []
-
-
-Overfull \hbox (61.94356pt too wide) in paragraph at lines 230--231
-[][]$\T1/aett/m/n/12 https : / / community . rstudio . com / t / reinstalling-[
-]packages-[]on-[]new-[]version-[]of-[]r / 
+Overfull \hbox (9.51097pt too wide) in paragraph at lines 234--235
+[]\T1/aer/m/n/12 Para ini-ciar o down-load da pla-ta-forma Rs-tu-dio é pre-ciso
+ aces-sar o site ([]$\T1/aett/m/n/12 https : 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 238.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 235.
+(babel)             in language  on input line 238.
+[6 <../figs/BP_Curso_TecComp_00_2019_f01-05.png>]
+<../figs/BP_Curso_TecComp_00_2019_f01-06.png, id=422, 1036.87375pt x 676.5275pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-06.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-06.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-06.png  used on i
+nput line 242.
+(pdftex.def)             Requested size: 397.485pt x 259.34384pt.
+<../figs/BP_Curso_TecComp_00_2019_f01-07.png, id=423, 1104.125pt x 861.2175pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-07.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-07.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-07.png  used on i
+nput line 249.
+(pdftex.def)             Requested size: 397.485pt x 310.03806pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 243.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 245.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 245.
-[6]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 251.
+(babel)             in language  on input line 256.
+ [7 <../figs/BP_Curso_TecComp_00_2019_f01-06.png> <../figs/BP_Curso_TecComp_00_
+2019_f01-07.png>]
+<../figs/BP_Curso_TecComp_00_2019_f01-08.png, id=437, 1239.63126pt x 606.265pt>
 
-Overfull \hbox (19.76788pt too wide) in paragraph at lines 255--256
+File: ../figs/BP_Curso_TecComp_00_2019_f01-08.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-08.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-08.png  used on i
+nput line 260.
+(pdftex.def)             Requested size: 397.485pt x 194.3973pt.
+<../figs/BP_Curso_TecComp_00_2019_f01-09.png, id=440, 1371.1225pt x 770.88pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-09.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-09.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-09.png  used on i
+nput line 269.
+(pdftex.def)             Requested size: 397.485pt x 223.4789pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 276.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 276.
+ [8 <../figs/BP_Curso_TecComp_00_2019_f01-08.png> <../figs/BP_Curso_TecComp_00_
+2019_f01-09.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 276.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 323.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 323.
+ [9]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 323.
+
+Overfull \hbox (0.26653pt too wide) in paragraph at lines 326--327
+\T1/aer/m/n/12 fun-ções e bi-bli-o-te-cas agru-pa-das em pa-co-tes. Es-tes pa-c
+o-tes são, em boa parte, 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 328.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 337.
+<../figs/BP_Curso_TecComp_00_2019_f01-10.png, id=462, 1024.82875pt x 863.225pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f01-10.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-10.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-10.png  used on i
+nput line 347.
+(pdftex.def)             Requested size: 397.485pt x 334.79918pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+[10]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+ [11 <../figs/BP_Curso_TecComp_00_2019_f01-10.png>]
+Underfull \hbox (badness 10000) detected at line 355
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 357
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 359
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 368.
+<../figs/BP_Curso_TecComp_00_2019_f01-11.png, id=486, 1284.8pt x 860.21375pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f01-11.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f01-11.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f01-11.png  used on i
+nput line 386.
+(pdftex.def)             Requested size: 397.485pt x 266.12534pt.
+
+Underfull \hbox (badness 10000) detected at line 399
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 401
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Overfull \hbox (37.38995pt too wide) in paragraph at lines 401--402
 [][]$\T1/aett/m/n/12 https : / / www . r-[]bloggers . com / how-[]to-[]install-
 []and-[]include-[]an-[]r-[]package/$[]  
  []
 
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
 
-Overfull \hbox (128.79105pt too wide) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) detected at line 403
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 411.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 411.
+[12]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 429.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 429.
+ [13 <../figs/BP_Curso_TecComp_00_2019_f01-11.png>]
+Underfull \hbox (badness 10000) detected at line 433
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 434
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 439.
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
+[][][][]$\T1/aett/m/n/10 https : / / www . rdocumentation . org / packages / ut
+ils / versions / 3 . 5 . 3 / topics /
+ []
+
+
+Overfull \hbox (25.2029pt too wide) in paragraph at lines 441--442
+[]\T1/aer/m/n/12 A ins-ta-la-ção de pa-co-tes em R é feita usu-al-mente com a f
+un-ção \T1/aer/m/it/12 ins-tall.packages()[][][]\T1/aer/m/n/12 . 
+ []
+
+<../figs/erro_R.png, id=509, 755.82375pt x 643.40375pt>
+File: ../figs/erro_R.png Graphic file (type png)
+<use ../figs/erro_R.png>
+Package pdftex.def Info: ../figs/erro_R.png  used on input line 450.
+(pdftex.def)             Requested size: 278.23828pt x 236.8481pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+[14]
+Underfull \hbox (badness 10000) detected at line 462
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Overfull \hbox (146.41312pt too wide) in paragraph at lines 462--463
 [][]$\T1/aett/m/n/12 https : / / stackoverflow . com / questions / 23135703 / p
 ackage-[]install-[]error-[]compilation-[]failed$[]  
  []
 
 
-Overfull \hbox (129.29105pt too wide) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) detected at line 464
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Overfull \hbox (146.91312pt too wide) in paragraph at lines 464--465
 [][]$\T1/aett/m/n/12 https : / / support . rstudio . com / hc / en-[]us / commu
 nity / posts / 200522573-[]Can-[]t-[]install-[]packages$[]  
  []
 
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 269.
 
-Overfull \hbox (118.45514pt too wide) in paragraph at lines 273--274
-[][]$\T1/aett/m/n/12 https : / / www . dummies . com / programming / r / how-[]
-to-[]install-[]load-[]and-[]unload-[]packages-[]in-[]r/$[]  
+Underfull \hbox (badness 10000) detected at line 466
+[]\TS1/cmr/m/n/12 ˆ[]
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 286.
-[7]
-Cap\'{\i }tulo 2.
+(babel)             in language  on input line 495.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 495.
+[15 <../figs/erro_R.png>]
+Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 290.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 292.
+(babel)             in language  on input line 495.
 
-Overfull \hbox (73.77946pt too wide) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[][][]\T1/aer/m/n/10 Uma de-fi-ni-ção do Mark-down pode ser achada em : []$\T1/
+aett/m/n/10 https : / / tools . ietf . org / html /
+ []
+
+
+Overfull \hbox (0.40022pt too wide) in paragraph at lines 501--502
+[]\T1/aer/bx/n/12 Markdown \T1/aer/m/n/12 é duas coi-sas: (1) uma sin-taxe de f
+or-ma-ta-ção de texto 
+ []
+
+
+Overfull \hbox (3.3525pt too wide) in paragraph at lines 503--504
+[]\T1/aer/m/n/12 A meta de de-sign pre-do-mi-nante da sin-taxe de for-ma-ta-ção
+ do Mark- 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 509.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 512.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 512.
+[16
+
+]
+<../figs/BP_Curso_TecComp_00_2019_f04-03.png, id=543, 1927.2pt x 1058.95625pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f04-03.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f04-03.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f04-03.png  used on i
+nput line 520.
+(pdftex.def)             Requested size: 397.485pt x 218.39626pt.
+
+Overfull \hbox (0.40575pt too wide) in paragraph at lines 525--526
+[]\T1/aer/m/n/12 Para a ins-ta-la-ção do Rmark-down você pode sim-ples-mente ut
+i-li-zar o co-mando 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 536.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 536.
+[17 <../figs/BP_Curso_TecComp_00_2019_f04-03.png>]
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 538
+.
+
+(/usr/share/texmf/tex/latex/R/tex/latex/ts1aett.fd
+File: ts1aett.fd 
+)
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 538
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <12> not available
+(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 538.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 548.
+<../figs/BP_Curso_TecComp_00_2019_f04-02.png, id=555, 641.39626pt x 304.13625pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f04-02.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f04-02.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f04-02.png  used on i
+nput line 554.
+(pdftex.def)             Requested size: 278.23828pt x 131.93622pt.
+<../figs/BP_Curso_TecComp_00_2019_f04-01.png, id=556, 711.65875pt x 120.45pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f04-01.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f04-01.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f04-01.png  used on i
+nput line 563.
+(pdftex.def)             Requested size: 397.485pt x 67.27509pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 573.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 578.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 578.
+ [18 <../figs/BP_Curso_TecComp_00_2019_f04-02.png>]
+Underfull \hbox (badness 10000) detected at line 578
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
+[][][]\T1/aer/m/n/10 YAML é um for-mato de se-ri-a-li-za-ção de da-dos le-gí-ve
+is por hu-ma-nos ins-pi-rado em
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
+\T1/aer/m/n/10 lin-gua-gens como XML, C, Python, Perl, as-sim como o for-mato d
+e cor-reio ele-trô-nico es-pe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
+\T1/aer/m/n/10 ci-fi-cado pela RFC 2822. YAML foi pro-posto por Clark Evans em 
+2001 em con-junto com
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 579
+[]\T1/aer/m/n/12 2.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 580
+[]\T1/aer/m/n/12 3.[]
+ []
+
+LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <12> not available
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 580.
+<../figs/BP_Curso_TecComp_00_2019_f04-04.png, id=566, 640.3925pt x 314.17375pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f04-04.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f04-04.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f04-04.png  used on i
+nput line 587.
+(pdftex.def)             Requested size: 278.23828pt x 136.50148pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 593.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 596.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 596.
+[19 <../figs/BP_Curso_TecComp_00_2019_f04-01.png> <../figs/BP_Curso_TecComp_00_
+2019_f04-04.png>]
+Overfull \hbox (185.20468pt too wide) in paragraph at lines 603--604
+[]\T1/aer/m/n/12 Os hi-per-links são cri-a-dos usando a sin-taxe [][]\T1/aett/m
+/n/12 [text](link)[]\T1/aer/m/n/12 , por exem-plo [][]\T1/aett/m/n/12 [RStudio]
+(https://www.rstudio.com)[]\T1/aer/m/n/12 .  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 622.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 622.
+[20]
+Underfull \hbox (badness 10000) detected at line 635
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 636
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 637
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 639
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 640
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 641
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 657
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 658
+[]\T1/aer/m/n/12 2.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 659
+[]\T1/aer/m/n/12 3.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 661
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 662.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 662.
+[21]
+Underfull \hbox (badness 10000) detected at line 662
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 669.
+<../figs/BP_Curso_TecComp_00_2019_f04-05.png, id=596, 765.86125pt x 234.8775pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f04-05.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f04-05.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f04-05.png  used on i
+nput line 676.
+(pdftex.def)             Requested size: 397.485pt x 121.90404pt.
+
+Underfull \hbox (badness 10000) detected at line 684
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 685
+[]\T1/aer/m/n/12 2.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 686
+[]\T1/aer/m/n/12 3.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 687
+[]\T1/aer/m/n/12 4.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 688
+[]\T1/aer/m/n/12 5.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 689
+[]\T1/aer/m/n/12 6.[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 696.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 696.
+[22 <../figs/BP_Curso_TecComp_00_2019_f04-05.png>]
+Underfull \hbox (badness 10000) detected at line 698
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 699
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 701
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 702
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 703
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 704
+[]\T1/aer/bx/n/12 ^^U[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 706
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 707
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 708
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 714.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 720.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 720.
+[23]
+Overfull \hbox (41.4397pt too wide) in paragraph at lines 726--727
+[][]$\T1/aett/m/n/12 https : / / www . rstudio . com / wp-[]content / uploads /
+ 2015 / 03 / rmarkdown-[]reference . 
+ []
+
+
+Overfull \hbox (60.44356pt too wide) in paragraph at lines 728--729
+[][]$\T1/aett/m/n/12 https : / / www . rstudio . com / wp-[]content / uploads /
+ 2016 / 03 / rmarkdown-[]cheatsheet-[]2 . 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 745.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 745.
+[24]
+Cap\'{\i }tulo 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 745.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 749.
+<../figs/BP_Curso_TecComp_00_2019_f02-01.png, id=634, 431.6125pt x 324.21124pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f02-01.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f02-01.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-01.png  used on i
+nput line 760.
+(pdftex.def)             Requested size: 397.485pt x 298.58467pt.
+
+Underfull \hbox (badness 10000) detected at line 772
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 773
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 774
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 775.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 775.
+[25
+
+]
+Underfull \hbox (badness 10000) detected at line 775
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 776
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 777
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 778
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 779
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 784.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 784.
+[26 <../figs/BP_Curso_TecComp_00_2019_f02-01.png>]
+<../figs/BP_Curso_TecComp_00_2019_f02-02.png, id=650, 307.8045pt x 120.888pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f02-02.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f02-02.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-02.png  used on i
+nput line 788.
+(pdftex.def)             Requested size: 397.485pt x 156.11954pt.
+
+Overfull \hbox (59.27747pt too wide) in paragraph at lines 793--794
+\T1/aer/m/n/12 da-dos es-ta-tís-ti-cos para mo-de-la-gem é a que po-de-mos ter 
+em []$\T1/aett/m/n/12 https : / / paulvanderlaken . 
+ []
+
+
+Overfull \hbox (3.18219pt too wide) in paragraph at lines 793--794
+\T1/aer/m/n/12 caso, es-ta-mos fa-lando de da-dos já ad-qui-ri-dos e di-gi-ta-l
+i-za-dos de al-guma forma. 
+ []
+
+<../figs/BP_Curso_TecComp_00_2019_f02-03.png, id=653, 819.06pt x 433.62pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f02-03.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f02-03.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-03.png  used on i
+nput line 798.
+(pdftex.def)             Requested size: 278.23828pt x 147.30313pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 805.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 805.
+[27 <../figs/BP_Curso_TecComp_00_2019_f02-02.png> <../figs/BP_Curso_TecComp_00_
+2019_f02-03.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
+[][][][]$\T1/aett/m/n/10 https : / / cran . r-[]project . org / web / packages 
+/ readxl / index . html$[] \T1/aer/m/n/10 e []$\T1/aett/m/n/10 https :
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 825.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 825.
+[28]
+Underfull \hbox (badness 10000) detected at line 825
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 826
+[]\T1/aer/m/n/12 2.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 827
+[]\T1/aer/m/n/12 3.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 828
+[]\T1/aer/m/n/12 4.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 835
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 836
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 837
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 838
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 839
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 840
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 846.
+<../figs/BP_Curso_TecComp_00_2019_f02-04.png, id=681, 773.36351pt x 371.03568pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f02-04.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f02-04.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f02-04.png  used on i
+nput line 852.
+(pdftex.def)             Requested size: 397.485pt x 190.70334pt.
+
+LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
+(Font)              using `T1/aett/m/n' instead on input line 853.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 859.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 868.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 868.
+[29]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 880.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 900.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 900.
+ [30 <../figs/BP_Curso_TecComp_00_2019_f02-04.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 902.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 924.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 940.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 940.
+ [31]
+Overfull \hbox (73.77946pt too wide) in paragraph at lines 965--966
 [][]$\T1/aett/m/n/12 https : / / swcarpentry . github . io / r-[]novice-[]infla
 mmation / 13-[]supp-[]data-[]structures/$[]  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
-
-Overfull \hbox (5.93198pt too wide) in paragraph at lines 318--319
+(babel)             in language  on input line 975.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 979.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 979.
+[32]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1014.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1014.
+ [33]
+Overfull \hbox (5.93198pt too wide) in paragraph at lines 1045--1046
 [][]$\T1/aett/m/n/12 https : / / datacarpentry . org / R-[]ecology-[]lesson / 0
 2-[]starting-[]with-[]data . 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 322.
+(babel)             in language  on input line 1049.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 322.
-[8
-
-]
+(babel)             in language  on input line 1053.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 322.
+(babel)             in language  on input line 1053.
+[34]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1053.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1078.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1092.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1092.
+ [35]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1100.
 
-Overfull \hbox (23.43584pt too wide) in paragraph at lines 324--325
+Overfull \hbox (23.43584pt too wide) in paragraph at lines 1104--1105
 [][]$\T1/aett/m/n/12 https : / / www . datacamp . com / community / tutorials /
  r-[]data-[]import-[]tutorial ? 
  []
 
 
-Overfull \hbox (9.59993pt too wide) in paragraph at lines 324--325
+Overfull \hbox (9.59993pt too wide) in paragraph at lines 1104--1105
 \T1/aett/m/n/12 65083631748 & utm _ device = c & utm _ keyword = &utm _ matchty
 pe = b & utm _ network = 
  []
 
 
-Overfull \hbox (71.77946pt too wide) in paragraph at lines 324--325
+Overfull \hbox (71.77946pt too wide) in paragraph at lines 1104--1105
 \T1/aett/m/n/12 g & utm _ adpostion = 1t1 & utm _ creative = 332602034364 & utm
  _ targetid = dsa-[]473406573035 & 
  []
 
 
-Overfull \hbox (243.98216pt too wide) in paragraph at lines 324--325
+Overfull \hbox (243.98216pt too wide) in paragraph at lines 1104--1105
 \T1/aett/m/n/12 utm _ loc _ interest _ ms = &utm _ loc _ physical _ ms = 100161
 0 & gclid = Cj0KCQiA5NPjBRDDARIsAM9X1GLkgYWekNMkjHQnsTnRAzV7 _ 
  []
 
 
-Overfull \hbox (17.26788pt too wide) in paragraph at lines 332--333
+Overfull \hbox (17.26788pt too wide) in paragraph at lines 1112--1113
 [][]$\T1/aett/m/n/12 https : / / riptutorial . com / r / example / 31447 / impo
 rting-[]fixed-[]width-[]files$[]  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 335.
+(babel)             in language  on input line 1115.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1121.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1125.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1125.
+[36]
+Underfull \hbox (badness 10000) detected at line 1145
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
 
-Overfull \hbox (75.77946pt too wide) in paragraph at lines 337--338
+
+Underfull \hbox (badness 10000) detected at line 1146
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1147
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1152
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1154
+[]\T1/aer/m/n/12 (a)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1155
+[]\T1/aer/m/n/12 (b)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1156
+[]\T1/aer/m/n/12 (c)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1157
+[]\T1/aer/m/n/12 (d)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1158
+[]\T1/aer/m/n/12 (e)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1159
+[]\T1/aer/m/n/12 (f)[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1162
+[]\T1/aer/m/n/12 2.[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1164.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1164.
+[37]
+Underfull \hbox (badness 10000) detected at line 1164
+[]\T1/aer/m/n/12 3.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1166
+[]\T1/aer/m/n/12 4.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1168
+[]\T1/aer/m/n/12 5.[]
+ []
+
+
+Overfull \hbox (255.89629pt too wide) in paragraph at lines 1181--1182
+[]\T1/aer/m/n/12 download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.43
+29/dados?formato=json&amp;dataInicial=01/01/2001","ICMS")  
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1204.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1204.
+[38]
+Overfull \hbox (75.77946pt too wide) in paragraph at lines 1208--1209
 [][]$\T1/aett/m/n/12 https : / / www . r-[]bloggers . com / accessing-[]apis-[]
 from-[]r-[]and-[]a-[]little-[]r-[]programming/$[]  
  []
 
 
-Overfull \hbox (22.93584pt too wide) in paragraph at lines 339--340
+Overfull \hbox (22.93584pt too wide) in paragraph at lines 1210--1211
 [][]$\T1/aett/m/n/12 https : / / cran . r-[]project . org / web / packages / ht
 tr / vignettes / api-[]packages . 
  []
 
 
-Overfull \hbox (79.44742pt too wide) in paragraph at lines 343--344
+Overfull \hbox (79.44742pt too wide) in paragraph at lines 1214--1215
 [][]$\T1/aett/m/n/12 https : / / www . earthdatascience . org / courses / earth
 -[]analytics / get-[]data-[]using-[]apis / 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 347.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 355.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 355.
-[9]
-Overfull \hbox (36.77174pt too wide) in paragraph at lines 357--358
+(babel)             in language  on input line 1218.
+
+Overfull \hbox (36.77174pt too wide) in paragraph at lines 1228--1229
 [][]$\T1/aett/m/n/12 https : / / www . rstudio . com / resources / webinars / w
 orking-[]with-[]big-[]data-[]in-[]r/$[]  
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 372.
+(babel)             in language  on input line 1249.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 372.
-[10]
-Cap\'{\i }tulo 3.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 372.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 374.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 376.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 378.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 380.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 393.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 393.
-[11
-
-]
-Cap\'{\i }tulo 4.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 393.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 395.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 397.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 401.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 403.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 416.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 416.
-[12
-
-]
+(babel)             in language  on input line 1249.
+[39]
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 416.
+(babel)             in language  on input line 1249.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 418.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 420.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 422.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 424.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 426.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 439.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 439.
-[13
+(babel)             in language  on input line 1251.
+<../figs/BP_Curso_TecComp_00_2019_f03-01.png, id=796, 1927.2pt x 602.25pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-01.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-01.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-01.png  used on i
+nput line 1257.
+(pdftex.def)             Requested size: 397.485pt x 124.20639pt.
 
-]
+Underfull \hbox (badness 10000) detected at line 1265
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1266
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1267
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1270.
+
+Underfull \hbox (badness 10000) detected at line 1274
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1275
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1276
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1281.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1281.
+[40
+
+ <../figs/BP_Curso_TecComp_00_2019_f03-01.png>]
+<../figs/BP_Curso_TecComp_00_2019_f03-02.png, id=804, 1214.5375pt x 367.3725pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f03-02.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-02.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-02.png  used on i
+nput line 1286.
+(pdftex.def)             Requested size: 397.485pt x 120.22987pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1291.
+
+Underfull \hbox (badness 10000) detected at line 1296
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1297
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+<../figs/BP_Curso_TecComp_00_2019_f03-03.png, id=806, 390.45876pt x 529.98pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-03.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-03.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-03.png  used on i
+nput line 1307.
+(pdftex.def)             Requested size: 397.485pt x 539.53731pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1327.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1331.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1331.
+[41 <../figs/BP_Curso_TecComp_00_2019_f03-02.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1331.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1331.
+ [42 <../figs/BP_Curso_TecComp_00_2019_f03-03.png>]
+Overfull \hbox (12.04108pt too wide) in paragraph at lines 1337--1338
+[]\T1/aer/m/n/12 Estão apre-sen-ta-das a se-guir as fun-ções uti-li-za-das para
+ re-no-mear ró-tu-los(nomes) 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1347.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1372.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1372.
+[43]
+Overfull \hbox (2.3881pt too wide) in paragraph at lines 1394--1395
+[]\T1/aer/m/n/12 Para com-bi-na-ção de duas ou mais ba-ses de da-dos te-mos as 
+fun-ções de \T1/aer/bx/n/12 "join"\T1/aer/m/n/12 . 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1421
+[]\TS1/cmr/m/n/12 ˆ[]
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1427.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1427.
+[44]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1435.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1468.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1471.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1471.
+ [45]
+<../figs/BP_Curso_TecComp_00_2019_f03-04.png, id=836, 649.42625pt x 325.215pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-04.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-04.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-04.png  used on i
+nput line 1484.
+(pdftex.def)             Requested size: 238.49342pt x 119.42947pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1499.
+<../figs/BP_Curso_TecComp_00_2019_f03-05.png, id=837, 751.80875pt x 536.0025pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f03-05.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-05.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-05.png  used on i
+nput line 1516.
+(pdftex.def)             Requested size: 238.49342pt x 170.03577pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1522.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1522.
+ [46 <../figs/BP_Curso_TecComp_00_2019_f03-04.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1523.
+<../figs/BP_Curso_TecComp_00_2019_f03-06.png, id=844, 583.17876pt x 292.09125pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-06.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-06.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-06.png  used on i
+nput line 1547.
+(pdftex.def)             Requested size: 238.49342pt x 119.45064pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1554.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1564.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1564.
+ [47 <../figs/BP_Curso_TecComp_00_2019_f03-05.png>]
+<../figs/BP_Curso_TecComp_00_2019_f03-07.png, id=851, 717.68124pt x 297.11pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-07.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-07.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-07.png  used on i
+nput line 1577.
+(pdftex.def)             Requested size: 238.49342pt x 98.73116pt.
+<../figs/BP_Curso_TecComp_00_2019_f03-08.png, id=852, 694.595pt x 485.815pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-08.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-08.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-08.png  used on i
+nput line 1590.
+(pdftex.def)             Requested size: 238.49342pt x 166.80576pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1598.
+<../figs/BP_Curso_TecComp_00_2019_f03-09.png, id=853, 283.0575pt x 222.8325pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-09.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-09.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-09.png  used on i
+nput line 1603.
+(pdftex.def)             Requested size: 198.7425pt x 156.4611pt.
+<../figs/BP_Curso_TecComp_00_2019_f03-10.png, id=854, 286.06876pt x 229.85875pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f03-10.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-10.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-10.png  used on i
+nput line 1612.
+(pdftex.def)             Requested size: 198.7425pt x 159.69348pt.
+<../figs/BP_Curso_TecComp_00_2019_f03-11.png, id=855, 332.24126pt x 226.8475pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f03-11.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f03-11.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f03-11.png  used on i
+nput line 1622.
+(pdftex.def)             Requested size: 198.7425pt x 135.69763pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1640.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1640.
+ [48 <../figs/BP_Curso_TecComp_00_2019_f03-06.png> <../figs/BP_Curso_TecComp_00
+_2019_f03-07.png> <../figs/BP_Curso_TecComp_00_2019_f03-08.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1640.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1640.
+ [49 <../figs/BP_Curso_TecComp_00_2019_f03-09.png> <../figs/BP_Curso_TecComp_00
+_2019_f03-10.png> <../figs/BP_Curso_TecComp_00_2019_f03-11.png>]
 Cap\'{\i }tulo 6.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 1640.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 441.
+(babel)             in language  on input line 1642.
+<../figs/BP_Curso_TecComp_00_2019_f06-01.png, id=878, 1927.2pt x 1084.05pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-01.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-01.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-01.png  used on i
+nput line 1649.
+(pdftex.def)             Requested size: 278.23828pt x 156.49677pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 443.
+(babel)             in language  on input line 1664.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 454.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 454.
-[14
+(babel)             in language  on input line 1664.
+[50
 
-]
+ <../figs/BP_Curso_TecComp_00_2019_f06-01.png (PNG copy)>]
+<../figs/BP_Curso_TecComp_00_2019_f06-04.png, id=886, 432.11438pt x 405.01312pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-04.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-04.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-04.png  used on i
+nput line 1697.
+(pdftex.def)             Requested size: 278.23828pt x 260.79576pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1702.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1702.
+ [51]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1740.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1740.
+ [52 <../figs/BP_Curso_TecComp_00_2019_f06-04.png>]
+<../figs/BP_Curso_TecComp_00_2019_f06-05.png, id=897, 432.11438pt x 405.01312pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-05.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-05.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-05.png  used on i
+nput line 1747.
+(pdftex.def)             Requested size: 278.23828pt x 260.79576pt.
+<../figs/BP_Curso_TecComp_00_2019_f06-06.png, id=899, 432.11438pt x 405.01312pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-06.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-06.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-06.png  used on i
+nput line 1769.
+(pdftex.def)             Requested size: 278.23828pt x 260.79576pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1783.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1783.
+ [53 <../figs/BP_Curso_TecComp_00_2019_f06-05.png (PNG copy)>]
+<../figs/BP_Curso_TecComp_00_2019_f06-07.png, id=907, 432.11438pt x 405.01312pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-07.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-07.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-07.png  used on i
+nput line 1791.
+(pdftex.def)             Requested size: 278.23828pt x 260.79576pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1809.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1809.
+ [54 <../figs/BP_Curso_TecComp_00_2019_f06-06.png (PNG copy)>]
+<../figs/BP_Curso_TecComp_00_2019_f06-08.png, id=915, 432.11438pt x 405.01312pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-08.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-08.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-08.png  used on i
+nput line 1815.
+(pdftex.def)             Requested size: 278.23828pt x 260.79576pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1827.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1827.
+ [55 <../figs/BP_Curso_TecComp_00_2019_f06-07.png (PNG copy)> <../figs/BP_Curso
+_TecComp_00_2019_f06-08.png (PNG copy)>]
+Overfull \hbox (26.94885pt too wide) in paragraph at lines 1834--1835
+\T1/aer/m/n/12 va-riá-vel. Para fa-zer isso basta adi-ci-o-nar uma ca-mada na f
+un-ção \T1/aer/bx/n/12 geom_point(size 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1874.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1874.
+[56]
+Overfull \hbox (30.03671pt too wide) in paragraph at lines 1881--1882
+[]\T1/aer/m/n/12 Todos os te-mas dis-po-ní-veis po-dem ser che-ca-dos em []$\T1
+/aett/m/n/12 https : / / ggplot2 . tidyverse . 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1895.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1895.
+[57]
 Cap\'{\i }tulo 7.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 454.
+(babel)             in language  on input line 1895.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 456.
+(babel)             in language  on input line 1901.
+
+Overfull \hbox (64.4039pt too wide) in paragraph at lines 1925--1937
+ [][] 
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 458.
+(babel)             in language  on input line 1945.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 460.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 462.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 476.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 476.
-[15
+(babel)             in language  on input line 1945.
+[58
 
 ]
+<BP_Curso_TecComp_00_2019-consumHP.pdf, id=937, 289.08pt x 289.08pt>
+File: BP_Curso_TecComp_00_2019-consumHP.pdf Graphic file (type pdf)
+<use BP_Curso_TecComp_00_2019-consumHP.pdf>
+Package pdftex.def Info: BP_Curso_TecComp_00_2019-consumHP.pdf  used on input l
+ine 1988.
+(pdftex.def)             Requested size: 317.98921pt x 318.0066pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2016.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2016.
+ [59]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2016.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2016.
+ [60 <./BP_Curso_TecComp_00_2019-consumHP.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2074.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2074.
+ [61]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2114.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2118.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2118.
+ [62]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2128.
+
+Underfull \hbox (badness 10000) detected at line 2138
+[]\T1/aer/m/n/12 1.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 2140
+[]\T1/aer/m/n/12 2.[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 2142
+[]\T1/aer/m/n/12 3.[]
+ []
+
+<../figs/BP_Curso_TecComp_00_2019_f06-09.png, id=972, 551.05875pt x 185.69376pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-09.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-09.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-09.png  used on i
+nput line 2153.
+(pdftex.def)             Requested size: 397.485pt x 133.94873pt.
+<../figs/BP_Curso_TecComp_00_2019_f06-10.png, id=974, 1382.16376pt x 406.51875p
+t>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-10.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-10.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-10.png  used on i
+nput line 2162.
+(pdftex.def)             Requested size: 397.485pt x 116.90733pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2165.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2165.
+[63]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2173.
+<../figs/BP_Curso_TecComp_00_2019_f06-13.png, id=986, 568.1225pt x 279.0425pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-13.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-13.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-13.png  used on i
+nput line 2179.
+(pdftex.def)             Requested size: 278.23828pt x 136.66388pt.
+<../figs/BP_Curso_TecComp_00_2019_f06-14.png, id=988, 602.25pt x 175.65625pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-14.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-14.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-14.png  used on i
+nput line 2188.
+(pdftex.def)             Requested size: 278.23828pt x 81.15665pt.
+<../figs/BP_Curso_TecComp_00_2019_f06-15.png, id=990, 600.2425pt x 185.69376pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f06-15.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-15.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-15.png  used on i
+nput line 2197.
+(pdftex.def)             Requested size: 278.23828pt x 86.07751pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2200.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2200.
+ [64 <../figs/BP_Curso_TecComp_00_2019_f06-09.png> <../figs/BP_Curso_TecComp_00
+_2019_f06-10.png>]
+<../figs/BP_Curso_TecComp_00_2019_f06-16.png, id=1001, 599.23875pt x 188.705pt>
+
+File: ../figs/BP_Curso_TecComp_00_2019_f06-16.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-16.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-16.png  used on i
+nput line 2206.
+(pdftex.def)             Requested size: 278.23828pt x 87.62021pt.
+
+Overfull \hbox (6.38652pt too wide) in paragraph at lines 2211--2212
+\T1/aer/m/n/12 tas apre-sen-ta-ções e apli-ca-ções em pá-gi-nas que mos-tram da
+-dos têm esse layout.  
+ []
+
+<../figs/BP_Curso_TecComp_00_2019_f06-19.png, id=1003, 602.25pt x 462.72874pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-19.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-19.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-19.png  used on i
+nput line 2217.
+(pdftex.def)             Requested size: 238.49342pt x 183.24538pt.
+<../figs/BP_Curso_TecComp_00_2019_f06-12.png, id=1005, 428.60126pt x 584.1825pt
+>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-12.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-12.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-12.png  used on i
+nput line 2228.
+(pdftex.def)             Requested size: 278.23828pt x 379.24168pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2234.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2234.
+[65 <../figs/BP_Curso_TecComp_00_2019_f06-13.png> <../figs/BP_Curso_TecComp_00_
+2019_f06-14.png> <../figs/BP_Curso_TecComp_00_2019_f06-15.png>]
+<../figs/BP_Curso_TecComp_00_2019_f06-20.png, id=1018, 867.24pt x 538.01pt>
+File: ../figs/BP_Curso_TecComp_00_2019_f06-20.png Graphic file (type png)
+<use ../figs/BP_Curso_TecComp_00_2019_f06-20.png>
+Package pdftex.def Info: ../figs/BP_Curso_TecComp_00_2019_f06-20.png  used on i
+nput line 2239.
+(pdftex.def)             Requested size: 278.23828pt x 172.61002pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2248.
+
+Overfull \hbox (40.9397pt too wide) in paragraph at lines 2252--2253
+[][]$\T1/aett/m/n/12 https : / / cran . r-[]project . org / web / packages / xt
+able / vignettes / xtableGallery . 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2258.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2258.
+[66 <../figs/BP_Curso_TecComp_00_2019_f06-16.png> <../figs/BP_Curso_TecComp_00_
+2019_f06-19.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2258.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2258.
+ [67 <../figs/BP_Curso_TecComp_00_2019_f06-12.png> <../figs/BP_Curso_TecComp_00
+_2019_f06-20.png>]
+Overfull \hbox (317.32965pt too wide) in paragraph at lines 2266--2267
+[][]$\T1/aett/m/n/12 https : / / www . r-[]statistics . com / 2013 / 01 / starg
+azer-[]package-[]for-[]beautiful-[]latex-[]tables-[]from-[]r-[]statistical-[]mo
+dels-[]output/$[]  
+ []
+
+
+Overfull \hbox (22.93584pt too wide) in paragraph at lines 2280--2281
+[][]$\T1/aett/m/n/12 https : / / www . rstudio . com / wp-[]content / uploads /
+ 2015 / 02 / shiny-[]cheatsheet . 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2304.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2304.
+[68]
 Cap\'{\i }tulo 8.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 476.
+(babel)             in language  on input line 2304.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 481.
+(babel)             in language  on input line 2327.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 481.
-[16
+(babel)             in language  on input line 2327.
+[69
 
-]
-Cap\'{\i }tulo 9.
+] (./BP_Curso_TecComp_00_2019.bbl
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 481.
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 482.
-
+(babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 482.
-(./BP_Curso_TecComp_00_2019.bbl
+(babel)             in language  on input line 2.
+ [70]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [17
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 2.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2354.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 508.
+(babel)             in language  on input line 2354.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 508.
- [18
+(babel)             in language  on input line 2354.
+ [71
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2354.
  (./BP_Curso_TecComp_00_2019.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2354.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2354.
+
 Package rerunfilecheck Info: File `BP_Curso_TecComp_00_2019.out' has not change
 d.
-(rerunfilecheck)             Checksum: E47D48C5C9EFE3D14D8F937C7838ACBD;3606.
+(rerunfilecheck)             Checksum: 979801EFC98965112B7CEB8C2D0789D7;4090.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1649,37 +2768,42 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2354.
  ) 
 Here is how much of TeX's memory you used:
- 10537 strings out of 494733
- 153037 string characters out of 6175646
- 347331 words of memory out of 5000000
- 13510 multiletter control sequences out of 15000+600000
- 60788 words of font info for 116 fonts, out of 8000000 for 9000
+ 11044 strings out of 494733
+ 167323 string characters out of 6175647
+ 355981 words of memory out of 5000000
+ 13802 multiletter control sequences out of 15000+600000
+ 61874 words of font info for 120 fonts, out of 8000000 for 9000
  109 hyphenation exceptions out of 8191
- 43i,13n,50p,538b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200
-.pfb>
-Output written on BP_Curso_TecComp_00_2019.pdf (24 pages, 1362350 bytes).
+ 43i,13n,50p,733b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/rivero/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1200.60
+0pk> </home/rivero/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcst1200.
+600pk> </home/rivero/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm120
+0.600pk> </home/rivero/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0
+800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on BP_Curso_TecComp_00_2019.pdf (77 pages, 4844854 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 493 compressed objects within 5 object streams
- 82 named destinations out of 1000 (max. 500000)
- 440 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1212 PDF objects out of 1440 (max. 8388607)
+ 988 compressed objects within 10 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 772 words of extra memory for PDF output out of 10000 (max. 10000000)
 

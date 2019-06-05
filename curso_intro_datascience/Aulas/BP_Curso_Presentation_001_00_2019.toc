@@ -1,9 +1,0 @@
-\babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Objetivos da Aula}{3}{0}{1}
-\beamer@sectionintoc {2}{Exposi\IeC {\c c}\IeC {\~a}o do Assunto}{4}{0}{2}
-\beamer@sectionintoc {3}{Exerc\IeC {\'\i }cios}{5}{0}{3}
-\beamer@sectionintoc {4}{D\IeC {\'u}vidas}{6}{0}{4}
-\beamer@sectionintoc {5}{Avalia\IeC {\c c}\IeC {\~a}o}{7}{0}{5}
-\beamer@sectionintoc {6}{Para Levar para Casa}{8}{0}{6}
-\beamer@sectionintoc {7}{Agradecimentos}{9}{0}{7}
-\beamer@sectionintoc {8}{Refer\IeC {\^e}ncias}{10}{0}{8}

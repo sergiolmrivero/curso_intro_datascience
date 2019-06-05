@@ -76,7 +76,7 @@ Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IB
  library(dplyr)
 @
 
-  Nesta seção utilizaremos a base de dado "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
+  Nesta seção utilizaremos a base de dados "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
   
 <<eval=false,echo=T>>=
 data("starwars")

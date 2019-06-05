@@ -1,0 +1,420 @@
+\documentclass[11pt]{beamer}
+\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{Sweave}
+
+\author{Sérgio Rivero}
+\subtitle{Aula 3 - Acessando e Utilizando Bases de Dados}
+\title{Introdução ao Tratamento \\ e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+
+\logo{
+	\makebox[0.95\paperwidth]{
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		\hfill
+		\includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+	}
+}
+\makeindex
+ 
+\begin{document}
+
+\SweaveOpts{concordance=TRUE, echo=TRUE, eval=TRUE}
+
+<<setup, include=FALSE, cache=FALSE, echo=FALSE>>= 
+library(knitr)
+library(ggplot2)
+@
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\begin{multicols}{2}
+		\tableofcontents
+\end{multicols}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivos da Aula}
+\section{Objetivos da Aula}
+
+Nesta Aula queremos:
+
+\begin{enumerate}
+	\item Apresentar o conceito de Dataframe;
+	\item Apresentar os tipos de dados utilizados no R;
+	\item Apresentar os principais comandos; 
+\end{enumerate}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O ciclo de tratamento e análise de dados}
+\section{O ciclo de dados}
+	\begin{itemize}
+		\item Atividades que utilizam dados e fazem algum tratamento formal (estatístico, matemático) destes dados são comuns 
+		\item Muitas vezes, os dados correspondem a milhões de observações em diversas bases de dados. 
+		\item Estas bases de dados, muitas vezes têm estruturas complexas e diferentes formas de organização
+		
+		\item Tratar e analisar estes dados exige planejamento, avaliação, organização;
+		
+		\item Muitos dados podem ser analisados várias vezes,e podem ter um reuso para diferentes projetos e análises. 
+		
+		\item Esta possibilidade de reuso torna ainda mais importante o seu tratamento e armazenamento sistematizado. 
+		
+		\item Dados têm um \textit{ciclo de vida} e este ciclo pode ser pensado como um conjunto de atividades que vão do planejamento de seu uso até a sua análise. 
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{O Ciclo}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+		\caption{\url{https://www.dataone.org/data-life-cycle}}
+		\label{fig:f02-01}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detalhando o ciclo}
+	\begin{itemize}
+		\item Planejar: como dados que serão compilados gerenciados e disponibilizados ao longo de sua vida útil
+		\item Coletar: como os dados serão adquiridos
+		\item Validar: assegurar a qualidade dos dados 
+		\item Descrever: produzir os metadados apropriados
+		\item Preservar: como os dados serão armazenados e preservados
+		\item Descobrir: avaliar quais dados são relevantes para a análise
+		\item Integrar: combinar os dados, gerar novos dados
+		\item Analisar: os dados são analisados	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O ciclo de tratamento de dados e modelagem}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-02}
+		\caption{Tratamento de Dados Estatísticos}
+		\label{fig:f02-02}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ferramentas para tratamento de dados em R}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-03}
+		\caption{Ferramentas de Tratamento de Dados em R}
+		\label{fig:f02-03}
+	\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Pacotes para importação de dados em R}
+	\begin{itemize}
+		\item \textit{readr} - genérico para dados em formato matricial (\textit{retangular data}), tais como arquivos csv, tsv, fwf. 
+		\item \textit{haven} - para importar arquivos SPSS, Stata, e SAS;
+		\item \textit{readxl} e \textit{xlsx} - arquivos excel (.xls e .xlsx);
+		\item \textit{DBI} - arquivos de bancos de dados;
+		\item \textit{jsonlite} - arquivos \textit{json};
+		\item \textit{xml2} - arquivos padrão \textit{XML}
+		\item \textit{httr} - \textit{APIs} na \textit{Web}
+	\end{itemize}
+	
+	O \textit{tidyverse} tem  pacotes  que fornecem funcionalidades para executar eficazmente as atividades de tratamentos e análise de dados, reduzindo o esforço de codificação e a possibilidade de erros. 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que são dados limpos (tidy data)?}
+	Os dados limpos têm algumas características fundamentais:
+	
+	\begin{enumerate}
+		\item Cada coluna da sua base de dados tem apenas um tipo de dado e corresponde a apenas uma variável;
+		\item Cada linha de sua base de dados corresponde a apenas uma observação;
+		\item Cada elemento da base corresponde a um dado de uma variável em uma observação. 
+		\item Preferencialmente, o número de observações faltantes é mínimo.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tipos de dados em R}
+\section{Tipos de dados em R}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-04}
+		\caption{Uma representação gráfica dos tipos de dados em R. \\ Fonte: \url{http://venus.ifca.unican.es/Rintro/index.html}}
+		\label{fig:f02-04}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Escalares}
+	Determinada variável pode ser um escalar, ou seja, simplesmente um número:
+	
+	Exemplo de escalares:
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.2\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-05}
+		\label{fig:bpcursoteccomp002019f02-05}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vetores}
+	O vetor é um objeto matemático caracterizado em um conjunto de segmentos orientados de reta que possuem o mesmo módulo, direção e sentido. Ele contêm elementos de classes diferentes, conforme apresentado abaixo:
+	\begin{itemize}
+		\item \textit{a <- c((1,3500,5.3,543,-2,4000)}
+		\item \textit{b <- c("taxa de juros","taxa de câmbio","reservas bancárias") }
+		\item \textit{c <- c(FALSE,TRUE,FALSE,TRUE) }
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Matrizes}
+	\textit{matriz <- matrix(data=1:16,nrow=4,ncol=4)\\
+		matriz}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4cm]{../figs/BP_Curso_TecComp_00_2019_f02-06}
+		\label{fig:bpcursoteccomp002019f02-06}
+	\end{figure}
+	Onde:
+	\begin{description}
+		\item [data:] parâmetro que representa os dados usados para criar matriz;
+		\item [nrow:] parâmetro para número de linhas;
+		\item [ncol:] parâmetro para número de colunas.
+	\end{description}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Array}
+
+	Essa estrutura de dados possui três dimensões, as linhas, as colunas e as camadas. 
+	
+	\textit{cubo <- array(data = 1:27, dim=c(3,3,3))\\
+		cubo}
+	
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=2cm]{../figs/BP_Curso_TecComp_00_2019_f02-07}
+				\label{fig:bpcursoteccomp002019f02-07}
+			\end{figure}
+		\end{column}	
+		\begin{column}{.5\linewidth}
+			\begin{description}
+				\item [data:] parâmetro que representa os dados usados para criar matriz;
+				\item [dim:] parâmetro para determinar as dimensões do array, sendo \textbf{dim} um vetor;
+			\end{description}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dataframes}
+\section{Dataframes}
+
+	Dataframe é uma formatação de tabela presente no R que comporta duas dimensões.
+	\begin{itemize}
+		\item A primeira dimensão compreende as linhas(Observações) 
+		\item segunda dimensão compreende as colunas(variáveis). 	
+	\end{itemize}	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-08}
+		\caption{Variaveis e observações num Dataframe}
+		\label{fig:bpcursoteccomp002019f02-08}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Estrutura de um Dataframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-09}
+		\label{fig:bpcursoteccomp002019f02-09}
+	\end{figure} 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Criando um Dataframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-10}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f02-10}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{O Dataframe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-11}
+		\caption{}
+		\label{fig:bpcursoteccomp002019f02-11}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Importando arquivos tabulares - \textit{readr}}
+\section{Importando arquivos}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-12}
+		\label{fig:bpcursoteccomp002019f02-12}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Algumas opções úteis}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-13}
+		\caption{\url{https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf}}
+		\label{fig:bpcursoteccomp002019f02-13}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Lendo Arquivos xlsx}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-14}
+		\label{fig:bpcursoteccomp002019f02-14}
+	\end{figure}
+	
+	\begin{description}
+		\item [file:] o caminho para o arquivo
+		\item [sheetIndex:] O número da folha da planilha
+		\item [header:] Um valor lógico. Se verdadeiro, a primeira linha é o nome das variáveis.
+		\item [colClasses:] um vetor de caracteres representando a classe de cada coluna
+	\end{description}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-15}
+		\label{fig:bpcursoteccomp002019f02-15}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{APIs}
+	\begin{itemize}
+		\item O acesso a APIs em R, pode ser feito com o pacote \textbf{httr} - \url{http://hadley.nz/};
+		\item este pacote atua criando chamadas de APIs e lidando com autenticação destas;
+		\item O pacote \textbf{jsonlite}, realiza suporte ao trabalho com dados JASON, para traduzir as estruturas de dados aninhadas do JSON em objetos R; 
+		\item O  pacote \textbf{lubridate}, atua na transformação e extração de datas, funções úteis para trabalhar com datas, fusos horá¡rios e operações aritméticas com datas; 
+	\end{itemize}
+	
+	Para obtê-los: 
+	
+	\textbf{install.packages(c("httr", "jsonlite", "lubridate"))}
+\end{frame}
+
+\begin{frame}
+\frametitle{Utilizando APIs}
+Argumentos de consulta:
+\begin{itemize}
+	\item GET(): Recupera o arquivo;
+	\item POST(): Adiciona um arquivo;
+	\item DELETE(): Remove um arquivo;
+\end{itemize}
+
+\begin{enumerate}
+	\item As API's acessam dados na internet. Detalhamos os elementos do comando abaixo:
+	\begin{enumerate}
+		\item Verbo HTTP ( GET, POST, DELETE, etc.);
+		\item O URL base da API;
+		\item O caminho da URL ou o endpoint;
+		\item Argumentos de consulta de URL (por exemplo, ?foo=bar);
+		\item Cabeçalhos opcionais;
+		\item Um corpo de solicitação opcional;
+	\end{enumerate}
+	
+	\item \textbf{download.file()} baixa um arquivo para o seu computador;
+	
+	\item Se os dados estiverem em \textbf{JSON} é necessário utilizar o pacote \textit{jasolite}.
+	
+	\item a função \textbf{fromJSON()} pode ser usada para importar esses dados para um objeto data.frame.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Agradecimentos}
+
+Obrigado!
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+\end{frame}
+
+
+%
+%\begin{frame}[allowframebreaks]
+%\frametitle{Referências}
+%       \section{Referências}
+%
+%\bibliographystyle{alpha}
+%\bibliography{../bib/bibliografia}
+%\end{frame}
+%
+
+
+
+\end{document}

@@ -1,0 +1,237 @@
+---
+title: "Lista de Exercício"
+author: "Métodos computacionais em economia"
+date: "Setembro de 2018"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  word_document:
+    toc: yes
+    toc_depth: '2'
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+---
+
+
+
+
+
+
+
+#Definindo o *Working directory*
+
+**1) Baseado no que foi visto em sala de aula responda**
+
+a) Em que diretório está o seu R agora ?
+
+```{r,  results= 'show', echo= TRUE}
+getwd()
+```
+
+b) Altere seu diretório e repita o procedimento anterior
+
+```{r eval=FALSE,  results= 'hide', echo= FALSE}
+setwd("diretório que deseja definir")
+getwd()
+```
+
+c) Quais elementos estão no seu ambiente de trabalho ?
+```{r, results='hide', echo=FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+```
+
+
+
+```{r eval=TRUE, results= 'show', echo= TRUE}
+ls()
+```
+
+#O R como calculadora
+
+**Calcule as seguintes operações:**
+
+a) $\frac{2}{36}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+2/36
+```
+
+
+b) $4 \times 8$
+
+
+```{r,  results= 'hide', echo= FALSE}
+4*8
+```
+
+
+c) $5\times76$
+
+
+```{r,  results= 'hide', echo= FALSE}
+5*76
+```
+
+
+d) $2^{9}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+2^9
+```
+
+e) $e^{2}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+exp(2)
+```
+
+
+f) $log7$
+
+
+```{r,  results= 'hide', echo= FALSE}
+log(7, base = 10)
+```
+
+
+g) $ln{25}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+log(25)
+```
+
+
+h) $\mid-10\mid$
+
+
+```{r,  results= 'hide', echo= FALSE}
+abs(-10)
+```
+
+
+i) $\sqrt{4489}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+sqrt(4489)
+```
+
+j) $\frac{\sqrt{5} + 1}{3}$
+
+
+```{r,  results= 'hide', echo= FALSE}
+(sqrt(5) + 1)/3 
+
+```
+
+
+**2) Quais as diferenças entre `NaN`, `NULL`, `NA` e `Inf` ?**
+
+
+<!---
+*`NaN` quer dizer “Not a number”, ele aparece quando o resultado de uma expressão matemática não está definida.
+
+*`NA` significa “Not Available” e simboliza informação ausente/faltante. Usamos `NA` principalmente para representar dados faltantes em bancos de dados.
+
+*`NULL` significa vazio, “nada”. Quando queremos que uma função não retorne nada, fazemos ela devolver `NULL`.
+
+*`Inf` representa o infinito, como no limite de funções matemáticas. Valores muito grandes (10e+308) e 1/0 retornam `Inf` (com I maiúsculo). -->
+
+#Vetores e Matrizes
+
+**3)Leia e responda as questões abaixo**
+
+a) Crie e reproduza um vetor com os seguintes elementos: [laranja,manga,caju,uva], chame-o de  "f"
+
+```{r,  results= 'hide', echo= FALSE, echo= FALSE}
+f <- c("laranja","manga","uva")
+f
+```
+
+b) Crie e reproduza um vetor com os seguintes elementos: [10,5,7,8], chame-o de "q"
+
+```{r,  results= 'hide', echo= FALSE}
+q <- c(10,5,7)
+q
+```
+
+c) Crie e reproduza um vetor com os seguintes elementos: [4,2,1,8], chame-o de  "p"
+
+```{r,  results= 'hide', echo= FALSE}
+p <- c(4,2,1)
+p
+```
+
+d) Calcule e reproduza o produto dos vetores preco e quantidade e chame-o de "t":
+
+```{r,  results= 'hide', echo= FALSE}
+t <- p*q
+t
+```
+
+e) Crie e reproduza uma matriz 4x3 ( i = 4, j = 3) com os vetores do item anterior, chame-a de "m1"
+
+```{r,  results= 'hide', echo= FALSE}
+m1 <- rbind(f,q,p,t)
+m1
+```
+
+f) Crie e reproduza uma matriz 3x4 ( i = 3, j = 4) com os vetores do item anterior, chame-a de "m2"
+
+```{r,  results= 'hide', echo= FALSE}
+m2 <- cbind(f,q,p,t)
+m2
+```
+
+g) Refaça a matriz "m1" com a função ``matrix()``, chame-a de "M1"
+
+```{r,  results= 'hide', echo= FALSE}
+M1 <- matrix( c("laranja","manga","uva", 10 ,5 , 7, 4 , 2, 1 ,40 , 10 ,7) , nrow = 4 ,ncol = 3 , byrow = TRUE)
+M1
+```
+
+h) Transforme a matriz "M1"" em data frame, chame-a de "df"" em seguida verifique a classe do objeto "df"
+
+```{r,  results= 'hide', echo= FALSE}
+df <- as.data.frame(M1)
+df
+class(df)
+```
+
+i) Altere o nome das linhas do seu novo data frame para: "frutas", "preço", "quantidade" e "total" e em seguida reproduza
+
+```{r,  results= 'hide', echo= FALSE}
+rownames(df) <- c("frutas", "preço", "quantidade","total")
+df
+```
+
+Mostrando o gráfico para $y = x^2$
+
+```{r,  results= 'show', echo= FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+y = x^2
+plot(x,y)
+```
+
+Comentário: neste gráfico acima vemos a linda forma que uma função quadrática pode ter mesmo sem ligar os pontos.
+
+
+```{r,  results= 'show', echo= TRUE}
+
+print(Sys.info())
+print(Sys.Date())
+print(Sys.time())
+print(Sys.getpid())
+
+```
+
+
+

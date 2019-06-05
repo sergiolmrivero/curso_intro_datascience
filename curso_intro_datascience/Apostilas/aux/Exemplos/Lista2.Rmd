@@ -1,0 +1,297 @@
+---
+title: "Lista de Exercício"
+author: "Miguel Leite/Sergio Rivero"
+date: "Setembro de 2018"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+subtitle: Métodos computacionais em economia
+---
+
+options(encoding = 'UTF-8')
+
+#O R como calculadora
+
+**Calcule as seguintes operações:**
+
+a) $1 - (1 + 10^{-15})$
+
+```{r, echo= FALSE, results='hide'}
+ 1 - (1 + 10^(-15))
+```
+
+
+b) $log_{10}25 + ln{2} + log_{4}10$
+
+```{r, echo= FALSE, results='hide'}
+ log10(25) + log(2) + log(10, base = 4)
+```
+
+c) $e^5 + \mid-7\mid$
+
+```{r, echo = F, results="hide"}
+exp(5) + abs(-7)
+```
+
+d) $cos(\pi) + sen(\frac{\pi}{2})$
+
+```{r, echo = F, results="hide"}
+cos(pi) + sin(pi/2)
+```
+
+
+#A função ``list()``
+
+a) Crie os seguintes vetores:  temp = (26.1,26.7,22.7,16.8) , cidade = (João Pessoa, Manaus, Salvador, Curitiba), estado = (Paraíba, Amazonas, Bahia, Paraná)
+
+```{r, echo = F, results="hide"}
+temp <- c(26.1,26.7,22.7,16.8)
+cidade <- c("João Pessoa", "Manaus", "Salvador", "Curitiba")
+estado <- c("Paraíba", "Amazonas", "Bahia", "Paraná")
+```
+
+b) Agora crie um lista através da função `list()` incluindo os três vetores criados anteriormente, chame-a de "lista"
+
+```{r, echo = F, results="hide"}
+lista <- list(temp,cidade,estado)
+lista
+```
+
+c) Reproduza o primeiro elemento da lista
+
+```{r, echo = F, results="hide"}
+lista[1]
+```
+
+d) Com apenas um comando, reproduza o dois últimos elementos da lista
+
+```{r, echo = F, results="hide"}
+lista[c(2,3)]
+```
+
+e) Reproduza novamente o segundo elemento da lista, mas agora utilizando `[[]]`. Qual a diferença em relação ao item c), dica: use a função `class()`
+
+```{r, echo = F, results="hide"}
+lista[[1]]
+```
+
+# Matrizes
+
+a) Crie a matriz "A" com os seguinte elementos: 
+
+$$A =
+ \begin{pmatrix}
+  1 & 2  & 3 & 4 \\
+  5 & 6  & 7 & 8 \\
+  9 & 10 & 11 & 12  \\
+  13 & 14 & 15 & 16
+ \end{pmatrix}$$
+ 
+```{r, echo = F, results="hide"}
+A <- matrix(c(1:16), nrow = 4, byrow =  T)
+```
+ 
+b) Agora transponha a matriz anterior, necessariamente alterando o argumento `byrow` da função `matrix()`, chame esta nova matriz de "At"
+
+```{r, echo = F, results="hide"}
+At <- matrix(c(1:16), nrow = 4, byrow =  F)
+```
+
+c) Existe alguma função que transporia a matriz de forma mais eficiente ? Se sim, qual seria ?
+
+```{r, echo = F, results="hide"}
+t(A)
+```
+
+d) reproduza o elemento da linha 3 coluna 4 da matriz "A"
+
+```{r, echo = F, results="hide"}
+A[3,4]
+```
+
+e) Reproduz apenas a coluna 2 da matriz A
+
+```{r, echo = F, results="hide"}
+A[,2]
+```
+
+f) Reproduza apenas a linha 1 da matriz A
+
+```{r, echo = F, results="hide"}
+A[1,]
+```
+
+g) Qual é a soma das linhas de A ?
+
+```{r, echo = F, results="hide"}
+rowSums(A)
+```
+
+h) Qual é a soma das colunas de A ?
+
+```{r, echo = F, results="hide"}
+colSums(A)
+```
+
+#Operações com matrizes
+
+a)Crie as seguintes matrizes:
+
+$$ m1 = \begin{pmatrix}  3 & 9 & -1 \\
+                   4 & 2 & 6 
+                   \end{pmatrix}$$
+                   
+ $$ m2 = \begin{pmatrix}  5 & 2 & 0 \\
+                   9 & 3 & 4 
+                   \end{pmatrix}$$
+
+```{r, echo = F, results="hide"}
+m1 <- matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)
+m2 <- matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)
+```
+
+b) Qual a soma dessas duas matrizes ?
+
+```{r, echo = F, results="hide"}
+m1 + m2
+```
+
+c) Qual o resultado da subtração m1 - m2 ?
+
+```{r, echo = F, results="hide"}
+m1 - m2
+```
+
+
+d) Qual o produto dessas duas matrizes ?
+
+```{r, echo = F, results="hide"}
+m1 * m2
+```
+
+e) Qual a o resultado da divisão dessas duas matrizes ?
+
+```{r, echo = F, results="hide"}
+m1/m2
+```
+
+# Data frames
+
+Para esse exercício será necessário a utilização do pacote datasets, este contém uma grande quantidade de conjuntos de dados e será importante para as questões relacionadas a dataframes. Para ter mais informações, execute o comando: `library(help = "datasets")`.  
+Uma dos data frames disponível nesse pacote é o "mtcars", que descreve características de diferentes modelos de automóvel.
+
+a) carregue os dados do data frame mtcars e obter informações sobre os dados.
+
+
+```{r, echo = F, results="hide"}
+data("mtcars")
+help(mtcars)
+```
+
+b) Verifique a classe de mtcars
+
+```{r, echo = F, results="hide"}
+class(mtcars)
+```
+
+
+c) Reproduza as seis primeiras e seis ultimas linhas do data frame
+
+```{r, echo = F, results="hide"}
+head(mtcars)
+tail(mtcars)
+```
+
+d) Agora reproduza as dez primeiras e as três últimas linhas do data frame
+
+```{r, echo = F, results="hide"}
+head(mtcars,10)
+tail(mtcars,3)
+```
+
+e) Verifique a estrutura do data frame
+
+```{r, echo = F, results="hide"}
+str(mtcars)
+```
+
+f) Quais são os nomes da coluna do date frame mtcars ?
+
+```{r, echo = F, results="hide"}
+names(mtcars)
+```
+
+g) Qual o número de linhas e colunas do data frame ?
+
+```{r, echo = F, results="hide"}
+dim(mtcars)
+```
+
+h) Reproduza apenas as seis primeiras colunas do data frame mtcars
+
+```{r, echo = F, results="hide"}
+mtcars[,1:6]
+```
+
+i) Altere a classe da variável gear para integer
+
+```{r, echo = F, results="hide"}
+mtcars$gear <- as.integer(mtcars$gear)
+```
+
+#Estatística descritiva
+
+a) Qual é o máximo e o mínimo de horse power(hp) dos veículos ?
+
+```{r, echo = F, results="hide"}
+max(mtcars$hp)
+min(mtcars$hp)
+```
+
+
+b) Calcule a média e mediana dos pesos (variável wt) dos veículos do data frame
+
+```{r, echo = F, results="hide"}
+mean(mtcars$wt)
+median(mtcars$wt)
+```
+
+c) Quais os quantis da variável galões por milhas (mpg) ?
+
+```{r, echo = F, results="hide"}
+quantile(mtcars$mpg)
+```
+
+d) Quais veículos conseguem percorrer pelo menos 20 milhas com um galão ?
+
+```{r, echo = F, results="hide"}
+subset(mtcars, mpg >= 20)
+```
+
+#Visualização dos dados
+
+
+a) Faça um gráfico de dispersão da variável mpg
+
+```{r, echo = F, results="hide", fig.show='hide'}
+plot(mtcars$mpg)
+```
+
+b) Agora faça um histograma
+
+```{r, echo = F, results="hide", fig.show='hide'}
+hist(mtcars$mpg)
+```
+
+c) Por fim, reproduza um boxplot
+
+```{r, echo = F, results="hide", fig.show='hide'}
+boxplot(mtcars$mpg)
+```
+

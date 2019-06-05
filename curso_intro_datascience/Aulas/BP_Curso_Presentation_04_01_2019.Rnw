@@ -1,0 +1,432 @@
+\documentclass[11pt]{beamer}
+\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{verbatim}
+
+\author{Sérgio Rivero}
+\subtitle{Aula 4 - Limpando e organizando seus dados}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\begin{multicols}{2}
+		\tableofcontents
+\end{multicols}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivos da Aula}
+\section{Objetivo da Aula}
+
+\centering
+Discutir algumas funções de correção e limpeza de bases de dados em R.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que é uma boa base de dados e que tipos de bases existem?}
+\section{O que é uma boa base de dados e que tipos de bases existem?}
+
+Boas bases de dados para trabalhar, sobretudo com tidy, são bases que possuem variáveis nas colunas e observações nas linhas. 
+Podemos identificar tal estrutura na figura \ref{fig:f03-01} abaixo:
+
+\begin{figure}[htpb!]
+\centering
+\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-01}
+\caption{Organização ideal para base de dados}
+\label{fig:f03-01}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Tipos de Bases de Dados}
+Há três tipos bases de dados principais que comportam a estrutura de variáveis nas colunas e observações nas linhas que são:
+
+\begin{itemize}
+\item Séries Temporais
+\item Cortes Transversais
+\item Dados em Painel
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Série Temporal}
+
+Séries temporais(ou longitudinais) são identificadas como observações ordenadas ao longo do "tempo". Exemplos:
+\begin{itemize}
+\item PIB distribuído anualmente;
+\item Arrecadação mensal de um ou mais Estados;
+\item Taxa de câmbio diária.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{ A base do BCB}
+
+Um bom exemplo de fonte de bases de dados de series temporais é o SGS - Banco Central. Segue o link abaixo:
+
+\begin{figure}[htpb!]
+\centering
+\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-02}
+\caption{Exemplo de série temporal}
+\label{fig:f03-02}
+\end{figure}
+
+\url{https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Corte Transversal}
+
+Dados transversais(ou cross-section) são identificados quando não há importância de ordenação das observações, além de representar dados em um único ponto do "tempo". Exemplos:
+
+\begin{itemize}
+\item Arrecadação de ICSM para todos Estados do Brasil para o ano de 2018;
+\item Dados demográficos para todos os municípios do Pará para o ano de 2010.
+\end{itemize}
+
+Um bom exemplo de fonte de bases de dados de cortes transversais é o Sidra - IBGE. Segue o link abaixo:
+
+\url{https://sidra.ibge.gov.br/home}
+\end{frame}
+
+\begin{frame}
+\frametitle{A Série}
+\begin{figure}[htpb!]
+\centering
+\includegraphics[width=.3\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-03}
+\caption{Exemplo de corte transversal}
+\label{fig:f03-03}
+\end{figure}
+
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Operando com os Dataframes}
+%\section{Operando com os Dataframes}	
+%	Nesta seção utilizaremos a base de dados "starwars", que é uma base nativa do pacote dplyr. Para que possamos ter acesso a base, devemos utilizar a função a seguir:
+%	
+%	\bigskip
+%	
+%	\textbf{
+%	library(dplyr)\\
+%	data("starwars")
+%	}
+%	
+%
+%\end{frame}
+%
+%\begin{frame}[fragile]
+%\frametitle{Funções de Remodelagem}
+%
+%	A primeira função apresentada é a função \textbf{arrange}, que consiste em ordenar uma coluna(variável) de forma crescente ou decrescente. As função é escrita da seguinte forma:
+%
+%	\begin{verbatim}
+%		starwars11 <- arrange(starwars, mass) 
+%		
+%		# Para ordenamento crescente
+%		
+%		starwars12 <- arrange(starwars, desc(height))
+%		
+%		#Para ordenamento decrescente
+%		
+%	\end{verbatim}
+%
+%\end{frame}
+%
+%
+%\begin{frame}[fragile]
+%\frametitle{Funções de Remodelagem}
+%
+%	Estão apresentadas a seguir as funções utilizadas para renomear rótulos(nomes) de colunas(variáveis).
+%	
+%	\begin{verbatim}
+%		starwars21 <- rename(starwars, nome = name)
+%		starwars22 <- rename(starwars, altura = height)
+%		starwars23 <- rename(starwars, massa = mass)
+%	\end{verbatim}	
+%	
+%\end{frame}
+%
+%
+%
+%\begin{frame}[fragile]
+%\frametitle{Funções de Filtragem}
+%
+%A função \textbf{filter} extrai linhas de uma base de dados a partir de um critério lógico. Essa função é bastante útil quando é preciso extrair um conjunto de dados que apresentam determinadas características. Por exemplo quando é preciso criar um novo objeto sem os outliers. A função está descrita abaixo:
+%
+%\bigskip
+%
+%
+%\verb|starwars31 <- filter(starwars, mass < 70)|
+%
+%
+%
+%\end{frame}
+%
+%
+%
+%\begin{frame}[fragile]
+%\frametitle{Funções de Filtragem}
+%
+%	A função \textbf{distinct} remove todas as linhas que se encontram duplicadas na base de dados, permanecendo apenas uma de cada linha duplicada. Utilizamos a função da seguinte forma:
+%	
+%	Observação: Para que possamos usar a função \textbf{distinct}, criamos o objeto \emph{starwars32} com as linhas 31 até a 60 duplicadas.
+%	
+%	\bigskip
+%	
+%	\verb|starwars32 <- rbind(starwars, starwars[31:60,])|
+%	
+%	
+%	\verb|starwars32 <- distinct(starwars32)|
+%
+%\end{frame}
+%
+%
+%\begin{frame}[fragile]
+%\frametitle{distinct, sample}
+%	\textbf{distinct} remove todas as linhas que se encontram duplicadas na base de dados, permanecendo apenas uma de cada linha duplicada. Utilizamos a função da seguinte forma:
+%	
+%	\bigskip
+%	
+%	\verb|starwars32 <- rbind(starwars, starwars[31:60,])|
+%	
+%	\verb|starwars32 <- distinct(starwars32)|
+%	
+%	\bigskip
+%	
+%	\textbf{sample\_frac} seleciona aleatoriamente o número de linhas correspondentes a fração determinada na função.\\
+%	\textbf{sample\_n} seleciona um número $N$ de linhas. Onde $N$ é o número de linhas que devem ser extraídas.
+%		
+%	\verb|starwars41 <- sample_frac(starwars, 0.4, replace = TRUE)|
+%	
+%	\verb|starwars42 <- sample_n(starwars, 25, replace = TRUE)|
+%
+%\end{frame}
+%
+%\begin{frame}[fragile]
+%\frametitle{Selecionando colunas de seus dados}
+%
+%A função \textbf{select} seleciona colunas a partir dos rótulos especificados na função.
+%
+%\bigskip
+%
+%\verb|starwars61 <- select(starwars, name, height, mass)|
+%
+%\verb|starwars62 <- select(starwars, name, gender, species)|
+%
+%
+%
+%\end{frame}
+
+
+\begin{frame}
+\frametitle{gather}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-04.png}
+		\caption{Exemplo da função gather: \\ 
+			gather(table4a, `1999`, `2000`,key = "year", value = "cases")}
+		\label{fig:bpcursoteccomp002019f03-04}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{spread}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-05.png}
+		\caption{Exemplo da função spread: \\ spread(table2, type, count)}
+		\label{fig:bpcursoteccomp002019f03-05}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{unite}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-06.png}
+		\caption{Exemplo da função unite: \\ 
+			unite(table5, century, year, col = "year", sep = ``""``)}
+		\label{fig:bpcursoteccomp002019f03-06}
+	\end{figure}	
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{separate}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-07.png}
+		\caption{Exemplo da função separate: \\ 
+			separate(table3, rate, into = c("cases", "pop"))}
+		\label{fig:bpcursoteccomp002019f03-07}
+	\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{separate\_rows}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.6\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-08.png}
+		\caption{Exemplo da função separate\_rows: separate\_rows(table3, rate)}
+		\label{fig:bpcursoteccomp002019f03-08}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Valores Omissos (NA)}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-09.png}
+		\caption{Exemplo da função drop\_na: drop\_na(x, x2)}
+		\label{fig:bpcursoteccomp002019f03-09}
+	\end{figure}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Valores Omissos (NA)}
+%	\begin{figure}[htpb]
+%		\centering
+%		\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-10.png}
+%		\caption{Exemplo da função fill: fill(x,x2)}
+%		\label{fig:bpcursoteccomp002019f03-10}
+%	\end{figure}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Valores Omissos (NA)}
+%	\begin{figure}[htpb]
+%		\centering
+%		\includegraphics[width=.5\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-11.png}
+%		\caption{Exemplo da função replace\_na: replace\_na(x, list(x2 = 2))}
+%		\label{fig:bpcursoteccomp002019f03-11}
+%	\end{figure}
+%\end{frame}
+%
+%
+
+
+\begin{frame}
+\frametitle{Selecionando observações com dplyr}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-12}
+	\caption{Algumas funçoes para alteração de dataframes}
+	\label{fig:bpcursoteccomp002019f03-12}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Combinando Datasets}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{../figs/BP_Curso_TecComp_00_2019_f03-14}
+\caption{O Join}
+\label{fig:bpcursoteccomp002019f03-14}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Pipes}
+
+Além de todas essas funções apresentadas anteriormente, o dplyr permite concatenar funções por meio de um mecanismo chamado \textbf{pipe}. Para utilizar o pipe é preciso colocar tais símbolos: 
+
+\begin{itemize}
+\item \%>\%
+\end{itemize}
+
+Abaixo temos um exemplo da utilização do pipe. O exemplo consiste em calcular média e desvio padrão a partir de um agrupamento por espécie da base de dados starwars.
+
+\begin{verbatim}
+starwars81 <- starwars %>%
+group_by(species) %>%
+summarise(desvpad = sd(birth_year, na.rm = TRUE),
+avg = mean(birth_year, na.rm = TRUE)
+)
+\end{verbatim}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+\end{frame}
+
+
+
+
+
+\end{document}

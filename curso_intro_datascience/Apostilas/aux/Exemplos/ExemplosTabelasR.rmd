@@ -1,0 +1,107 @@
+---
+title: "Exemplos de Uso do xtable e stargazer"
+author: "Curso de Tratamento de Dados"
+date: "May 11, 2019"
+output:
+  html_document:
+    number_sections: yes
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(ggplot2)
+library(xtable)
+library(stargazer)
+library(dplyr)
+```
+
+# Importando os arquivos para o R
+```{r importandoMtcars, results='asis'}
+  
+  data(mtcars)
+
+  mtc2 <- xtable(head(mtcars), auto = TRUE, caption="Base MTCARS")
+	
+  print.xtable(mtc2, type='html', caption.placement = 'top')
+```
+Gerando tabelas usando o Kable
+```{r}
+kable(mtc2, caption="Base MTCARS (kable)")
+```
+
+```{r, results='asis'}
+stargazer(mtcars, type = 'html')
+```
+
+
+
+# Organizando os dados e Gerando arquivos de síntese
+
+Aqui se utiliza o dplyr-summarize para gerar tabelas síntese e apresentar
+
+
+```{r organizandoMtcars, results='asis'}
+
+sintesePot <- as.data.frame(mtcars %>% group_by(cyl) %>%
+                    summarize(potenciaMedia = mean(hp,na.rm = TRUE),
+                              sigmaPotencia = sd(hp, na.rm = TRUE),
+                              n = n()
+                            )
+                    )
+	
+tabelaPot <- xtable(sintesePot, caption = 'Potência Média por número de cilindros')
+		print.xtable(tabelaPot, type = "html", caption.placement = 'top')
+```
+
+Agora gerando a tabela no kable
+
+```{r}
+kable(sintesePot,caption = 'Potência Média por número de cilindros')
+```
+
+
+
+
+
+
+
+# Gerando gráficos dos dados
+
+```{r, graficoHPMPG, fig.width=6, fig.height=6, fig.align='center'}
+ggplot(mtcars, aes(x=hp, y=mpg)) +
+  geom_point() +
+  geom_smooth() +
+  labs(x='Potência (HP)', y = 'Consumo (MPG)')
+```
+
+
+Aqui se gera gráficos dos dados
+
+Mais alguns gráficos para a análise.
+
+```{r, graficoCylMPG, fig.width=6, fig.height=6, fig.align='center'}
+ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
+  geom_boxplot() +
+  labs(x='Cilindros', y = 'Consumo (MPG)')
+```
+
+
+
+
+
+
+# Executando Regressões
+
+Aqui se executa as regressões dos arquivos do Hilder.
+
+Também seria interessante colocar alguma coisa do Ricardo
+
+
+# Apresentando diversos tipos de tabelas.
+
+Aqui se apresenta algumas tabelas e se discute as possibilidades do xtable e stargazer.
+
+

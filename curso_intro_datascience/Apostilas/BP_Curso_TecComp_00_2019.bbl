@@ -1,4 +1,10 @@
-\begin{thebibliography}{Sho19}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{ACX{\etalchar{+}}16}
+
+\bibitem[ACX{\etalchar{+}}16]{Allaire2016}
+J~Allaire, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen,
+  Hadley Wickham, Aron Atkins, Rob Hyndman, and Ruben Arslan.
+\newblock rmarkdown: Dynamic documents for r, 2016.
 
 \bibitem[Sho19]{Showmeshiny2019}
 Show me shiny: Gallery of r web apps, 2019.
@@ -7,5 +13,20 @@ Show me shiny: Gallery of r web apps, 2019.
 W~N Venables and D~M Smith.
 \newblock {\em An Introduction to R}, volume~2.
 \newblock CRAN - Comprehensive R Archive Network, 2011.
+
+\bibitem[Wic14]{Wickham2014}
+Hadley Wickham.
+\newblock Tidy data.
+\newblock {\em The Journal of Statistical Software}, 59, 2014.
+
+\bibitem[Xie16]{Xie2016}
+Y~Xie.
+\newblock knitr: A general-purpose package for dynamic report generation in r
+  [software], 2016.
+
+\bibitem[Xie17]{Xie2017}
+Yihui Xie.
+\newblock {\em Dynamic Documents with R and knitr}.
+\newblock Chapman and Hall/CRC, 2017.
 
 \end{thebibliography}

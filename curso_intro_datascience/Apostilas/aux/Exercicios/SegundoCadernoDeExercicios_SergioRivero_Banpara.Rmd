@@ -1,0 +1,369 @@
+---
+title: "Segundo Caderno de Exercícios"
+author: "Meu Nome Aqui"
+date: '`r format(Sys.time(), "%d de %B, %Y")`'
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    highlight: tango
+    number_sections: yes
+    theme: cosmo
+    toc: yes
+subtitle: Introdução ao Tratamento de dados em R
+---
+
+-----------
+
+# Exercícios
+
+Este é o segundo caderno de exercícios. 
+
+O arquivo Rmd, testado e funcionando será utilizando para a avaliação da aprendizagem no final do curso.
+
+Este arquivo deve ser entregue, ao final do curso para sergiolmrivero@gmail.com
+
+Baixe este programa para sua pasta **exercícios**
+
+Lembre-se que você deverá modificar as referências às pastas onde armazena os dados para a sua pasta de dados. No caso deste arquivo, a pasta dados é referenciada aqui como **"../Data"**
+
+--------
+
+
+## Exercícios em sala (utilizando o dplyr, tidy, lubridate e ggplot)
+ 
+Abaixo você tem um exemplo de uma tarefa completa de download e geração de gráficos e tabelas executados via R (e markdown).
+
+Sua tarefa é comentar cada bloco de comandos explicando o que estes comandos fazem.
+
+
+
+#### Abaixo há um conjunto de bibliotecas do R que estão sendo postas na memória. O que faz cada biblioteca?
+```{r, message=F}
+
+library(jsonlite)
+library(dplyr)
+library(lubridate)
+library(tidyr)
+library(ggplot2)
+
+```
+
+**Resposta:**
+
+A biblioteca ggplot implementa a gramática de gráficos no R e permite a produção de gráficos muito bacanas.
+
+
+#### O que faz o comando dowload.file? O que é o endereço de internet dentro do comando? O que é a string "Saldo_OpCreditoPF_PA" no comando dowload.file? O que faz o comando fromJSON?
+
+```{r, eval=FALSE}
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.14015/dados?formato=json&amp",
+              "../Dados/Saldo_OpCreditoPF_PA.json"
+              )
+
+
+```
+
+
+
+```{r, eval=TRUE}
+Saldo_OpCreditoPF_PA <- fromJSON("../Dados/Saldo_OpCreditoPF_PA.json")
+
+```
+**Resposta:**
+
+
+#### Abaixo são feitas várias operações modificando variáveis no dataframe Saldo_OpCreditoPF_PA. O que são estas operações e o que elas fazem? 
+
+```{r,eval=TRUE}
+
+Saldo_OpCreditoPF_PA$data <- as.Date(Saldo_OpCreditoPF_PA$data, "%d/%m/%Y")
+Saldo_OpCreditoPF_PA$valor <- as.integer(Saldo_OpCreditoPF_PA$valor) 
+Saldo_OpCreditoPF_PA <- rename(Saldo_OpCreditoPF_PA, Saldo_OpCreditoPF = valor)
+
+```
+**Resposta:**
+
+
+
+
+#### Abaixo há um conjunto completo de comandos. Dê uma visão geral do que eles fazem de de quais são as diferenças e semelhanças em relação aos comandos de download acima.
+
+```{r,eval=FALSE}
+
+
+########################
+########################
+# Api do saldo de credito de pessoas juridicas para o Para
+########################
+########################
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.14042/dados?formato=json&amp","../Dados/Saldo_OpCreditoPJ_PA.json")
+
+########################
+########################
+# Api da porcentagem de inadimplencia de credito de pessoas fisicas 
+# para o Para
+########################
+########################
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.15874/dados?formato=json&amp","../Dados/Inad_OpCreditoPF_PA.json")
+
+########################
+########################
+# Api da porcentagem de inadimplencia de credito de pessoas juridicas
+# para o Para
+########################
+########################
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.15906/dados?formato=json&amp","../Dados/Inad_OpCreditoPJ_PA.json")
+
+```
+
+
+```{r tratamentoDosDados, eval=TRUE}
+
+
+Saldo_OpCreditoPJ_PA <- fromJSON("../Dados/Saldo_OpCreditoPJ_PA.json")
+Inad_OpCreditoPF_PA <- fromJSON("../Dados/Inad_OpCreditoPF_PA.json")
+Inad_OpCreditoPJ_PA <- fromJSON("../Dados/Inad_OpCreditoPJ_PA.json")
+
+
+########################
+########################
+# Transformando a primeira coluna em data, a segunda em inteiro e 
+# renomeando o nome da segunda coluna
+########################
+########################
+
+Saldo_OpCreditoPJ_PA$data <- as.Date(Saldo_OpCreditoPJ_PA$data, "%d/%m/%Y")
+Saldo_OpCreditoPJ_PA$valor <- as.integer(Saldo_OpCreditoPJ_PA$valor)
+Saldo_OpCreditoPJ_PA <- rename(Saldo_OpCreditoPJ_PA, Saldo_OpCreditoPJ = valor)
+
+
+########################
+########################
+# Transformando a primeira coluna em data, a segunda em numerico e 
+# renomeando o nome da segunda coluna
+########################
+########################
+
+Inad_OpCreditoPF_PA$data <- as.Date(Inad_OpCreditoPF_PA$data, "%d/%m/%Y")
+Inad_OpCreditoPF_PA$valor <- as.numeric(Inad_OpCreditoPF_PA$valor)
+Inad_OpCreditoPF_PA <- rename(Inad_OpCreditoPF_PA, Inad_OpCreditoPF = valor)
+
+
+########################
+########################
+# Transformando a primeira coluna em data, a segunda em numerico e 
+# renomeando o nome da segunda coluna
+########################
+########################
+
+Inad_OpCreditoPJ_PA$data <- as.Date(Inad_OpCreditoPJ_PA$data, "%d/%m/%Y")
+Inad_OpCreditoPJ_PA$valor <- as.numeric(Inad_OpCreditoPJ_PA$valor)
+Inad_OpCreditoPJ_PA <- rename(Inad_OpCreditoPJ_PA, Inad_OpCreditoPJ = valor)
+
+
+```
+**Resposta:**
+
+
+#### Abaixo está sendo executado um full_join. O que este comando está fazendo nos 3 datafames abaixo? O que ele está gerando?
+
+```{r,eval=FALSE}
+PA <- full_join(Saldo_OpCreditoPF_PA, Saldo_OpCreditoPJ_PA)
+PA <- full_join(PA, Inad_OpCreditoPF_PA)
+PA <- full_join(PA, Inad_OpCreditoPJ_PA)
+```
+
+#### O que faz o comando abaixo? Qual a sua utilidade para o trabalho executado? (Dica, há mais de um estado)
+
+```{r,eval=FALSE}
+PA$UF <- "PA"
+```
+** Resposta: **
+
+
+
+#### Abaixo há um conjunto completo de comandos, repetindo os comandos acima. Dê uma visão geral do que eles fazem de de quais são as diferenças em relação aos comandos de download acima.(Dica: o estado é Espirito Santo)
+
+
+```{r,eval=FALSE}
+
+
+###################
+# Espírito Santo
+###################
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.14009/dados?formato=json&amp","../Dados/Saldo_OpCreditoPF_ES.json")
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.14036/dados?formato=json&amp","../Dados/Saldo_OpCreditoPJ_ES.json")
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.15868/dados?formato=json&amp","../Dados/Inad_OpCreditoPF_ES.json")
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.15900/dados?formato=json&amp","../Dados/Inad_OpCreditoPJ_ES")
+```
+
+
+```{r, eval=TRUE}
+Saldo_OpCreditoPF_ES <- fromJSON("../Dados/Saldo_OpCreditoPF_ES.json")
+
+Saldo_OpCreditoPF_ES$data <- as.Date(Saldo_OpCreditoPF_ES$data, "%d/%m/%Y")
+Saldo_OpCreditoPF_ES$valor <- as.integer(Saldo_OpCreditoPF_ES$valor) 
+Saldo_OpCreditoPF_ES <- rename(Saldo_OpCreditoPF_ES, Saldo_OpCreditoPF = valor)
+
+Saldo_OpCreditoPJ_ES <- fromJSON("../Dados/Saldo_OpCreditoPJ_ES.json")
+
+Saldo_OpCreditoPJ_ES$data <- as.Date(Saldo_OpCreditoPJ_ES$data, "%d/%m/%Y")
+Saldo_OpCreditoPJ_ES$valor <- as.integer(Saldo_OpCreditoPJ_ES$valor)
+Saldo_OpCreditoPJ_ES <- rename(Saldo_OpCreditoPJ_ES, Saldo_OpCreditoPJ = valor)
+
+Inad_OpCreditoPF_ES <- fromJSON("../Dados/Inad_OpCreditoPF_ES.json")
+
+Inad_OpCreditoPF_ES$data <- as.Date(Inad_OpCreditoPF_ES$data, "%d/%m/%Y")
+Inad_OpCreditoPF_ES$valor <- as.numeric(Inad_OpCreditoPF_ES$valor)
+Inad_OpCreditoPF_ES <- rename(Inad_OpCreditoPF_ES, Inad_OpCreditoPF = valor)
+
+Inad_OpCreditoPJ_ES <- fromJSON("../Dados/Inad_OpCreditoPJ_ES")
+
+Inad_OpCreditoPJ_ES$data <- as.Date(Inad_OpCreditoPJ_ES$data, "%d/%m/%Y")
+Inad_OpCreditoPJ_ES$valor <- as.numeric(Inad_OpCreditoPJ_ES$valor)
+Inad_OpCreditoPJ_ES <- rename(Inad_OpCreditoPJ_ES, Inad_OpCreditoPJ = valor)
+
+ES <- full_join(Saldo_OpCreditoPF_ES, Saldo_OpCreditoPJ_ES)
+ES <- full_join(ES, Inad_OpCreditoPF_ES)
+ES <- full_join(ES, Inad_OpCreditoPJ_ES)
+
+ES$UF <- "ES"
+
+
+
+```
+
+
+
+#### O que fazem este comando full_join e o save?
+
+```{r,eval=FALSE}
+PAES <- full_join(PA, ES)
+save(PAES, file="../Dados/CreditoPAES.Rda")
+```
+
+
+
+
+#### Explique o que faz este comando gather (Dica: olhe o dataframe DF_PAES_1 que foi gerado)
+
+```{r,eval=FALSE}
+DF_PAES_1 <- gather(PAES, "Saldo_OpCreditoPF", "Saldo_OpCreditoPJ",
+            "Inad_OpCreditoPF","Inad_OpCreditoPJ", key = Variaveis, 
+            value = Valor)
+```
+
+
+#### Explique o que faz este comando DF_PAES_2 (Dica: olhe o dataframe DF_PAES_2 que foi gerado)
+```{r,eval=FALSE}
+
+DF_PAES_2 <- DF_PAES_1 %>% spread(Variaveis, Valor) 
+```
+
+
+#### Explique o que fazem os comandos ggplot abaixo
+
+```{r,eval=TRUE}
+gf4 <- ggplot(DF_PAES_2, aes(x = Saldo_OpCreditoPJ, y = Inad_OpCreditoPJ, 
+                          color = UF)) +
+  geom_point() +
+  geom_smooth() +
+  ggtitle("Relação entre Saldo e inad de crédito para PJ") +
+  labs(y="Inad", x="Saldo", color = "UF") 
+plot(gf4)
+```
+
+```{r,eval=FALSE}
+gf5 <- ggplot(DF_PAES_2, aes(y = Saldo_OpCreditoPJ, x = Inad_OpCreditoPJ)) +
+  #geom_point() +
+  geom_smooth() +
+  facet_wrap(~UF) +
+  ggtitle("Relação entre Saldo e inad de crédito para PJ") +
+  labs(x="Inad", y="Saldo", color = "UF") 
+plot(gf5)
+```
+
+```{r,eval=FALSE}
+gf6 <- ggplot(DF_PAES_2, aes(y = Saldo_OpCreditoPF, x = data, color = UF)) +
+  geom_line() +
+  #geom_smooth() +
+  #facet_wrap(~UF) +
+  ggtitle("Saldo de Crédito PF") +
+  labs(x="Período", y="Saldo", color = "UF") 
+plot(gf6)
+```
+
+```{r,eval=TRUE}
+gf7 <- ggplot(DF_PAES_2, aes(y = Saldo_OpCreditoPJ, x = data, color = UF)) +
+  geom_line() +
+  #geom_smooth() +
+  facet_wrap(~UF) +
+  ggtitle("Saldo de Crédito PJ") +
+  labs(x="Período", y="Saldo", color = "UF") 
+plot(gf7)
+```
+
+
+```{r,eval=TRUE}
+gf8 <- ggplot(DF_PAES_2, aes(y = Inad_OpCreditoPF, x = data, color = UF)) +
+  geom_line() +
+  #geom_smooth() +
+  #facet_wrap(~UF) +
+  ggtitle("Inadimplencia PF") +
+  labs(x="Período", y="Saldo", color = "UF") 
+plot(gf8)
+```
+
+Gerando gráficos por mês.
+
+```{r}
+DF_PAES_2$mes <- month(DF_PAES_2$data)
+
+gf9 <- ggplot(DF_PAES_2, aes(y = Inad_OpCreditoPF, x = as.factor(mes), color=UF)) +
+  geom_boxplot() +
+  geom_point() +
+  #geom_smooth() +
+  #facet_wrap(~UF) +
+  ggtitle("Inadimplencia PF") +
+  labs(x="mes", y="Inadimplencia") 
+plot(gf9)
+
+
+```
+
+
+
+
+
+## Tarefa 
+
+
+### Avaliando um problema de análise de dados em sua área proponha a utilização do R e markdown para resolvê-lo,
+
+
+
+--------
+
+# Anotações 
+
+## Anotações sobre o R
+
+
+
+## Anotações gerais
+
+
+
+
+
+
+
+

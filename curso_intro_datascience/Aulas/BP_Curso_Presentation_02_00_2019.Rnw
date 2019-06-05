@@ -1,9 +1,9 @@
 \documentclass[11pt]{beamer}
-\usetheme{Frankfurt}
-%\usetheme{Singapore}
+%\usetheme{Frankfurt}
+\usetheme{Singapore}
 %\usetheme{CambridgeUS}
-%\usecolortheme{seahorse}
-\usecolortheme{whale}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
 \setbeamertemplate{navigation symbols}{}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -88,9 +88,13 @@ library(ggplot2)
 	R Markdown é um formato de arquivo que permite a produção documentos dinâmicos utilizando R. Um documento R Markdown é escrito na linguagem \textbf{Markdown} e contém partes  de código R incorporado em seções específicas do arquivo, chamadas \textit{chunks}:
 	
 \begin{quotation}
-	\textbf{Markdown} é duas coisas: (1) uma sintaxe de formatação de texto simples; e (2) uma ferramenta de software, escrita em Perl, que converte a formatação de texto simples em HTML. Consulte a página Sintaxe para obter detalhes relacionados à sintaxe de formatação do Markdown. Você pode experimentá-lo agora mesmo, usando o Dingus online .
+	\textbf{Markdown} é duas coisas: 
+	\begin{enumerate}
+		\item uma sintaxe de formatação de texto simples; 
+		\item uma ferramenta de software, escrita em Perl, que converte a formatação de texto simples em HTML.
+	\end{enumerate}
 	
-	A meta de design predominante da sintaxe de formatação do Markdown é torná-la o mais legível possível. A ideia é que um documento formatado com Markdown seja publicável como está, como texto simples, sem parecer ter sido marcado com tags ou instruções de formatação. Embora a sintaxe do Markdown tenha sido influenciada por vários filtros de texto para HTML existentes, a maior fonte de inspiração para a sintaxe do Markdown é o formato do email em texto simples.
+	A meta de design predominante da sintaxe de formatação do Markdown é torná-la o mais legível possível.
 \end{quotation}	
 
 \end{frame}
@@ -99,17 +103,39 @@ library(ggplot2)
 
 \begin{frame}
 \frametitle{Markdown - Objetivos}
-	O uso da linguagem \textbf{Markdown} para a produção de documentos quando se analisa dados utilizando o R, permite uma transição suave e contínua entre o processo de análise e a elaboração de um Relatório de resultados. Neste sentido um arquivo \textit{Rmarkdown} (Rmd) funciona como uma espécie de \textit{bloco de notas} que pode evoluir para o formato de um relatório final em um arquivo Html, PDF, docx, etc. Isto economiza tempo e esforço. 
+\begin{itemize}
+	\item O uso da linguagem \textbf{Markdown}, quando se analisa dados utilizando o R, permite uma transição suave e contínua entre: 
+		\begin{itemize}
+			\item Análise $\rightarrow$ Relatório $\rightarrow$ Apresentação
+		\end{itemize}  
+	
+	\item Um arquivo \textit{Rmarkdown} (Rmd) funciona como uma espécie de \textit{bloco de notas} 
+	\item Pode evoluir para o formato de um relatório final 
+	\item Em um conjunto de formatos (Html, PDF, docx, etc.)
+	\item Isto economiza tempo e esforço. 
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{O que é o Rmarkdown?}
 
-	O \textit{Rmarkdown} (RMD) é a implementação do \textbf{Markdown} em R. R markdown é um formato de documento  que foi introduzido inicialmente no pacote \textit{knitr}. O Knitr, na verdade suporta um conjunto grande de linguagens, como \LaTeX, HTML, AsciiDoc, reStructuredText e Textile.
-	
-	A ideia por trás do RMD é embutir comandos em uma linguagem qualquer (no nosso caso, o R) dentro de um documento. Assim, um arquivo .Rmd teria, ao mesmo tempo, comando que gerariam resultados como gráficos e tabelas, que seriam gerados num arquivo de resultados e compilados posteriormente num documento PDF, HTML, Word, etc.  A grande vantagem do RMD é sua simplicidade.
-	
-	Documentos no R Markdown são salvos com um sufixo .Rmd. Este arquivo tem textos e comandos do Markdown e código R em partes específicas chamadas \textit{chunks}.
+	\begin{itemize}
+		\item 	O \textit{Rmarkdown} (RMD) é a implementação do \textbf{Markdown} em R. 
+		
+		\item RMD é um formato de documento introduzido inicialmente no pacote \textit{knitr}. 
+		\item O Knitr, suporta um conjunto grande de linguagens, como \LaTeX, HTML, AsciiDoc, reStructuredText e Textile.
+		\item A ideia por trás do RMD é embutir comandos em uma linguagem qualquer (no nosso caso, o R) dentro de um documento. 
+		\item Assim, um arquivo .Rmd teria, ao mesmo tempo:
+		\begin{itemize}
+			\item comandos que gerariam resultados como gráficos e tabelas, 
+			\item que seriam gerados num arquivo de resultados 
+			\item e compilados posteriormente num documento PDF, HTML, Word, etc.
+		\end{itemize} 
+		
+		\item o Código R está em partes específicas chamadas \textit{chunks}
+	\end{itemize}
+
 \end{frame}
 
 
@@ -127,12 +153,14 @@ library(ggplot2)
 
 \begin{frame}
 \frametitle{Instalando o RMD}
-	
-	Para a instalação do Rmarkdown você pode simplesmente utilizar o comando \textit{install.packages()}. Você pode instalá-lo diretamente do CRAN
-	
-	Ou instalar a versão de desenvolvimento do \textit{GitHub}. Para isso é necessário utilizar o pacote \textit{devtools}.
-	
-	Para conseguir gerar o pdf no windows a partir de um arquivo RMD é necessário instalar o \LaTeX. O \LaTeX ~é um conjunto de pacotes que permite a edição e geração de textos formatados de alta qualidade.
+	\begin{itemize}
+		\item Instalação do Rmarkdown $\rightarrow$ \textit{install.packages()}.
+		
+		\item Ou instalar a versão de desenvolvimento do \textit{GitHub}. Para isso é necessário utilizar o pacote \textit{devtools}.
+		
+		\item Para conseguir gerar o pdf no windows a partir de um arquivo RMD é necessário instalar o \LaTeX. O \LaTeX ~é um conjunto de pacotes que permite a edição e geração de textos formatados de alta qualidade.
+	\end{itemize}
+
 \end{frame}
 
 \begin{frame}

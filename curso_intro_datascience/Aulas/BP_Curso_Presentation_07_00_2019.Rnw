@@ -1,0 +1,305 @@
+\documentclass[11pt]{beamer}
+%\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{Berkeley}
+\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{verbatim}
+\usepackage{Sweave}
+
+
+\author{Sérgio Rivero}
+\subtitle{R Shiny}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivo da Aula}
+\section{Objetivo da Aula}
+\begin{enumerate}
+	\item Apresentar os elementos básicos do Shiny
+	\item Apresentar alguns casos de aplicação da ferramenta
+	
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que é o shiny?}
+\section{O que é o shiny?}
+	\begin{itemize}
+		\item O \textit{shiny} é um pacote R que facilita a criação de aplicativos interativos com uma interface web Web direto do R.
+		
+		\item Para baixar o \textit{shiny} usamos nosso velho conhecido \textit{install.packages()}
+		
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Algumas características do \textit{shiny}}
+\begin{itemize}
+	\item Permite aplicativos da Web com apenas algumas linhas de código,
+	\item As aplicações em \textit{shiny} mudam suas saídas instantaneamente conforme os usuários modificam as entradas, sem exigir uma recarga do navegador;
+	\item Interfaces de usuário em shiny podem ser construídas inteiramente usando R;
+	\item Funciona em qualquer ambiente R (Console R, Rgui para Windows ou Mac, ESS, StatET, RStudio, etc.)
+\end{itemize}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Estrutura de um aplicativo \textit{shiny}}
+\section{Estrutura de um aplicativo \textit{shiny}}
+
+Aplicativos \textit{shiny} estão contidos em um único script chamado app.R. O script app.R reside em um diretório (por exemplo, newdir/) e o aplicativo pode ser executado com runApp("newdir").
+
+
+app.R tem três componentes:
+
+\begin{enumerate}
+	\item um objeto de interface do usuário
+	
+	\item uma função de servidor
+	
+	\item uma chamada para a função shinyApp
+	
+\end{enumerate}
+
+\url{https://shiny.rstudio.com/images/shiny-cheatsheet.pdf}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Os Objetos básicos da app \textit{shiny}}
+	O objeto \textit{ui} da interface com o usuário controla o layout e a aparência do seu aplicativo. A função \textit{server} contém as instruções que seu computador precisa para criar seu aplicativo. Finalmente, a função \textit{shinyApp} cria objetos do \textit{shiny} a partir de um par de interface do usuário/servidor explícito.
+	
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-09}
+		\caption{Estrutura de um arquivo de aplicação shiny}
+		\label{fig:bpcursoteccomp002019f06-09}
+	\end{figure}
+	
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Os Objetos básicos da app \textit{shiny}}
+Um arquivo de aplicação em \textit{shiny}, então, conterá 3 partes (Figura \ref{fig:bpcursoteccomp002019f06-09}). Uma primeira parte é a descrição  da estrutura da página a ser publicada, bem como com os elementos da interface do usuário (ui). Este componentes terão os elementos de entrada e também indicarão onde ficariam os gráficos, tabelas e textos que resultariam nas \textbf{reações} as mudanças nos valores que estiverem conectados com estas saídas. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-10}
+	\caption{Entrada, servidor e aplicação em detalhe}
+	\label{fig:bpcursoteccomp002019f06-10}
+\end{figure}
+
+
+A segunda parte é a descrição das ações que ocorrem quando há uma mudança nos valores observados e quais as funções específicas serão utilizadas. Nesta segunda parte também é incluída a estratégia de renderização dos resultados (Figura \ref{fig:bpcursoteccomp002019f06-10}).
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Layouts do shiny}
+\section{Layouts do shiny}
+	
+	A interface de usuário do shiny permite uma quantidade razoável de opções de layout, podendo também combinar conjuntos diferentes de elementos em entradas únicas. Abaixo (Figura \ref{fig:bpcursoteccomp002019f06-13}) vemos o exemplo de um painel com um campo de entrada tipo data e um botão para incluir o valor da variável.
+	
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-13}
+		\caption{Um painel composto e as diversas funções de painéis compostos}
+		\label{fig:bpcursoteccomp002019f06-13}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{\textit{FluidRow}}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-14}
+		\caption{Exemplo da função fluidRow()}
+		\label{fig:bpcursoteccomp002019f06-14}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{\textit{flowLayout}}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-15}
+		\caption{Exemplo da função flowLayout()}
+		\label{fig:bpcursoteccomp002019f06-15}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{\textit{sidebarLayout}}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-16}
+		\caption{Exemplo da função sidebarLayout()}
+		\label{fig:bpcursoteccomp002019f06-16}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Painéis no \textit{shiny}}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-19}
+		\label{fig:bpcursoteccomp002019f06-19}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Alguns Tipos de Entradas}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-12-01}
+				\label{fig:bpcursoteccomp002019f06-12-01}
+			\end{figure}
+		\end{column}
+	
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-12-02}
+				\label{fig:bpcursoteccomp002019f06-12-02}
+			\end{figure}
+		\end{column}
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funções de Renderização e Saída}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f06-20}
+		\label{fig:bpcursoteccomp002019f06-20}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Exemplos}
+
+\url{https://shiny.rstudio.com/gallery/retirement-simulation.html}
+
+\url{https://shiny.rstudio.com/gallery/tabsets.html}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Alguns links úteis}
+\section{Alguns links úteis}
+
+
+\url{https://rstudio.github.io/shiny/tutorial/}
+
+\url{https://shiny.rstudio.com/tutorial}
+
+\url{https://shiny.rstudio.com/}
+
+\url{https://www.rstudio.com/products/shiny/shiny-user-showcase/}
+
+\url{https://www.showmeshiny.com/category/topics/finance/}
+
+\url{https://shiny.rstudio.com/images/shiny-cheatsheet.pdf}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+\end{frame}
+
+
+%
+%\begin{frame}[allowframebreaks]
+%\frametitle{Referências}
+%       \section{Referências}
+%
+%\bibliographystyle{alpha}
+%\bibliography{../bib/bibliografia}
+%\end{frame}
+%
+%
+
+
+\end{document}

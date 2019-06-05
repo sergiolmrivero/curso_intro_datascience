@@ -1,0 +1,405 @@
+---
+title: 'Caderno de Exercícios'
+subtitle: 'Introdução ao Tratamento de dados em R'
+author: "Sergio Rivero"
+date: '`r format(Sys.time(), "%d de %B, %Y")`'
+output:
+  html_document:
+    highlight: tango
+    theme: cosmo
+    number_sections: true
+    toc: true
+---
+
+-----------
+
+# Exercícios
+
+Este é o caderno de exercícios. 
+
+Este material vai ser ampliado na medida em que você for fazendo os exercícios em sala de aula.
+
+O arquivo Rmd, testado e funcionando será utilizando para a avaliação da aprendizagem no final do curso.
+
+Este arquivo deve ser entregue, ao final do curso para rivero@ufpa.br
+
+--------
+
+```{r, echo=FALSE}
+
+library(knitr)
+library(xtable)
+
+
+```
+
+
+
+
+## Exercício Aula 1
+
+### Definindo o *Working directory*
+
+**1) Baseado no que foi visto em sala de aula responda**
+
+a) Em que diretório está o seu R agora ?
+
+```{r, echo=TRUE}
+getwd()
+```
+
+b) Altere seu diretório e repita o procedimento anterior
+
+```{r eval=FALSE,  results= 'hide', echo= FALSE}
+setwd("diretório que deseja definir")
+getwd()
+```
+
+c) Quais elementos estão no seu ambiente de trabalho ?
+```{r, results='hide', echo=FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+```
+
+```{r eval=TRUE, results= 'show', echo= TRUE}
+ls()
+```
+
+### O R como calculadora
+
+**Calcule as seguintes operações:**
+
+a) $\frac{2}{36}$
+```{r,echo=TRUE,results='markup'}
+2/36
+```
+
+
+b) $4 \times 8$
+
+
+c) $5\times76$
+
+
+d) $2^{9}$
+
+
+
+e) $e^{2}$
+
+
+f) $log7$
+
+
+g) $ln{25}$
+
+
+
+h) $\mid-10\mid$
+
+
+i) $\sqrt{4489}$
+
+
+j) $\frac{\sqrt{5} + 1}{3}$
+
+
+
+### Vetores e Matrizes
+
+**3)Leia e responda as questões abaixo**
+
+a) Crie e reproduza um vetor com os seguintes elementos: [laranja,manga,caju,uva], chame-o de  "f"
+```{r}
+f <- c('laranja','manga','caju','uva')
+f
+```
+
+
+b) Crie e reproduza um vetor com os seguintes elementos: [10,5,7,8], chame-o de "q"
+
+
+c) Crie e reproduza um vetor com os seguintes elementos: [4,2,1,8], chame-o de  "p"
+
+
+d) Calcule e reproduza o produto dos vetores preco e quantidade e chame-o de "t":
+
+
+
+
+Mostrando o gráfico para $y = x^2$
+
+```{r,  results= 'show', echo= FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+y = x^2
+plot(x,y)
+```
+
+Comentário: neste gráfico acima vemos a linda forma que uma função quadrática pode ter mesmo sem ligar os pontos.
+
+
+
+--------
+
+## Exercício Aula 2
+
+
+### Vetores
+
+a) Crie os seguintes vetores:  temp = (26.1,26.7,22.7,16.8) , cidade = (João Pessoa, Manaus, Salvador, Curitiba), estado = (Paraíba, Amazonas, Bahia, Paraná)
+
+```{r}
+temp = c(26.1,26.7,22.7,16.8)
+cidade = c('João Pessoa', 'Manaus', 'Salvador', 'Curitiba')
+estado = c('Paraíba', 'Amazonas', 'Bahia', 'Paraná')
+
+```
+
+
+b) Mostre estes três vetores
+```{r}
+temp
+cidade
+estado
+
+t1 <- cbind(cidade, estado, temp)
+
+temperaturas <- data.frame(t1)
+```
+
+Abaixo temos um exemplo de uma tabela com o Kable.
+
+
+```{r}
+
+
+kable(temperaturas, format = 'html', booktabs = TRUE)
+
+```
+
+Aqui utilizamos o xtable.
+
+```{r,results='asis' }
+
+tb1 <- xtable(temperaturas)
+
+print.xtable(tb1, format = 'html')
+```
+
+
+### Listas
+
+
+a) Agora crie uma lista através da função `list()` incluindo os três vetores criados anteriormente, chame-a de "lista"
+
+```{r}
+lista <- list(cidade, estado, temp)
+```
+
+
+
+b) Reproduza o primeiro elemento da lista
+```{r}
+
+lista[2:3]
+
+class(lista[3])
+
+class(lista[[3]])
+
+lista[3][1]
+
+```
+
+
+
+c) Com apenas um comando, reproduza o dois últimos elementos da lista
+
+
+d) Reproduza novamente o segundo elemento da lista, mas agora utilizando `[[]]`. Qual a diferença em relação ao item b), dica: use a função `class()`
+
+
+
+### Matrizes
+
+
+a) Crie a matriz "A" com os seguinte elementos: 
+
+$$A =
+ \begin{pmatrix}
+  1 & 2  & 3 & 4 \\
+  5 & 6  & 7 & 8 \\
+  9 & 10 & 11 & 12  \\
+  13 & 14 & 15 & 16
+ \end{pmatrix}$$
+ 
+
+```{r}
+A = matrix(1:16,ncol = 4,nrow = 4)
+B = matrix(11:26,ncol = 4,nrow = 4)
+
+
+B+A
+```
+
+
+
+B)Crie as seguintes matrizes:
+
+$$ m1 = \begin{pmatrix}  3 & 9 & -1 \\
+                   4 & 2 & 6 
+                   \end{pmatrix}$$
+                   
+ $$ m2 = \begin{pmatrix}  5 & 2 & 0 \\
+                   9 & 3 & 4 
+                   \end{pmatrix}$$
+
+
+b) Qual a soma dessas duas matrizes ?
+
+
+c) Qual o resultado da subtração m1 - m2 ?
+
+
+d) Transponha a matriz m1
+
+
+
+
+
+### Dataframes
+
+Para esse exercício será necessário a utilização do pacote datasets, este contém uma grande quantidade de conjuntos de dados e será importante para as questões relacionadas a dataframes. Para ter mais informações, execute o comando: `library(help = "datasets")`.  
+Uma dos data frames disponível nesse pacote é o "mtcars", que descreve características de diferentes modelos de automóvel.
+
+a) carregue os dados do data frame mtcars e obter informações sobre os dados.
+```{r}
+data("mtcars")
+```
+
+
+b) Verifique a classe de mtcars
+```{r}
+class(mtcars)
+```
+
+
+
+c) Reproduza as seis primeiras e seis ultimas linhas do data frame
+
+
+d) Agora reproduza as dez primeiras e as três últimas linhas do data frame
+
+
+e) Verifique a estrutura do data frame
+
+
+f) Quais são os nomes das colunas do date frame mtcars ?
+
+
+
+g) Qual o número de linhas e colunas do data frame ?
+
+```{r}
+dim(mtcars)
+```
+
+h) Reproduza apenas as seis primeiras colunas do data frame mtcars
+
+
+i) Altere a classe da variável gear para integer
+
+
+### Importando dados para o R
+
+a) Leia um arquivo csv na pasta "Dados", que está no mesmo nível hierárquico da sua pasta "Exercicios", importe o arquivo "PIB_BR_1996-2016.csv" e salve este arquivo na mesma pasta como um dataframe.
+
+```{r, eval=FALSE}
+
+PIB9616 <- read.csv(file = '../Dados/PIB_BR_1996-2016.csv', fileEncoding = "UTF-8")
+
+save(PIB9616, file='../Dados/PIB9616.Rda')
+
+
+```
+
+
+b) Mostre as primeiras linhas do Dataframe "PIB9616"
+
+
+
+c) Mostre a estrutura do Dataframe "PIB9616"
+
+
+
+d) Altere os nomes das variaveis do dataframe para: c('Ano', 'PIBcorrente','DeflatorPIB','PopulacaoResidente', 'PIBpcCorrente')
+
+
+
+e) Leia o Arquivo ../Dados/PIB_BR_1996-2016.xlsx' para o Dataframe "PIB9616excel"
+
+
+f) Altere os nomes das variaveis do dataframe para: c('Ano', 'PIBcorrente','DeflatorPIB','PopulacaoResidente', 'PIBpcCorrente')
+
+
+g) Salve o Arquivo como  "PIB9616excel.Rda", na pasta "Data"
+
+
+h) Salve uma versão csv do dataframe com o nome  "PIB9616excel.csv", na pasta "Data"
+
+
+
+
+### Importando Dados via API
+
+
+a) Você vai precisar utilizar as bibliotecas "jsonlite", "dplyr" e "lubridate", procure na internet e diga para que estas 3 bibliotecas são utilizadas no R.
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(lubridate)
+
+```
+
+b) Baixe o arquivo do saldo de crédito de pessoas físicas para o Pará que está no sistema de dados abertos do BACEN, salvando o resultado em um dataframe
+
+```{r, eval=FALSE}
+
+download.file("http://api.bcb.gov.br/dados/serie/bcdata.sgs.14015/dados?formato=json&amp","Saldo_OpCreditoPF_PA")
+
+Saldo_OpCreditoPF_PA <- fromJSON("Saldo_OpCreditoPF_PA")
+
+save(Saldo_OpCreditoPF_PA, file="../Dados/Saldo_OpCreditoPF_PA.Rda")
+
+```
+
+
+
+
+
+
+c) Faça o Download do Arquivo de Saldo... do BCB de Concessões de crédito com recursos livres - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público que pode ser encontrado em:
+
+[Série Consignado Funcionários Públicos] (https://dadosabertos.bcb.gov.br/dataset/20669-concessoes-de-credito-com-recursos-livres---pessoas-fisicas---credito-pessoal-consignado-para)
+
+Usando o api
+
+d) Salve Esta série num Dataframe ("ConsignadoFuncPublicos.Rda") na sua pasta Dados
+
+--------
+
+# Anotações 
+
+## Anotações sobre o R
+
+
+
+## Anotações gerais
+
+
+
+
+
+
+
+

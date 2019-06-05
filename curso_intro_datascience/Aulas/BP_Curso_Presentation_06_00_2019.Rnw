@@ -1,0 +1,268 @@
+\documentclass[11pt]{beamer}
+%\usetheme{Frankfurt}
+%\usetheme{Singapore}
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{verbatim}
+\usepackage{Sweave}
+
+
+\author{Sérgio Rivero}
+\subtitle{Tabelas em R}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivo da Aula}
+\section{Objetivo da Aula}
+\begin{enumerate}
+	\item Neste capítulo veremos como é possível gerar um grande conjunto de tabelas em R	
+	\item vamos utilizar o \textit{Markdown} para isso
+	\item bem como discutiremos a apresentação de resultados de modelos com estas bibliotecas.
+	
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Gerando Tabelas com Xtable e Stargazer}
+\section{Gerando Tabelas com Xtable e Stargazer}
+	\begin{itemize}
+		\item A geração de tabelas no R pode ser feita utilizando alguns pacotes específicos adequados para tal. 
+		\item Estes pacotes leem dataframes ou matrizes e geram tabelas a partir destes. 	
+		\item Muitos destes pacotes têm também a capacidade de:
+		\begin{enumerate}
+			\item ler objetos específicos do R (como resultados de regressões, análise de cluster, etc) 
+	 		\item e gerar tabelas correspondentes às saídas normais de apresentação destes resultados.		
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{xtable}
+Aqui temos o nosso velho conhecido banco de dados MTCARS. Utilizando a opção auto, o xtable define o tipo de saída em termos de casas decimais, automaticamente.
+
+\begin{verbatim}
+library(xtable)
+
+mtc2 <- xtable(head(mtcars), 
+auto = TRUE, 
+caption = 'Base mtcars, primeiras linhas')
+
+print.xtable(mtc2, caption.placement='top')
+
+\end{verbatim}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Tabelas com xtable}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-01}
+		\caption{A tabela apresentando as primeiras 6 linhas do dataframe \textbf{mtcars}}
+		\label{fig:bpcursoteccomp002019f05-01}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Gerando uma tabela sintética com dplyr}
+\begin{verbatim}
+library(dplyr)
+
+data(mtcars)
+
+sintesePot <- as.data.frame(mtcars %>% group_by(cyl) %>%
+      summarize(potenciaMedia = mean(hp,na.rm = TRUE),
+      sigmaPotencia = sd(hp, na.rm = TRUE),
+      n = n()
+	)
+)
+tabelaPot <- xtable(sintesePot,
+                    caption = 'Média e Desvio Padrão ...')
+print(tabelaPot, type = "html", 
+       caption.placement='bottom')
+\end{verbatim}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Tabelas com xtable}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-02}
+	\label{fig:bpcursoteccomp002019f05-02}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Olhando para os dados}
+\begin{verbatim}
+library(ggplot2)
+
+ggplot(mtcars, aes(x=hp, y=mpg)) +
+       geom_point() +
+       geom_smooth() +
+       labs(x='Potência (HP)', 
+            y = 'Consumo (MPG)')
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+\frametitle{O gráfico}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-03}
+	\label{fig:bpcursoteccomp002019f05-03}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Análise}
+\section{Análise}
+	Podemos então pensar em uma regressão que olhe para a relação entre potência e  consumo
+	\begin{verbatim}
+		hpmpg <- lm(mpg~hp, data = mtcars)
+		
+		summary(hpmpg)
+	\end{verbatim}
+\end{frame}
+
+\begin{frame}
+\frametitle{O resultado da regressão pelo \textit{summary}}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-04}
+	\label{fig:bpcursoteccomp002019f05-04}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{O resultado da regressão pelo \textit{xtable}}
+	\begin{verbatim}
+		lm.hpmpg.tab <- xtable(hpmpg, 
+		       caption = 'Resultado do Modelo Consumo versus HP', 
+		       label  = 'tabreg:consumohp'
+		)
+		
+		print.xtable(lm.hpmpg.tab, caption.placement = 'top')
+	\end{verbatim}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-05}
+	\label{fig:bpcursoteccomp002019f05-05}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Utilizando o \textbf{stargazer}}
+\begin{verbatim}
+library(stargazer)
+
+stargazer(hpmpg, type='html', 
+          title = 'Resultado do Modelo Consumo versus HP'
+)
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{A saída do \textbf{stargazer}}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.45\linewidth]{../figs/BP_Curso_TecComp_00_2019_f05-06}
+		\label{fig:bpcursoteccomp002019f05-06}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+\end{frame}
+
+
+%
+%\begin{frame}[allowframebreaks]
+%\frametitle{Referências}
+%       \section{Referências}
+%
+%\bibliographystyle{alpha}
+%\bibliography{../bib/bibliografia}
+%\end{frame}
+%
+%
+
+
+\end{document}

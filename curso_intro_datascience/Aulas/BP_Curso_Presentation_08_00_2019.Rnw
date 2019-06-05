@@ -1,0 +1,273 @@
+\documentclass[11pt]{beamer}
+%\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{Berkeley}
+\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{url}
+%\usepackage{enumitem}
+%\bibliographystyle{alpha}
+\nobibliography *
+\usepackage[brazil]{babel}
+%\usepackage{abnt-alf}
+%\usepackage[alf]{abntcite}
+\usepackage{verbatim}
+\usepackage{Sweave}
+\usepackage{smartdiagram}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\author{Sérgio Rivero}
+\subtitle{Organizando a Atividade de Tratamento de dados com R}
+\title{Introdução ao Tratamento e Análise de Dados em R}
+
+\institute{PPGE-UFPA} 
+\date{\today}
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\includegraphics[width=.5cm,keepaspectratio]{../logos/brasao-UFPA-preto}
+		%        \includegraphics[width=1cm,keepaspectratio]{../logos/logoBP}
+		
+		%\includegraphics[width=1cm,keepaspectratio]{cern_logo_white.jpg}%
+		\hfill%
+		\includegraphics[width=1.5cm,keepaspectratio]{../logos/Logo_FACECON}
+		\includegraphics[width=.8cm,keepaspectratio]{../logos/Logo-PPGE}
+		%\includegraphics[width=1cm,keepaspectratio]{ntua-logo.jpg}%
+	}%
+}
+\makeindex
+ 
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Objetivo da Aula}
+\section{Objetivo da Aula}
+\begin{enumerate}
+	\item Discutir as estratégias para organizar o processo de tratamento de dados
+	\item Mostrar ferramentas de trabalho colaborativo com dados
+	\item Mostrar algumas das principais fontes de informação sobre o R
+	
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Relembrando o Ciclo de tratamento de dados}
+\section{Ciclo de tratamento de dados}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.75\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-01}
+		\caption{\url{https://www.dataone.org/data-life-cycle}}
+		\label{fig:f02-01}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O ciclo de tratamento de dados e modelagem}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f02-02}
+		\caption{Tratamento de Dados Estatísticos}
+		\label{fig:f02-02}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Fluxo do tratamento de dados}
+\section{Fluxo do tratamento de dados}
+\centering
+\scalebox{.8}{
+\smartdiagram[priority descriptive diagram]{
+	Adquire os dados de entrada\\ (0-Originais),
+	Trata os dados de entrada\\ (1-Tratamento),
+	Salva os dados tratados \\ (2-Tratados) ,
+	Modifica/Analisa os dados tratados\\ (3-Analise),
+	Salva e Apresenta os Resultados\\ (4-Resultados)
+}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Uma estrutura sugerida de arquivos adequada para isso}
+\smartdiagramset{
+	back arrow disabled=true
+}
+\scalebox{.8}{
+\smartdiagram[flow diagram:horizontal]{
+	0 \\Originais, 1 \\Tratamento, 2 \\Tratados, 3 \\Analise, 4 \\Resultados}
+}
+\begin{enumerate}
+	\setcounter{enumi}{-1}
+	\item \textbf{Originais} vai conter seus arquivos originais (json, csv, txt, etc). Os arquivos a partir dos quais você fazer o tratamento dos dados.
+	\item \textbf{Tratamento} terá os programas R (ou de outro tipo) que vão gerar seus dados limpos, prontos para a a análise.
+	\item \textbf{Tratados} terá seus arquivos (em geral, dataframes) tratados.
+	\item \textbf{Analise} terá seus programas R (ou rmd ou Rnw) para a análise dos dados e geração de resultados (pode ser 2 pastas)
+	\item \textbf{Resultados} terá seus arquivos de resultados e os relatórios apresentados (pode ser 2 pastas)
+\end{enumerate}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{A estrutura de pastas (sugerida)}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\centering
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+\begin{tikzpicture}[%
+grow via three points={one child at (0.5,-0.7) and
+	two children at (0.5,-0.7) and (0.5,-1.4)},
+edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+\node {NomeDoProjeto}
+	child { node {0-Originais }}		
+	child { node {1-Tratamento}}
+	child { node {2-Tratados}}
+	child { node {3-Analise}}
+	child { node {4-Resultados}};
+\end{tikzpicture}
+\end{column}
+
+\begin{column}{.5\linewidth}
+	\begin{enumerate}
+		\item O fluxo segue sempre em apenas um sentido.
+		\item A correção e alteração dos dados é feita sempre a partir de um programa R
+		\item Erros eventuais exigirão a reexecução de um programa R para sua correção
+		\item Lembre-se, que repete a execução é o computador, não você.
+		\item Alterações erradas nos dados de origem produzem problemas difíceis de corrigir 
+	\end{enumerate}
+\end{column}
+
+
+
+\end{columns}
+
+
+
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Trabalhando em Equipe - O GitHub}
+\section{Trabalhando em Equipe}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{../figs/BP_Curso_TecComp_00_2019_f08-01}
+		\caption{\url{https://github.com/rstudio/rstudio}}
+		\label{fig:bpcursoteccomp002019f08-01}
+	\end{figure}
+	
+\end{frame}
+
+
+\begin{frame}
+\frametitle{A estrutura de trabalho no GitHub}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f08-02}
+		\caption{Atividades Paralelas - Repositório único}
+		\label{fig:bpcursoteccomp002019f08-02}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fluxo de trabalho no GitHub}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=0.9\linewidth]{../figs/BP_Curso_TecComp_00_2019_f08-03}
+		\caption{Ramos (branches) e junções (merges)}
+		\label{fig:bpcursoteccomp002019f08-03}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Onde procurar informação?}
+\section{Aprendendo mais sobre R}
+\begin{itemize}
+	\item \url{https://cran.r-project.org/}
+	\item \url{https://www.rstudio.com/}
+	\item \url{https://www.rdocumentation.org/}
+	\item \url{https://www.bioconductor.org/}
+	\item \url{https://www.r-bloggers.com/}
+	\item \url{https://r4ds.had.co.nz/}
+	\item \url{https://en.wikibooks.org/wiki/R_Programming}
+	\item \url{https://stats.idre.ucla.edu/r/}
+	\item \url{http://www.cookbook-r.com/}
+	\item \url{http://www.cookbook-r.com/Graphs/}
+
+\end{itemize}
+
+
+
+\bigskip
+
+Divirtam-se.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Exercícios}
+\section{Exercícios}
+
+Exercícios
+
+\end{frame}
+
+
+%
+%\begin{frame}[allowframebreaks]
+%\frametitle{Referências}
+%       \section{Referências}
+%
+%\bibliographystyle{alpha}
+%\bibliography{../bib/bibliografia}
+%\end{frame}
+%
+%
+
+
+\end{document}

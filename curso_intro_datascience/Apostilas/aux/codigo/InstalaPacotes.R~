@@ -1,0 +1,13 @@
+#########################################
+### Instalando pacotes do R para o curso
+#########################################
+
+pacotes <- c('tidyverse', 'jsonlite', 'xtable', 'stargazer')
+
+
+for(pacote in pacotes){
+
+  if (!requireNamespace(pacote)){
+    install.packages(pacote)
+  }
+}

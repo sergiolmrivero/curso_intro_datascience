@@ -1,0 +1,121 @@
+---
+title: "Lista de Exercícios 1"
+author: "Introdução a Data Science com R"
+date: "Maio 2019"
+output:
+  html_document:
+    highlight: tango
+    theme: cosmo
+---
+
+
+#Definindo o *Working directory*
+
+**1) Baseado no que foi visto em sala de aula responda**
+
+a) Em que diretório está o seu R agora ?
+
+```{r, echo=TRUE}
+getwd()
+```
+
+b) Altere seu diretório e repita o procedimento anterior
+
+```{r eval=FALSE,  results= 'hide', echo= FALSE}
+setwd("diretório que deseja definir")
+getwd()
+```
+
+c) Quais elementos estão no seu ambiente de trabalho ?
+```{r, results='hide', echo=FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+```
+
+```{r eval=TRUE, results= 'show', echo= TRUE}
+ls()
+```
+
+#O R como calculadora
+
+**Calcule as seguintes operações:**
+
+a) $\frac{2}{36}$
+```{r,echo=TRUE,results='markup'}
+2/36
+```
+
+
+b) $4 \times 8$
+
+
+c) $5\times76$
+
+
+d) $2^{9}$
+
+
+
+e) $e^{2}$
+
+
+f) $log7$
+
+
+g) $ln{25}$
+
+
+
+h) $\mid-10\mid$
+
+
+i) $\sqrt{4489}$
+
+
+j) $\frac{\sqrt{5} + 1}{3}$
+
+
+
+#Vetores e Matrizes
+
+**3)Leia e responda as questões abaixo**
+
+a) Crie e reproduza um vetor com os seguintes elementos: [laranja,manga,caju,uva], chame-o de  "f"
+```{r}
+f <- c('laranja','manga','caju','uva')
+f
+```
+
+
+b) Crie e reproduza um vetor com os seguintes elementos: [10,5,7,8], chame-o de "q"
+
+
+c) Crie e reproduza um vetor com os seguintes elementos: [4,2,1,8], chame-o de  "p"
+
+
+d) Calcule e reproduza o produto dos vetores preco e quantidade e chame-o de "t":
+
+
+
+
+Mostrando o gráfico para $y = x^2$
+
+```{r,  results= 'show', echo= FALSE}
+x = c(1,2,3,4,5,6,7,8,9,10)
+y = x^2
+plot(x,y)
+```
+
+Comentário: neste gráfico acima vemos a linda forma que uma função quadrática pode ter mesmo sem ligar os pontos.
+
+
+```{r,  results= 'show', echo= TRUE}
+
+print(Sys.info())
+print(Sys.Date())
+print(Sys.time())
+print(Sys.getpid())
+
+```
+
+
+
